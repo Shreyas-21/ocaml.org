@@ -16,7 +16,7 @@ We would like to acknowledge the following people for their contribution:
 * Török Edwin was able to reproduce the bug in `Task.pool` management
   [Domainslib#43](https://github.com/ocaml-multicore/domainslib/issues/43), and has also provided a PR to fix the same.
 * Sid Kshatriya has created
-  [PR#83](https://github.com/ocaml-multicore/eio/pull/83) for `Eio` to use the Effect Handlers module.
+  [PR#83](https://github.com/ocaml-multicore/eio/pull/83 - [403 Forbidden]) for `Eio` to use the Effect Handlers module.
 
 Our focus in November is going to continue to be on relentlessly making a 5.0 staging tree, and we are preparing for a series of working groups with the core OCaml teams (taking up an entire week) to conduct preliminary code review on the full patchset. Stay tuned for how that has gone by the start of December!
 
@@ -564,24 +564,24 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 ###### Domainslib
 
-* [ocaml-multicore/domainslib#45](https://github.com/ocaml-multicore/domainslib/pull/45)
+* [ocaml-multicore/domainslib#45](https://github.com/ocaml-multicore/domainslib/pull/45 - [403 Forbidden])
   Add named pools
   
   An optional argument is now added to name a pool during setup. This
   name can be used to retrieve the pool later.
 
-* [ocaml-multicore/domainslib#52](https://github.com/ocaml-multicore/domainslib/pull/52)
+* [ocaml-multicore/domainslib#52](https://github.com/ocaml-multicore/domainslib/pull/52 - [403 Forbidden])
   Use a random number as the cache prefix to disable cache in CI
   
   The `cache-prefix` now uses a random number in
   `.github/workflows/main.yml` to disable cache in the CI.
 
-* [ocaml-multicore/domainslib#53](https://github.com/ocaml-multicore/domainslib/pull/53)
+* [ocaml-multicore/domainslib#53](https://github.com/ocaml-multicore/domainslib/pull/53 - [403 Forbidden])
   Make domainslib build/run with OCaml 5.00 after PR#704
   
   The CI has been updated to now build and run with OCaml 5.00 branch.
 
-* [ocaml-multicore/domainslib#54](https://github.com/ocaml-multicore/domainslib/pull/54)
+* [ocaml-multicore/domainslib#54](https://github.com/ocaml-multicore/domainslib/pull/54 - [403 Forbidden])
   Use last 4.12+domains+effects hash as the cache-key
   
   The cache-key now uses the last commit hash from OCaml Multicore in
@@ -589,22 +589,22 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 ###### Sundries
 
-* [ocaml-multicore/tezos-opam-repository#3](https://github.com/ocaml-multicore/tezos-opam-repository/pull/3)
+* [ocaml-multicore/tezos-opam-repository#3](https://github.com/ocaml-multicore/tezos-opam-repository/pull/3 - [403 Forbidden])
   Add domainslib
   
   The `domainslib.0.3.1` version has now been included in the Tezos
   OPAM repository as a package.
 
-* [ocaml-multicore/tezos-opam-repository#5](https://github.com/ocaml-multicore/tezos-opam-repository/pull/5)
+* [ocaml-multicore/tezos-opam-repository#5](https://github.com/ocaml-multicore/tezos-opam-repository/pull/5 - [403 Forbidden])
   Upstream updates
   
   The `Tezos OPAM repository` has been updated with upstream changes
   using
-  [PR#1](https://github.com/ocaml-multicore/tezos-opam-repository/pull/1)
+  [PR#1](https://github.com/ocaml-multicore/tezos-opam-repository/pull/1 - [403 Forbidden])
   and
-  [PR#5](https://github.com/ocaml-multicore/tezos-opam-repository/pull/5).
+  [PR#5](https://github.com/ocaml-multicore/tezos-opam-repository/pull/5 - [403 Forbidden]).
 
-* [ocaml-multicore/retro-httpaf-bench#17](https://github.com/ocaml-multicore/retro-httpaf-bench/pull/17)
+* [ocaml-multicore/retro-httpaf-bench#17](https://github.com/ocaml-multicore/retro-httpaf-bench/pull/17 - [403 Forbidden])
   Improve graphs
   
   Markers have now been added to the graphs generated from the Jupyter
@@ -612,26 +612,26 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   
   ![retro-httpaf-bench-17-graph|690x409](https://discuss.ocaml.org/uploads/short-url/qKGZJ5anPXMCKp8EDcY2F5TMRbk.jpeg)
 
-* [ocaml-multicore/multicore-opam#59](https://github.com/ocaml-multicore/multicore-opam/pull/59)
+* [ocaml-multicore/multicore-opam#59](https://github.com/ocaml-multicore/multicore-opam/pull/59 - [403 Forbidden])
   Fix batteries after ocaml-multicore/ocaml-multicore#514
   
   The `batteries.3.3.0+multicore` opam file for `batteries-included`
   has been updated with the correct src URL.
 
-* [ocaml-multicore/eio#82](https://github.com/ocaml-multicore/eio/pull/82)
+* [ocaml-multicore/eio#82](https://github.com/ocaml-multicore/eio/pull/82 - [403 Forbidden])
   Migrate to 4.12.0+domains effects implementation (syntax-free effects version)
   
   The PR updates `eio` to support the effects implementation for OCaml
   5.0 release.
 
-* [ocaml-multicore/eio#83](https://github.com/ocaml-multicore/eio/pull/83)
+* [ocaml-multicore/eio#83](https://github.com/ocaml-multicore/eio/pull/83 - [403 Forbidden])
   Effect handlers have their own module now
   
   Sid Kshatriya has contributed a patch to rename
   `Obj.Effect_handlers` to `EffectHandlers` since effect handlers have
   their own module in Stdlib.
 
-* [ocaml-multicore/core](https://github.com/ocaml-multicore/core)
+* [ocaml-multicore/core](https://github.com/ocaml-multicore/core - [403 Forbidden])
 
   Jane Street's standard library overlay `core` has now been
   added to `ocaml-multicore` GitHub project repositories.
@@ -642,14 +642,14 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Ongoing
 
-* [ocaml-bench/sandmark#248](https://github.com/ocaml-bench/sandmark/issues/248)
+* [ocaml-bench/sandmark#248](https://github.com/ocaml-bench/sandmark/issues/248 - [403 Forbidden])
   Coq fails to build
   
   A new Coq tarball,
-  [coq-multicore-2021-09-24](https://github.com/ejgallego/coq/releases/tag/multicore-2021-09-24),
+  [coq-multicore-2021-09-24](https://github.com/ejgallego/coq/releases/tag/multicore-2021-09-24 - [403 Forbidden]),
   builds with Multicore OCaml 4.12.0+domains, but, `stdio.v0.14.0`
   fails to build cleanly with 4.14.0+trunk because of a [dune
-  issue](https://github.com/ocaml/dune/issues/5028) that has been
+  issue](https://github.com/ocaml/dune/issues/5028 - [403 Forbidden]) that has been
   reported.
   
 * [ocaml-bench/sandmark#260](https://github.com/ocaml-bench/sandmark/pull/260)

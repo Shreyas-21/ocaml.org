@@ -5,9 +5,9 @@ date: "2021-12-01"
 tags: [multicore]
 ---
 
-Welcome to the December 2021 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore) monthly report! The [previous updates](https://discuss.ocaml.org/tag/multicore-monthly) along with this update have been compiled by myself, @ctk21, @kayceesrk and @shakthimaan.
+Welcome to the December 2021 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore - [403 Forbidden]) monthly report! The [previous updates](https://discuss.ocaml.org/tag/multicore-monthly) along with this update have been compiled by myself, @ctk21, @kayceesrk and @shakthimaan.
 
-Well, it's finally here! @kayceesrk opened the [Multicore OCaml PR#10831](https://github.com/ocaml/ocaml/pull/10831) to the main OCaml development repository that represents the "minimum viable" implementation of multicore OCaml that we decided on in [November's core team review](https://discuss.ocaml.org/t/multicore-ocaml-november-2021-with-results-of-code-review/8934#core-team-code-review-1).  The branch pushes the limits of GitHub's rendering capability, with around 4000 commits.
+Well, it's finally here! @kayceesrk opened the [Multicore OCaml PR#10831](https://github.com/ocaml/ocaml/pull/10831 - [403 Forbidden]) to the main OCaml development repository that represents the "minimum viable" implementation of multicore OCaml that we decided on in [November's core team review](https://discuss.ocaml.org/t/multicore-ocaml-november-2021-with-results-of-code-review/8934#core-team-code-review-1).  The branch pushes the limits of GitHub's rendering capability, with around 4000 commits.
 
 Once the PR was opened just before Christmas, the remaining effort has been for a number of developers to pore over [the diff](http://github.com/ocaml/ocaml/pull/10831.diff) and look for any unexpected changes that crept in during multicore development. A large number of code changes, improvements and fixes have been merged into the ocaml-multicore trees since the PR was opened to facilitate this upstreaming process. We're expecting to have the PR merged during January, and then will continue onto the "post-MVP" tasks described last month, but working directly from ocaml/ocaml from now on.  We therefore remain on track to release OCaml 5.00 in 2022.
 
@@ -31,34 +31,34 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Upstream
 
-* [ocaml-multicore/ocaml-multicore#742](https://github.com/ocaml-multicore/ocaml-multicore/issues/742)
+* [ocaml-multicore/ocaml-multicore#742](https://github.com/ocaml-multicore/ocaml-multicore/issues/742 - [403 Forbidden])
   Minor tasks from asynchronous review
   
   A list of minor tasks from the asynchronous review is provided for
   the OCaml 5.00 release. The major tasks will have their respective
   GitHub issues.
 
-* [ocaml-multicore/ocaml-multicore#750](https://github.com/ocaml-multicore/ocaml-multicore/issues/750)
+* [ocaml-multicore/ocaml-multicore#750](https://github.com/ocaml-multicore/ocaml-multicore/issues/750 - [403 Forbidden])
   Discussing the design of Lazy under Multicore
   
   An ongoing discussion on the design of Lazy under Multicore OCaml
   that involves sequential Lazy, concurrency problems, duplicated
   computations, and memory safety.
 
-* [ocaml-multicore/ocaml-multicore#756](https://github.com/ocaml-multicore/ocaml-multicore/pull/756)
+* [ocaml-multicore/ocaml-multicore#756](https://github.com/ocaml-multicore/ocaml-multicore/pull/756 - [403 Forbidden])
   RFC: Generalize the `Domain.DLS` interface to split PRNG state for child domains
   
   The implementation for a "proper" PRNG+Domains semantics where
   spawning a domain "splits" the PRNG state is under review.
 
-* [ocaml-multicore/ocaml-multicore#791](https://github.com/ocaml-multicore/ocaml-multicore/issues/791)
+* [ocaml-multicore/ocaml-multicore#791](https://github.com/ocaml-multicore/ocaml-multicore/issues/791 - [403 Forbidden])
   `caml_process_pending_actions_exn` is missing
   
   The `caml_process_pending_actions_exn` returns exceptions as an
   OCaml value instead of raising them, and the C API call is missing
   on Multicore OCaml.
 
-* [ocaml-multicore/ocaml-multicore#795](https://github.com/ocaml-multicore/ocaml-multicore/issues/795)
+* [ocaml-multicore/ocaml-multicore#795](https://github.com/ocaml-multicore/ocaml-multicore/issues/795 - [403 Forbidden])
   Make `Minor_heap_max` and `Max_domains` as `OCAMLRUNPARAM` options
   
   The `Minor_heap_max` is defined as 2GB and `Max_domains` as 128 in
@@ -66,53 +66,53 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   Multicore OCaml when running tools like AFL and Valgrind. The
   suggestion is to make these parameters as `OCAMLRUNPARAM` options.
 
-* [ocaml-multicore/ocaml-multicore#799](https://github.com/ocaml-multicore/ocaml-multicore/issues/799)
+* [ocaml-multicore/ocaml-multicore#799](https://github.com/ocaml-multicore/ocaml-multicore/issues/799 - [403 Forbidden])
   Bring `runner.sh` in the CI in line with trunk
   
   The `runner.sh` script in `ocaml-multicore/ocaml-multicore` has
   changed and diverged from trunk. It needs to be updated to be in
   sync with `ocaml/ocaml`.
 
-* [ocaml-multicore/ocaml-multicore#806](https://github.com/ocaml-multicore/ocaml-multicore/issues/806)
+* [ocaml-multicore/ocaml-multicore#806](https://github.com/ocaml-multicore/ocaml-multicore/issues/806 - [403 Forbidden])
   Unify GC interrupt and signal triggering mechanisms
   
   The interaction between signal and GC interrupts need to be
   reworked, as they exist as two independent mechanisms.
 
-* [ocaml-multicore/ocaml-multicore#811](https://github.com/ocaml-multicore/ocaml-multicore/issues/811)
+* [ocaml-multicore/ocaml-multicore#811](https://github.com/ocaml-multicore/ocaml-multicore/issues/811 - [403 Forbidden])
   Double check rebase through `ocaml/ocaml`
   
   An ongoing review of the porting of Multicore OCaml signal handling
   changes for x86, ARM, PPC and s390x architectures.
 
 * A new
-  [ocaml-multicore/ocaml](https://github.com/ocaml-multicore/ocaml)
+  [ocaml-multicore/ocaml](https://github.com/ocaml-multicore/ocaml - [403 Forbidden])
   project repository has been created from `ocaml/ocaml` to keep it in
   sync with trunk.
 
 #### Improvements
 
-* [ocaml-multicore/ocaml-multicore#765](https://github.com/ocaml-multicore/ocaml-multicore/issues/765)
+* [ocaml-multicore/ocaml-multicore#765](https://github.com/ocaml-multicore/ocaml-multicore/issues/765 - [403 Forbidden])
   `tools/gdb_ocamlrun.py` needs an update
   
   The `tools/gdb_ocamlrun.py` has hardcoded values, and both
   `Forcing_tag` and `Cont_tag` need to be updated.
 
-* [ocaml-multicore/ocaml-multicore#772](https://github.com/ocaml-multicore/ocaml-multicore/issues/772)
+* [ocaml-multicore/ocaml-multicore#772](https://github.com/ocaml-multicore/ocaml-multicore/issues/772 - [403 Forbidden])
   Not all registers need to be saved for `caml_call_realloc_stack`
   
   The C callee saved registers are saved by `caml_try_realloc_stack`
   and they do not invoke the GC. There is no need to save all the
   registers in `caml_call_realloc_stack`.
 
-* [ocaml-multicore/ocaml-multicore#775](https://github.com/ocaml-multicore/ocaml-multicore/issues/775)
+* [ocaml-multicore/ocaml-multicore#775](https://github.com/ocaml-multicore/ocaml-multicore/issues/775 - [403 Forbidden])
   Use explicit next pointer in `gc_regs_bucket`
   
   In `amd64.S`, the last word of a `gc_regs_bucket` contains either a
   saved value of `rax` or a pointer to a previous structure. The
   suggestion is to use distinct members for these two entities.
 
-* [ocaml-multicore/ocaml-multicore#793](https://github.com/ocaml-multicore/ocaml-multicore/pull/793)
+* [ocaml-multicore/ocaml-multicore#793](https://github.com/ocaml-multicore/ocaml-multicore/pull/793 - [403 Forbidden])
   Ring buffer-based runtime tracing (`eventring`)
   
   `Eventring` is a low-overhead runtime tracing system for continuous
@@ -124,13 +124,13 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
   ![OCaml-Multicore-PR-793-Chrome|690x149](https://discuss.ocaml.org/uploads/short-url/RykCGqsYr4FjqCEod45QdKNwV9.png)
 
-* [ocaml-multicore/ocaml-multicore#794](https://github.com/ocaml-multicore/ocaml-multicore/issues/794)
+* [ocaml-multicore/ocaml-multicore#794](https://github.com/ocaml-multicore/ocaml-multicore/issues/794 - [403 Forbidden])
   Audit `OCAMLRUNPARAM` options
   
   A number of `OCAMLRUNPARAM` options, such as `init_heap_wsz` and
   `init_heap_chunk_sz`, can be removed as they are not used.
 
-* [ocaml-multicore/ocaml-multicore#796](https://github.com/ocaml-multicore/ocaml-multicore/issues/796)
+* [ocaml-multicore/ocaml-multicore#796](https://github.com/ocaml-multicore/ocaml-multicore/issues/796 - [403 Forbidden])
   `Caml_state` for domains should not use mmap
   
   The `Caml_state` is no longer located adjacent to the minor heap
@@ -139,7 +139,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   of `malloc` at the domain creation time is sufficient to simplify
   and manage `Caml_state`.
 
-* [ocaml-multicore/ocaml-multicore#805](https://github.com/ocaml-multicore/ocaml-multicore/issues/805)
+* [ocaml-multicore/ocaml-multicore#805](https://github.com/ocaml-multicore/ocaml-multicore/issues/805 - [403 Forbidden])
   Improve `stack_size_bucket`/`alloc_stack_noexc`
   
   The current stack cache scheme will not use caching when
@@ -149,25 +149,25 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Sundries
 
-* [ocaml-multicore/ocaml-multicore#797](https://github.com/ocaml-multicore/ocaml-multicore/issues/797)
+* [ocaml-multicore/ocaml-multicore#797](https://github.com/ocaml-multicore/ocaml-multicore/issues/797 - [403 Forbidden])
   Atomic access on `bigarray`
   
   A feature request to implement atomic access for `bigarray`.
 
-* [ocaml-multicore/ocaml-multicore#801](https://github.com/ocaml-multicore/ocaml-multicore/issues/801)
+* [ocaml-multicore/ocaml-multicore#801](https://github.com/ocaml-multicore/ocaml-multicore/issues/801 - [403 Forbidden])
   Call to `fork` in `Sys.command`
   
   A query on whether to guard a `fork` call when used with
   `Sys.command`.
 
-* [ocaml-multicore/ocaml-multicore#810](https://github.com/ocaml-multicore/ocaml-multicore/issues/810)
+* [ocaml-multicore/ocaml-multicore#810](https://github.com/ocaml-multicore/ocaml-multicore/issues/810 - [403 Forbidden])
   Getting segfault/undefined behavior using Multicore with custom blocks
 
   A segmentation fault and undefined behaviour reported by
   @dannywillems (Danny Willems) for a Pippenger benchmark
   implementation in OCaml.
 
-* [ocaml-multicore/ocaml-multicore#816](https://github.com/ocaml-multicore/ocaml-multicore/issues/816)
+* [ocaml-multicore/ocaml-multicore#816](https://github.com/ocaml-multicore/ocaml-multicore/issues/816 - [403 Forbidden])
   Filter-tree to normalise email address from commiters
   
   The inconsistent names and email addresses among committers in
@@ -177,80 +177,80 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Upstream
 
-* [ocaml-multicore/ocaml-multicore#669](https://github.com/ocaml-multicore/ocaml-multicore/pull/669)
+* [ocaml-multicore/ocaml-multicore#669](https://github.com/ocaml-multicore/ocaml-multicore/pull/669 - [403 Forbidden])
   Set thread names for domains
   
   The patch that implements thread naming for Multicore OCaml, and
   also provides an interface to name Domains and Threads differently
   is now merged.
 
-* [ocaml-multicore/ocaml-multicore#701](https://github.com/ocaml-multicore/ocaml-multicore/pull/701)
+* [ocaml-multicore/ocaml-multicore#701](https://github.com/ocaml-multicore/ocaml-multicore/pull/701 - [403 Forbidden])
   Cherry pick: Merge pull request #701 from `ocaml-multicore/really_flush`
   
   The PR updates `stlib/format.ml` to flush the output when
   pre-defined formatters are used in parallel.
 
-* [ocaml-multicore/ocaml-multicore#735](https://github.com/ocaml-multicore/ocaml-multicore/pull/735)
+* [ocaml-multicore/ocaml-multicore#735](https://github.com/ocaml-multicore/ocaml-multicore/pull/735 - [403 Forbidden])
   Add `caml_young_alloc_start` and `caml_young_alloc_end` in `minor_gc.c`
   
   `caml_young_alloc_start` and `caml_young_alloc_end` are not present
   in Multicore OCaml, and they have now been included as a
   compatibility macro.
 
-* [ocaml-multicore/ocaml-multicore#737](https://github.com/ocaml-multicore/ocaml-multicore/issues/737)
+* [ocaml-multicore/ocaml-multicore#737](https://github.com/ocaml-multicore/ocaml-multicore/issues/737 - [403 Forbidden])
   Port the new ephemeron API to 5.00
   
   An API for immutable ephemerons has been
-  [merged](https://github.com/ocaml/ocaml/pull/10737) in trunk, and
+  [merged](https://github.com/ocaml/ocaml/pull/10737 - [403 Forbidden]) in trunk, and
   the respective changes have been ported to 5.00.
 
-* [ocaml-multicore/ocaml-multicore#740](https://github.com/ocaml-multicore/ocaml-multicore/pull/740)
+* [ocaml-multicore/ocaml-multicore#740](https://github.com/ocaml-multicore/ocaml-multicore/pull/740 - [403 Forbidden])
   Systhread lifecycle
   
   The fixes in `caml_thread_domain_stop_hook`, `Thread.exit` and
   `caml_c_thread_unregister` have been merged. The PR also addresses
   the systhreads lifecycle in Multicore OCaml.
 
-* [ocaml-multicore/ocaml-multicore#745](https://github.com/ocaml-multicore/ocaml-multicore/pull/745)
+* [ocaml-multicore/ocaml-multicore#745](https://github.com/ocaml-multicore/ocaml-multicore/pull/745 - [403 Forbidden])
   Systhreads WG3 comments
   
   The PR updates the commit names to be self-descriptive, uses
   non-atomic variables, and raises OOM when there is a failure to
   allocate thread descriptors.
 
-* [ocaml-multicore/ocaml-multicore#748](https://github.com/ocaml-multicore/ocaml-multicore/pull/748)
+* [ocaml-multicore/ocaml-multicore#748](https://github.com/ocaml-multicore/ocaml-multicore/pull/748 - [403 Forbidden])
   WG3 move `gen_sizeclasses`
   
   The `runtime/gen_sizeclasses.ml` have been moved to
   `tools/gen_sizeclasses.ml`, and the check-typo issues have been
   fixed and merged.
 
-* [ocaml-multicore/ocaml-multicore#762](https://github.com/ocaml-multicore/ocaml-multicore/pull/762)
+* [ocaml-multicore/ocaml-multicore#762](https://github.com/ocaml-multicore/ocaml-multicore/pull/762 - [403 Forbidden])
   Remove naked pointer checker
   
   The PR removes the naked pointer checker as it is not supported in
   Multicore OCaml.
 
-* [ocaml-multicore/ocaml-multicore#763](https://github.com/ocaml-multicore/ocaml-multicore/pull/763)
+* [ocaml-multicore/ocaml-multicore#763](https://github.com/ocaml-multicore/ocaml-multicore/pull/763 - [403 Forbidden])
   Move `Assert` -> `CAMLassert`
   
   The `Assert` has been replaced with `CAMLassert`, and check-typo
   changes to fix license files and line lengths have been merged.
 
-* [ocaml-multicore/ocaml-multicore#764](https://github.com/ocaml-multicore/ocaml-multicore/pull/764)
+* [ocaml-multicore/ocaml-multicore#764](https://github.com/ocaml-multicore/ocaml-multicore/pull/764 - [403 Forbidden])
   Address `shared_heap.c` review (WG1)
   
   The `runtime/shared_heap.c` code has been updated to initialize
   variables with NULL instead of 0.
 
-* [ocaml-multicore/ocaml-multicore#766](https://github.com/ocaml-multicore/ocaml-multicore/pull/766)
+* [ocaml-multicore/ocaml-multicore#766](https://github.com/ocaml-multicore/ocaml-multicore/pull/766 - [403 Forbidden])
   Signals changes from sync review and WG3
   
   The signals are blocked before spawning a domain, and unblocked
   afterwards when it is safe to do so. `total_signals_pending` has
   been removed, and we now coalesce signals by signal number.
 
-* [ocaml-multicore/ocaml-multicore#767](https://github.com/ocaml-multicore/ocaml-multicore/pull/767)
+* [ocaml-multicore/ocaml-multicore#767](https://github.com/ocaml-multicore/ocaml-multicore/pull/767 - [403 Forbidden])
   `relaxed` -> `acquire` in `minor_gc` header read
   
   The `memory_order_relaxed` is now replaced with
@@ -340,7 +340,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   The `array.c` sources have been updated to use non-initialising
   allocation to match trunk.
 
-* [ocaml/ocaml#10831](https://github.com/ocaml/ocaml/pull/10831)
+* [ocaml/ocaml#10831](https://github.com/ocaml/ocaml/pull/10831 - [403 Forbidden])
   Multicore OCaml
   
   This is the PR to merge Multicore OCaml to `ocaml/ocaml` with

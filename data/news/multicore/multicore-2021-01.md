@@ -21,7 +21,7 @@ The end of 2020 saw  enhancements and updates to the ecosystem libraries, with m
 
 We're really grateful to the OCaml core developers for giving this effort so much of their time and focus in 2020!  We're working on a broader plan for 2021's exciting multicore roadmap which will be included in the next monthly after a core OCaml developer's meeting ratifies it soon.  The broad strategy remains consistent: putting pieces of functionality steadily into each upcoming OCaml release so that each can be reviewed and tested in isolation, ahead of the OCaml 5.0 release which will include domains parallelism.
 
-With [OCaml 4.12 out in beta](https://discuss.ocaml.org/t/ocaml-4-12-0-second-beta-release/7171), our January has mainly been spent tackling some of the big pieces needed for OCaml 4.13.  In particular, the [safe points PR](https://github.com/ocaml/ocaml/pull/10039) has seen a big update (and corresponding performance improvements), and we have been working on the design and implementation of Domain-Local Allocation Buffers (DLAB).  We've also started the process of figuring out how to merge the awesome sequential best-fit allocator with our multicore major GC, to get the best of both worlds in OCaml 5.0.  The multicore IO stack has also restarted development, with focus on Linux's new `io_uring` kernel interface before retrofitting the old stalwart `epoll` and `kqueue` interfaces.
+With [OCaml 4.12 out in beta](https://discuss.ocaml.org/t/ocaml-4-12-0-second-beta-release/7171), our January has mainly been spent tackling some of the big pieces needed for OCaml 4.13.  In particular, the [safe points PR](https://github.com/ocaml/ocaml/pull/10039 - [403 Forbidden]) has seen a big update (and corresponding performance improvements), and we have been working on the design and implementation of Domain-Local Allocation Buffers (DLAB).  We've also started the process of figuring out how to merge the awesome sequential best-fit allocator with our multicore major GC, to get the best of both worlds in OCaml 5.0.  The multicore IO stack has also restarted development, with focus on Linux's new `io_uring` kernel interface before retrofitting the old stalwart `epoll` and `kqueue` interfaces.
 
 Tooling-wise, the multicore Merlin support began in December is now merged, thanks to @mattpallissard and @eduardorfs. We continue to work on the enhancements for Sandmark 2.0 benchmarking suite for an upcoming alpha release -- @shakthimaan gave an online seminar about these improvements to the multicore team which has been recorded and will be available in the next monthly for anyone interested in contributing to our benchmarking efforts. 
 
@@ -35,7 +35,7 @@ As with previous reports, the Multicore OCaml updates are listed first for the m
 
 #### Ecosystem
 
-* [ocaml-multicore/lockfree#6](https://github.com/ocaml-multicore/lockfree/issues/6)
+* [ocaml-multicore/lockfree#6](https://github.com/ocaml-multicore/lockfree/issues/6 - [403 Forbidden])
   Current status and potential improvements
   
   An RFC that lists the current status of the `lockfree` library, and
@@ -397,7 +397,7 @@ As with previous reports, the Multicore OCaml updates are listed first for the m
 
 ### Ongoing
 
-* [ocaml/ocaml#10039](https://github.com/ocaml/ocaml/pull/10039)
+* [ocaml/ocaml#10039](https://github.com/ocaml/ocaml/pull/10039 - [403 Forbidden])
   Safepoints
   
   An update to the draft Safepoints implementation that uses the

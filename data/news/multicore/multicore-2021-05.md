@@ -7,7 +7,7 @@ tags: [multicore]
 
 Welcome to the May 2021 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore) monthly report! This month's update along with the [previous updates](https://discuss.ocaml.org/tag/multicore-monthly) have been compiled by @avsm, @ctk21, @kayceesrk and @shakthimaan.
 
-Firstly, all of our upstream activity on the OCaml compiler is now reported as part of the shiny new [compiler development newsletter #2](https://discuss.ocaml.org/t/ocaml-compiler-development-newsletter-issue-2-may-2021/7965) that @gasche has started. This represents a small but important shift -- domains-only multicore is firmly locked in on the upstream roadmap for OCaml 5.0 and the whole OCaml compiler team has been helping and contributing to it, with the [GC safe points](https://github.com/ocaml/ocaml/pull/10039) feature being one of the last major multicore-prerequisites (and due to be in OCaml 4.13 soon).
+Firstly, all of our upstream activity on the OCaml compiler is now reported as part of the shiny new [compiler development newsletter #2](https://discuss.ocaml.org/t/ocaml-compiler-development-newsletter-issue-2-may-2021/7965) that @gasche has started. This represents a small but important shift -- domains-only multicore is firmly locked in on the upstream roadmap for OCaml 5.0 and the whole OCaml compiler team has been helping and contributing to it, with the [GC safe points](https://github.com/ocaml/ocaml/pull/10039 - [403 Forbidden]) feature being one of the last major multicore-prerequisites (and due to be in OCaml 4.13 soon).
 
 This multicore newsletter will now focus on getting our ecosystem ready for domains-only multicore in OCaml 5.0, and on how the (not-yet-official) effect system and multicore IO stack is progressing.  It's a long one this month, so settle in with your favourite beverage and let's begin :-)
 
@@ -471,7 +471,7 @@ Multicore OCaml.
   The README has been updated with more documentation on the use of
   OCAMLRUNPARAM configuration when running the benchmarks.
 
-* [ocaml-bench/sandmark#222](https://github.com/ocaml-bench/sandmark/pull/222)
+* [ocaml-bench/sandmark#222](https://github.com/ocaml-bench/sandmark/pull/222 - [403 Forbidden])
   Deprecate 4.06.1 and 4.10.0 and upgrade to 4.12.0
 
   The 4.06.1, 4.10.0 ocaml-versions have been removed and the CI
@@ -479,7 +479,7 @@ Multicore OCaml.
 
 #### current-bench
 
-* [ocurrent/current-bench#103](https://github.com/ocurrent/current-bench/issues/103)
+* [ocurrent/current-bench#103](https://github.com/ocurrent/current-bench/issues/103 - [403 Forbidden])
   Ability to set scale on UI to start at 0
 
   The graph origins now start from `[0, y_max+delta]` for the y-axis
@@ -487,7 +487,7 @@ Multicore OCaml.
 
   ![current-bench frontend fix 0 baseline](images/Current-bench-PR-74.png)
 
-* [ocurrent/current-bench#121](https://github.com/ocurrent/current-bench/pull/121)
+* [ocurrent/current-bench#121](https://github.com/ocurrent/current-bench/pull/121 - [403 Forbidden])
   Use string representation for docker cpu setting.
 
   The `OCAML_BENCH_DOCKER_CPU` setting now switches from Integer to
@@ -497,7 +497,7 @@ Multicore OCaml.
 
 ### Ongoing
 
-* [ocaml/ocaml#10039](https://github.com/ocaml/ocaml/pull/10039)
+* [ocaml/ocaml#10039](https://github.com/ocaml/ocaml/pull/10039 - [403 Forbidden])
   Safepoints
 
   The Sandmark benchmark runs to obtain the performance numbers for
@@ -509,7 +509,7 @@ Multicore OCaml.
 * [Multicore OCaml Runtime Systems Engineer](https://discuss.ocaml.org/t/runtime-systems-engineer-ocaml-labs-uk-tarides-fr-segfault-systems-in-remote/7959)
   OCaml Labs (UK), Tarides (France) and Segfault Systems (India)
 
-* [Benchmark Tooling Engineer](https://tarides.com/jobs/benchmark-tooling-engineer)
+* [Benchmark Tooling Engineer](https://tarides.com/jobs/benchmark-tooling-engineer - [404 Not Found])
   Tarides
 
 Our thanks to all the OCaml users, developers and contributors in the

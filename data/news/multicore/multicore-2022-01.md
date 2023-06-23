@@ -187,7 +187,7 @@ As always, the Multicore OCaml updates are listed first, which are then followed
   condition in `caml_mem_map`, and debugging printf statements have
   been removed.
 
-* [ocaml/ocaml#10925](https://github.com/ocaml/ocaml/issues/10925)
+* [ocaml/ocaml#10925](https://github.com/ocaml/ocaml/issues/10925 - [403 Forbidden])
   Rename symbol for `Caml_state` to `caml_state`
   
   `Caml_state` is a macro in Mac OS, and hence the same has been
@@ -592,12 +592,12 @@ As always, the Multicore OCaml updates are listed first, which are then followed
   moved, then using `bytes` can be an option. Performance measurements
   to compare `cstruct` and `bytes` need to be performed.
 
-* [ocaml-multicore/eio#146](https://github.com/ocaml-multicore/eio/issues/146)
+* [ocaml-multicore/eio#146](https://github.com/ocaml-multicore/eio/issues/146 - [403 Forbidden])
   `lib_eio`: Add `take_all` function
   
   The `take_all` function has been added to `lib_eio/stream.ml`.
 
-* [ocaml-multicore/eio#155](https://github.com/ocaml-multicore/eio/issues/155)
+* [ocaml-multicore/eio#155](https://github.com/ocaml-multicore/eio/issues/155 - [403 Forbidden])
   Add `Eio_unix.FD`
   
   An `FD` module has been added to `lib_eio/unix/eio_unix.ml` to be
@@ -756,20 +756,20 @@ As always, the Multicore OCaml updates are listed first, which are then followed
   mode. This is faster because Linux can start handling requests
   without waiting for us to submit them.
 
-* [ocaml-multicore/eio#158](https://github.com/ocaml-multicore/eio/pull/158)
+* [ocaml-multicore/eio#158](https://github.com/ocaml-multicore/eio/pull/158 - [403 Forbidden])
   Split `eio.ml` out into separate modules
   
   A code refactor to split the `lib_eio/eio.ml` into separate modules.
 
 ##### Fixes
 
-* [ocaml-multicore/eio#134](https://github.com/ocaml-multicore/eio/pull/134)
+* [ocaml-multicore/eio#134](https://github.com/ocaml-multicore/eio/pull/134 - [403 Forbidden])
   Simplify and improve error reporting
   
   An error raised and lost when cancelling an operation is now
   fixed. The cancellation contexts are now handled by the switches.
 
-* [ocaml-multicore/eio#160](https://github.com/ocaml-multicore/eio/pull/160)
+* [ocaml-multicore/eio#160](https://github.com/ocaml-multicore/eio/pull/160 - [403 Forbidden])
   Fix `Buf_read.take_all`
   
   A fix in `lib_eio/buf_read.ml` to read everything in the stream and
