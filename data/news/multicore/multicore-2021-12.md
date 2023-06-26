@@ -7,9 +7,9 @@ tags: [multicore]
 
 Welcome to the December 2021 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore) monthly report! The [previous updates](https://discuss.ocaml.org/tag/multicore-monthly) along with this update have been compiled by myself, @ctk21, @kayceesrk and @shakthimaan.
 
-Well, it's finally here! @kayceesrk opened the [Multicore OCaml PR#10831](https://github.com/ocaml/ocaml/pull/10831) to the main OCaml development repository that represents the "minimum viable" implementation of multicore OCaml that we decided on in [November's core team review](https://discuss.ocaml.org/t/multicore-ocaml-november-2021-with-results-of-code-review/8934#core-team-code-review-1).  The branch pushes the limits of GitHub's rendering capability, with around 4000 commits.
+Well, it's finally here! @kayceesrk opened the [Multicore OCaml PR#10831](https://github.com/ocaml/ocaml/pull/10831 - [429 Too Many Requests]) to the main OCaml development repository that represents the "minimum viable" implementation of multicore OCaml that we decided on in [November's core team review](https://discuss.ocaml.org/t/multicore-ocaml-november-2021-with-results-of-code-review/8934#core-team-code-review-1).  The branch pushes the limits of GitHub's rendering capability, with around 4000 commits.
 
-Once the PR was opened just before Christmas, the remaining effort has been for a number of developers to pore over [the diff](http://github.com/ocaml/ocaml/pull/10831.diff) and look for any unexpected changes that crept in during multicore development. A large number of code changes, improvements and fixes have been merged into the ocaml-multicore trees since the PR was opened to facilitate this upstreaming process. We're expecting to have the PR merged during January, and then will continue onto the "post-MVP" tasks described last month, but working directly from ocaml/ocaml from now on.  We therefore remain on track to release OCaml 5.00 in 2022.
+Once the PR was opened just before Christmas, the remaining effort has been for a number of developers to pore over [the diff](http://github.com/ocaml/ocaml/pull/10831.diff - [429 Too Many Requests]) and look for any unexpected changes that crept in during multicore development. A large number of code changes, improvements and fixes have been merged into the ocaml-multicore trees since the PR was opened to facilitate this upstreaming process. We're expecting to have the PR merged during January, and then will continue onto the "post-MVP" tasks described last month, but working directly from ocaml/ocaml from now on.  We therefore remain on track to release OCaml 5.00 in 2022.
 
 In the multicore ecosystem, progress also continued:
 - `Eio` continues to improve as the recommended effects-based direct-style IO library to
@@ -31,7 +31,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Upstream
 
-* [ocaml-multicore/ocaml-multicore#742](https://github.com/ocaml-multicore/ocaml-multicore/issues/742)
+* [ocaml-multicore/ocaml-multicore#742](https://github.com/ocaml-multicore/ocaml-multicore/issues/742 - [429 Too Many Requests])
   Minor tasks from asynchronous review
   
   A list of minor tasks from the asynchronous review is provided for
@@ -66,46 +66,46 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   Multicore OCaml when running tools like AFL and Valgrind. The
   suggestion is to make these parameters as `OCAMLRUNPARAM` options.
 
-* [ocaml-multicore/ocaml-multicore#799](https://github.com/ocaml-multicore/ocaml-multicore/issues/799)
+* [ocaml-multicore/ocaml-multicore#799](https://github.com/ocaml-multicore/ocaml-multicore/issues/799 - [429 Too Many Requests])
   Bring `runner.sh` in the CI in line with trunk
   
   The `runner.sh` script in `ocaml-multicore/ocaml-multicore` has
   changed and diverged from trunk. It needs to be updated to be in
   sync with `ocaml/ocaml`.
 
-* [ocaml-multicore/ocaml-multicore#806](https://github.com/ocaml-multicore/ocaml-multicore/issues/806)
+* [ocaml-multicore/ocaml-multicore#806](https://github.com/ocaml-multicore/ocaml-multicore/issues/806 - [429 Too Many Requests])
   Unify GC interrupt and signal triggering mechanisms
   
   The interaction between signal and GC interrupts need to be
   reworked, as they exist as two independent mechanisms.
 
-* [ocaml-multicore/ocaml-multicore#811](https://github.com/ocaml-multicore/ocaml-multicore/issues/811)
+* [ocaml-multicore/ocaml-multicore#811](https://github.com/ocaml-multicore/ocaml-multicore/issues/811 - [429 Too Many Requests])
   Double check rebase through `ocaml/ocaml`
   
   An ongoing review of the porting of Multicore OCaml signal handling
   changes for x86, ARM, PPC and s390x architectures.
 
 * A new
-  [ocaml-multicore/ocaml](https://github.com/ocaml-multicore/ocaml)
+  [ocaml-multicore/ocaml](https://github.com/ocaml-multicore/ocaml - [429 Too Many Requests])
   project repository has been created from `ocaml/ocaml` to keep it in
   sync with trunk.
 
 #### Improvements
 
-* [ocaml-multicore/ocaml-multicore#765](https://github.com/ocaml-multicore/ocaml-multicore/issues/765)
+* [ocaml-multicore/ocaml-multicore#765](https://github.com/ocaml-multicore/ocaml-multicore/issues/765 - [429 Too Many Requests])
   `tools/gdb_ocamlrun.py` needs an update
   
   The `tools/gdb_ocamlrun.py` has hardcoded values, and both
   `Forcing_tag` and `Cont_tag` need to be updated.
 
-* [ocaml-multicore/ocaml-multicore#772](https://github.com/ocaml-multicore/ocaml-multicore/issues/772)
+* [ocaml-multicore/ocaml-multicore#772](https://github.com/ocaml-multicore/ocaml-multicore/issues/772 - [429 Too Many Requests])
   Not all registers need to be saved for `caml_call_realloc_stack`
   
   The C callee saved registers are saved by `caml_try_realloc_stack`
   and they do not invoke the GC. There is no need to save all the
   registers in `caml_call_realloc_stack`.
 
-* [ocaml-multicore/ocaml-multicore#775](https://github.com/ocaml-multicore/ocaml-multicore/issues/775)
+* [ocaml-multicore/ocaml-multicore#775](https://github.com/ocaml-multicore/ocaml-multicore/issues/775 - [429 Too Many Requests])
   Use explicit next pointer in `gc_regs_bucket`
   
   In `amd64.S`, the last word of a `gc_regs_bucket` contains either a
@@ -130,7 +130,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   A number of `OCAMLRUNPARAM` options, such as `init_heap_wsz` and
   `init_heap_chunk_sz`, can be removed as they are not used.
 
-* [ocaml-multicore/ocaml-multicore#796](https://github.com/ocaml-multicore/ocaml-multicore/issues/796)
+* [ocaml-multicore/ocaml-multicore#796](https://github.com/ocaml-multicore/ocaml-multicore/issues/796 - [429 Too Many Requests])
   `Caml_state` for domains should not use mmap
   
   The `Caml_state` is no longer located adjacent to the minor heap
@@ -139,7 +139,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   of `malloc` at the domain creation time is sufficient to simplify
   and manage `Caml_state`.
 
-* [ocaml-multicore/ocaml-multicore#805](https://github.com/ocaml-multicore/ocaml-multicore/issues/805)
+* [ocaml-multicore/ocaml-multicore#805](https://github.com/ocaml-multicore/ocaml-multicore/issues/805 - [429 Too Many Requests])
   Improve `stack_size_bucket`/`alloc_stack_noexc`
   
   The current stack cache scheme will not use caching when
@@ -149,25 +149,25 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Sundries
 
-* [ocaml-multicore/ocaml-multicore#797](https://github.com/ocaml-multicore/ocaml-multicore/issues/797)
+* [ocaml-multicore/ocaml-multicore#797](https://github.com/ocaml-multicore/ocaml-multicore/issues/797 - [429 Too Many Requests])
   Atomic access on `bigarray`
   
   A feature request to implement atomic access for `bigarray`.
 
-* [ocaml-multicore/ocaml-multicore#801](https://github.com/ocaml-multicore/ocaml-multicore/issues/801)
+* [ocaml-multicore/ocaml-multicore#801](https://github.com/ocaml-multicore/ocaml-multicore/issues/801 - [429 Too Many Requests])
   Call to `fork` in `Sys.command`
   
   A query on whether to guard a `fork` call when used with
   `Sys.command`.
 
-* [ocaml-multicore/ocaml-multicore#810](https://github.com/ocaml-multicore/ocaml-multicore/issues/810)
+* [ocaml-multicore/ocaml-multicore#810](https://github.com/ocaml-multicore/ocaml-multicore/issues/810 - [429 Too Many Requests])
   Getting segfault/undefined behavior using Multicore with custom blocks
 
   A segmentation fault and undefined behaviour reported by
   @dannywillems (Danny Willems) for a Pippenger benchmark
   implementation in OCaml.
 
-* [ocaml-multicore/ocaml-multicore#816](https://github.com/ocaml-multicore/ocaml-multicore/issues/816)
+* [ocaml-multicore/ocaml-multicore#816](https://github.com/ocaml-multicore/ocaml-multicore/issues/816 - [429 Too Many Requests])
   Filter-tree to normalise email address from commiters
   
   The inconsistent names and email addresses among committers in
@@ -177,86 +177,86 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Upstream
 
-* [ocaml-multicore/ocaml-multicore#669](https://github.com/ocaml-multicore/ocaml-multicore/pull/669)
+* [ocaml-multicore/ocaml-multicore#669](https://github.com/ocaml-multicore/ocaml-multicore/pull/669 - [429 Too Many Requests])
   Set thread names for domains
   
   The patch that implements thread naming for Multicore OCaml, and
   also provides an interface to name Domains and Threads differently
   is now merged.
 
-* [ocaml-multicore/ocaml-multicore#701](https://github.com/ocaml-multicore/ocaml-multicore/pull/701)
+* [ocaml-multicore/ocaml-multicore#701](https://github.com/ocaml-multicore/ocaml-multicore/pull/701 - [429 Too Many Requests])
   Cherry pick: Merge pull request #701 from `ocaml-multicore/really_flush`
   
   The PR updates `stlib/format.ml` to flush the output when
   pre-defined formatters are used in parallel.
 
-* [ocaml-multicore/ocaml-multicore#735](https://github.com/ocaml-multicore/ocaml-multicore/pull/735)
+* [ocaml-multicore/ocaml-multicore#735](https://github.com/ocaml-multicore/ocaml-multicore/pull/735 - [429 Too Many Requests])
   Add `caml_young_alloc_start` and `caml_young_alloc_end` in `minor_gc.c`
   
   `caml_young_alloc_start` and `caml_young_alloc_end` are not present
   in Multicore OCaml, and they have now been included as a
   compatibility macro.
 
-* [ocaml-multicore/ocaml-multicore#737](https://github.com/ocaml-multicore/ocaml-multicore/issues/737)
+* [ocaml-multicore/ocaml-multicore#737](https://github.com/ocaml-multicore/ocaml-multicore/issues/737 - [429 Too Many Requests])
   Port the new ephemeron API to 5.00
   
   An API for immutable ephemerons has been
-  [merged](https://github.com/ocaml/ocaml/pull/10737) in trunk, and
+  [merged](https://github.com/ocaml/ocaml/pull/10737 - [429 Too Many Requests]) in trunk, and
   the respective changes have been ported to 5.00.
 
-* [ocaml-multicore/ocaml-multicore#740](https://github.com/ocaml-multicore/ocaml-multicore/pull/740)
+* [ocaml-multicore/ocaml-multicore#740](https://github.com/ocaml-multicore/ocaml-multicore/pull/740 - [429 Too Many Requests])
   Systhread lifecycle
   
   The fixes in `caml_thread_domain_stop_hook`, `Thread.exit` and
   `caml_c_thread_unregister` have been merged. The PR also addresses
   the systhreads lifecycle in Multicore OCaml.
 
-* [ocaml-multicore/ocaml-multicore#745](https://github.com/ocaml-multicore/ocaml-multicore/pull/745)
+* [ocaml-multicore/ocaml-multicore#745](https://github.com/ocaml-multicore/ocaml-multicore/pull/745 - [429 Too Many Requests])
   Systhreads WG3 comments
   
   The PR updates the commit names to be self-descriptive, uses
   non-atomic variables, and raises OOM when there is a failure to
   allocate thread descriptors.
 
-* [ocaml-multicore/ocaml-multicore#748](https://github.com/ocaml-multicore/ocaml-multicore/pull/748)
+* [ocaml-multicore/ocaml-multicore#748](https://github.com/ocaml-multicore/ocaml-multicore/pull/748 - [429 Too Many Requests])
   WG3 move `gen_sizeclasses`
   
   The `runtime/gen_sizeclasses.ml` have been moved to
   `tools/gen_sizeclasses.ml`, and the check-typo issues have been
   fixed and merged.
 
-* [ocaml-multicore/ocaml-multicore#762](https://github.com/ocaml-multicore/ocaml-multicore/pull/762)
+* [ocaml-multicore/ocaml-multicore#762](https://github.com/ocaml-multicore/ocaml-multicore/pull/762 - [429 Too Many Requests])
   Remove naked pointer checker
   
   The PR removes the naked pointer checker as it is not supported in
   Multicore OCaml.
 
-* [ocaml-multicore/ocaml-multicore#763](https://github.com/ocaml-multicore/ocaml-multicore/pull/763)
+* [ocaml-multicore/ocaml-multicore#763](https://github.com/ocaml-multicore/ocaml-multicore/pull/763 - [429 Too Many Requests])
   Move `Assert` -> `CAMLassert`
   
   The `Assert` has been replaced with `CAMLassert`, and check-typo
   changes to fix license files and line lengths have been merged.
 
-* [ocaml-multicore/ocaml-multicore#764](https://github.com/ocaml-multicore/ocaml-multicore/pull/764)
+* [ocaml-multicore/ocaml-multicore#764](https://github.com/ocaml-multicore/ocaml-multicore/pull/764 - [429 Too Many Requests])
   Address `shared_heap.c` review (WG1)
   
   The `runtime/shared_heap.c` code has been updated to initialize
   variables with NULL instead of 0.
 
-* [ocaml-multicore/ocaml-multicore#766](https://github.com/ocaml-multicore/ocaml-multicore/pull/766)
+* [ocaml-multicore/ocaml-multicore#766](https://github.com/ocaml-multicore/ocaml-multicore/pull/766 - [429 Too Many Requests])
   Signals changes from sync review and WG3
   
   The signals are blocked before spawning a domain, and unblocked
   afterwards when it is safe to do so. `total_signals_pending` has
   been removed, and we now coalesce signals by signal number.
 
-* [ocaml-multicore/ocaml-multicore#767](https://github.com/ocaml-multicore/ocaml-multicore/pull/767)
+* [ocaml-multicore/ocaml-multicore#767](https://github.com/ocaml-multicore/ocaml-multicore/pull/767 - [429 Too Many Requests])
   `relaxed` -> `acquire` in `minor_gc` header read
   
   The `memory_order_relaxed` is now replaced with
   `memory_order_acquire` in `runtime/minor_gc.c` for 5.00.
 
-* [ocaml-multicore/ocaml-multicore#768](https://github.com/ocaml-multicore/ocaml-multicore/pull/768)
+* [ocaml-multicore/ocaml-multicore#768](https://github.com/ocaml-multicore/ocaml-multicore/pull/768 - [429 Too Many Requests])
   Make `intern` not invoke the GC
   
   The PR brings the implementation of intern closer to trunk OCaml,
@@ -275,72 +275,72 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   25   1.90E+00      2.10E+00   10.53%
   ```
 
-* [ocaml-multicore/ocaml-multicore#770](https://github.com/ocaml-multicore/ocaml-multicore/pull/770)
+* [ocaml-multicore/ocaml-multicore#770](https://github.com/ocaml-multicore/ocaml-multicore/pull/770 - [429 Too Many Requests])
   Backport of PR770
   
   The `otherlibs/systhreads/st_stubs.c` file has been formatted to
   clear hygiene checks, and changes to `backtrace_last_exn` have been
   made to be closer to trunk.
 
-* [ocaml-multicore/ocaml-multicore#771](https://github.com/ocaml-multicore/ocaml-multicore/pull/771)
+* [ocaml-multicore/ocaml-multicore#771](https://github.com/ocaml-multicore/ocaml-multicore/pull/771 - [429 Too Many Requests])
   Bring root management of `backtrace_last_exn` in systhreads closer to trunk
   
   The `backtrace_last_exn` root management in systhreads has been
   updated to be closer to `ocaml/ocaml`.
 
-* [ocaml-multicore/ocaml-multicore#773](https://github.com/ocaml-multicore/ocaml-multicore/pull/773)
+* [ocaml-multicore/ocaml-multicore#773](https://github.com/ocaml-multicore/ocaml-multicore/pull/773 - [429 Too Many Requests])
   Improvements based on asynchronous reviews
   
   The allocation for the extern state is now done before its use, and
   improvements to `amd64.S` have been implemented.
 
-* [ocaml-multicore/ocaml-multicore#781](https://github.com/ocaml-multicore/ocaml-multicore/pull/781)
+* [ocaml-multicore/ocaml-multicore#781](https://github.com/ocaml-multicore/ocaml-multicore/pull/781 - [429 Too Many Requests])
   PR771 for 4.12 domains
 
   This is a backport of
-  [PR#771](https://github.com/ocaml-multicore/ocaml-multicore/pull/771)
+  [PR#771](https://github.com/ocaml-multicore/ocaml-multicore/pull/771 - [429 Too Many Requests])
   for `4.12+domains` branch.
 
-* [ocaml-multicore/ocaml-multicore#789](https://github.com/ocaml-multicore/ocaml-multicore/pull/789)
+* [ocaml-multicore/ocaml-multicore#789](https://github.com/ocaml-multicore/ocaml-multicore/pull/789 - [429 Too Many Requests])
   Review improvements
   
   The trunk's text section naming style has been updated to
   `runtime/amd64.S` with improvements to `runtime/fiber.c`. Also, the
   unnecessary reset in `runtime/interp.c` has been removed.
 
-* [ocaml-multicore/ocaml-multicore#790](https://github.com/ocaml-multicore/ocaml-multicore/pull/790)
+* [ocaml-multicore/ocaml-multicore#790](https://github.com/ocaml-multicore/ocaml-multicore/pull/790 - [429 Too Many Requests])
   Add `ocaml_check_pending_actions`, `caml_process_pending_actions`
   
   The `caml_check_pending_actions` and `caml_process_pending_actions`
   that are part of the C API have been added to OCaml Multicore.
 
-* [ocaml-multicore/ocaml-multicore#813](https://github.com/ocaml-multicore/ocaml-multicore/pull/813)
+* [ocaml-multicore/ocaml-multicore#813](https://github.com/ocaml-multicore/ocaml-multicore/pull/813 - [429 Too Many Requests])
   Revert arm64 changes and ocaml-variant.opam file
   
   The `asmcomp/arm64/*` files and `ocaml-variants.opam` file have been
   updated to be closer to trunk.
 
-* [ocaml-multicore/ocaml-multicore#815](https://github.com/ocaml-multicore/ocaml-multicore/pull/815)
+* [ocaml-multicore/ocaml-multicore#815](https://github.com/ocaml-multicore/ocaml-multicore/pull/815 - [429 Too Many Requests])
   Various tweaks
   
   The PR reduces the diff noise in `major_gc.h`, `sys.h`, `ui.h`,
   `weak.h`, `gc_ctrl.c`, `gc.mli`, and `runtime/Makefile`. It also
   removes unnecessary includes from `ocamldoc` and `ocamltest` builds.
 
-* [ocaml-multicore/ocaml-multicore#818](https://github.com/ocaml-multicore/ocaml-multicore/pull/818)
+* [ocaml-multicore/ocaml-multicore#818](https://github.com/ocaml-multicore/ocaml-multicore/pull/818 - [429 Too Many Requests])
   Minor fixes from review
 
   The PR updates comments in `otherlibs/systhreads/st_stubs.c`, uses
   `memcpy` instead of `memmove` in `runtime/caml/sync.h`, and minor
   fixes in the `asmcomp` sources.
 
-* [ocaml-multicore/ocaml-multicore#819](https://github.com/ocaml-multicore/ocaml-multicore/pull/819)
+* [ocaml-multicore/ocaml-multicore#819](https://github.com/ocaml-multicore/ocaml-multicore/pull/819 - [429 Too Many Requests])
   Do not initialise in `caml_alloc_shr`
   
   The `array.c` sources have been updated to use non-initialising
   allocation to match trunk.
 
-* [ocaml/ocaml#10831](https://github.com/ocaml/ocaml/pull/10831)
+* [ocaml/ocaml#10831](https://github.com/ocaml/ocaml/pull/10831 - [429 Too Many Requests])
   Multicore OCaml
   
   This is the PR to merge Multicore OCaml to `ocaml/ocaml` with
@@ -348,21 +348,21 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   concurrency through effect handlers. It is backward compatible with
   respect to language features, C API and performance of
   single-threaded code. The scalability results on parallel benchmarks
-  from [Sandmark](https://github.com/ocaml-bench/sandmark) on a two
+  from [Sandmark](https://github.com/ocaml-bench/sandmark - [429 Too Many Requests]) on a two
   processor, AMD EPYC 7551 server with 64 cores is shown below:
 
   ![OCaml-PR-10831-Speedup|674x500](https://discuss.ocaml.org/uploads/short-url/qlsUnoibozBfJJxEnFKEE2Xynkp.png)
 
 #### Improvements
 
-* [ocaml-multicore/ocaml-multicore#779](https://github.com/ocaml-multicore/ocaml-multicore/pull/779)
+* [ocaml-multicore/ocaml-multicore#779](https://github.com/ocaml-multicore/ocaml-multicore/pull/779 - [429 Too Many Requests])
   Rename/hide some global variables
   
   The use of extern `global`, `pool_freelist` and `atoms` have been
   replaced with extern `caml_heap_global_state`, static
   `static_pool_freelist`, and static `atoms` respectively.
 
-* [ocaml-multicore/ocaml-multicore#785](https://github.com/ocaml-multicore/ocaml-multicore/pull/785)
+* [ocaml-multicore/ocaml-multicore#785](https://github.com/ocaml-multicore/ocaml-multicore/pull/785 - [429 Too Many Requests])
   Unexport some unprefixed global names
   
   The global variables that are not prefixed with `caml_` are now made
@@ -404,14 +404,14 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   1093: 00000000000165a0    19 FUNC    GLOBAL DEFAULT   12 main
   ```
 
-* [ocaml-multicore/ocaml-multicore#792](https://github.com/ocaml-multicore/ocaml-multicore/pull/792)
+* [ocaml-multicore/ocaml-multicore#792](https://github.com/ocaml-multicore/ocaml-multicore/pull/792 - [429 Too Many Requests])
   Stdlib: simplify `is_main_domain`
   
   The `is_main_domain` implementation is made simpler in
   `stdlib/domain.ml`, and the PR also removes the
   `caml_ml_domain_is_main_domain` primitive.
 
-* [ocaml-multicore/ocaml-multicore#803](https://github.com/ocaml-multicore/ocaml-multicore/pull/803)
+* [ocaml-multicore/ocaml-multicore#803](https://github.com/ocaml-multicore/ocaml-multicore/pull/803 - [429 Too Many Requests])
   Remove difference in stack resize with debug runtime
   
   The difference in the stack resizing between the standard and debug
@@ -419,13 +419,13 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   experienced in the standard runtime with the same stack resize in
   the debug runtime.
 
-* [ocaml-multicore/ocaml-multicore#804](https://github.com/ocaml-multicore/ocaml-multicore/pull/804)
+* [ocaml-multicore/ocaml-multicore#804](https://github.com/ocaml-multicore/ocaml-multicore/pull/804 - [429 Too Many Requests])
   Remove redundant opens
   
   The redundant `open` calls in
   `testsuite/tests/weak-ephe-final/ephetest_par.ml` have been removed.
   
-* [ocaml-multicore/ocaml-multicore#820](https://github.com/ocaml-multicore/ocaml-multicore/pull/820)
+* [ocaml-multicore/ocaml-multicore#820](https://github.com/ocaml-multicore/ocaml-multicore/pull/820 - [429 Too Many Requests])
   Minor improvements
   
   The use of `memmove` in `runtime/sys.c` has been replaced with
@@ -434,7 +434,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Fixes
 
-* [ocaml-multicore/ocaml-multicore#725](https://github.com/ocaml-multicore/ocaml-multicore/pull/725)
+* [ocaml-multicore/ocaml-multicore#725](https://github.com/ocaml-multicore/ocaml-multicore/pull/725 - [429 Too Many Requests])
   Blocked signal infinite loop fix
 
   A monotonic `recorded_signals_counter` was added to fix the possible
@@ -442,7 +442,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   blocked signal. The consensus now is to move from counting signals
   to coalescing them, and hence this requires a code rewrite.
 
-* [ocaml-multicore/ocaml-multicore#749](https://github.com/ocaml-multicore/ocaml-multicore/issues/749)
+* [ocaml-multicore/ocaml-multicore#749](https://github.com/ocaml-multicore/ocaml-multicore/issues/749 - [429 Too Many Requests])
   Potential bug on `Forward_tag` short-circuiting?
   
   Short-circuiting is disabled on values of type `Forward_tag`,
@@ -450,34 +450,34 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   when short-circuiting `Forward_tag` on values of type
   `Obj.forcing_tag` has been fixed.
 
-* [ocaml-multicore/ocaml-multicore#760](https://github.com/ocaml-multicore/ocaml-multicore/pull/760)
+* [ocaml-multicore/ocaml-multicore#760](https://github.com/ocaml-multicore/ocaml-multicore/pull/760 - [429 Too Many Requests])
   Simplify lazy semantics
   
   The `RacyLazy` exception has been removed. Both `domain-local` id
   and `try_force` have also been removed. Any concurrent use of lazy
   value may raise an undefined exception.
 
-* [ocaml-multicore/ocaml-multicore#761](https://github.com/ocaml-multicore/ocaml-multicore/pull/761)
+* [ocaml-multicore/ocaml-multicore#761](https://github.com/ocaml-multicore/ocaml-multicore/pull/761 - [429 Too Many Requests])
   Bug fix in `amd64.S` and general cleanup
   
   The `jl` (jump if signed less) in `runtime/amd64.S` has been changed
   to `jb` (jump if unsigned less) and the code in
   `asmcomp/amd64/emit.mlp` has been cleaned up.
 
-* [ocaml-multicore/ocaml-multicore#769](https://github.com/ocaml-multicore/ocaml-multicore/pull/769)
+* [ocaml-multicore/ocaml-multicore#769](https://github.com/ocaml-multicore/ocaml-multicore/pull/769 - [429 Too Many Requests])
   Move frame descriptors header and fix typos
   
   The frame descriptors headers from `runtime` have been moved to
   `runtime/caml` and ifdefs with `CAML_INTERNALS`. An additional check
   for NULL has been added if code is compiled without `-g`.
 
-* [ocaml-multicore/ocaml-multicore#788](https://github.com/ocaml-multicore/ocaml-multicore/pull/788)
+* [ocaml-multicore/ocaml-multicore#788](https://github.com/ocaml-multicore/ocaml-multicore/pull/788 - [429 Too Many Requests])
   Fix selectgen `effects_of` for `Cdls_Get`
   
   The PR moves the `effects_of` for `Cdls_get` to `EC.coeffect_only
   Coffect.Read_mutable` in `asmcomp/selectgen.ml`.
 
-* [ocaml-multicore/ocaml-multicore#809](https://github.com/ocaml-multicore/ocaml-multicore/pull/809)
+* [ocaml-multicore/ocaml-multicore#809](https://github.com/ocaml-multicore/ocaml-multicore/pull/809 - [429 Too Many Requests])
   Finish off `tools/check-typo` on the repo
   
   The `Callback_link` in `runtime/caml/stack.h` has been removed, and
@@ -485,37 +485,37 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Tests
 
-* [ocaml-multicore/ocaml-multicore#774](https://github.com/ocaml-multicore/ocaml-multicore/pull/774)
+* [ocaml-multicore/ocaml-multicore#774](https://github.com/ocaml-multicore/ocaml-multicore/pull/774 - [429 Too Many Requests])
   Skip unsupported and incompatible tests
   
   The `skip` built-in action of `ocamltest` works for skipping
   unsupported and incompatible tests.
 
-* [ocaml-multicore/ocaml-multicore#784](https://github.com/ocaml-multicore/ocaml-multicore/pull/784)
+* [ocaml-multicore/ocaml-multicore#784](https://github.com/ocaml-multicore/ocaml-multicore/pull/784 - [429 Too Many Requests])
   Revert `testsuite/summarize.awk`
   
   The `testsuite/summarize.awk` has been updated to be closer to its
   `ocaml/ocaml` version.
 
-* [ocaml-multicore/ocaml-multicore#786](https://github.com/ocaml-multicore/ocaml-multicore/pull/786)
+* [ocaml-multicore/ocaml-multicore#786](https://github.com/ocaml-multicore/ocaml-multicore/pull/786 - [429 Too Many Requests])
   Reimplement `caml_alloc_small` like in OCaml 4.x
   
   The OCaml 4.x implementation of `caml_alloc_small` has been
   re-introduced with this PR, since it makes an assertion when `sz` is
   larger than `Max_young_wosize`.
 
-* [ocaml-multicore/ocaml-multicore#798](https://github.com/ocaml-multicore/ocaml-multicore/pull/798)
+* [ocaml-multicore/ocaml-multicore#798](https://github.com/ocaml-multicore/ocaml-multicore/pull/798 - [429 Too Many Requests])
   Revert `asmgen` testsuite and ocamltest to trunk
   
   The `asmgen` and `ocamltest` tests have been updated to build fine
   with `ocaml/ocaml`.
 
-* [ocaml-multicore/ocaml-multicore#808](https://github.com/ocaml-multicore/ocaml-multicore/pull/808)
+* [ocaml-multicore/ocaml-multicore#808](https://github.com/ocaml-multicore/ocaml-multicore/pull/808 - [429 Too Many Requests])
   `signal_alloc` testcase fix
   
   The `signal_alloc` test case has been added back to the test suite.
 
-* [ocaml-multicore/ocaml-multicore#814](https://github.com/ocaml-multicore/ocaml-multicore/pull/814)
+* [ocaml-multicore/ocaml-multicore#814](https://github.com/ocaml-multicore/ocaml-multicore/pull/814 - [429 Too Many Requests])
   Minor improvements
   
   An unused function in `asmcomp/reg.ml` has been removed, with the
@@ -524,25 +524,25 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Documentation
 
-* [ocaml-multicore/ocaml-multicore#752](https://github.com/ocaml-multicore/ocaml-multicore/pull/752)
+* [ocaml-multicore/ocaml-multicore#752](https://github.com/ocaml-multicore/ocaml-multicore/pull/752 - [429 Too Many Requests])
   Document the current Multicore testsuite situation
 
   The Multicore test suite now runs in the same way as `ocaml/ocaml`
   and hence this issue is closed.
 
-* [ocaml-multicore/ocaml-multicore#759](https://github.com/ocaml-multicore/ocaml-multicore/pull/759)
+* [ocaml-multicore/ocaml-multicore#759](https://github.com/ocaml-multicore/ocaml-multicore/pull/759 - [429 Too Many Requests])
   Rename type variables for clarity
   
   The PR to update the type variables for consistency and clarity in
   `stdlib/fiber.ml` has been merged.
 
-* [ocaml-multicore/ocaml-multicore#778](https://github.com/ocaml-multicore/ocaml-multicore/pull/778)
+* [ocaml-multicore/ocaml-multicore#778](https://github.com/ocaml-multicore/ocaml-multicore/pull/778 - [429 Too Many Requests])
   Comment on `caml_domain_spawn` also calling in `install_backup_thread`
   
   A comment that mentions when domain 0 first spawns a domain, and
   when the backup thread is not active, and is subsequently started.
 
-* [ocaml-multicore/ocaml-multicore#787](https://github.com/ocaml-multicore/ocaml-multicore/pull/787)
+* [ocaml-multicore/ocaml-multicore#787](https://github.com/ocaml-multicore/ocaml-multicore/pull/787 - [429 Too Many Requests])
   Address feedback on GC from async review
   
   A comment has been added to `runtime/finalise.c` for
@@ -550,14 +550,14 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   added to the old of the target. The cap computed work limit is set
   to 0.3, as you cannot do more than 1/3 of a GC cycle in one slice.
 
-* [ocaml-multicore/ocaml-multicore#800](https://github.com/ocaml-multicore/ocaml-multicore/pull/800)
+* [ocaml-multicore/ocaml-multicore#800](https://github.com/ocaml-multicore/ocaml-multicore/pull/800 - [429 Too Many Requests])
   Document which GC stats are global and which are per-domain
   
   The comments in `stdlib/gc.mli` and `runtime/caml/domain_state.tbl`
   have been updated to provide information on the GC stats that are
   global, and those that are per-domain.
 
-* [ocaml-multicore/ocaml-multicore#802](https://github.com/ocaml-multicore/ocaml-multicore/pull/802)
+* [ocaml-multicore/ocaml-multicore#802](https://github.com/ocaml-multicore/ocaml-multicore/pull/802 - [429 Too Many Requests])
   More comments for domain
   
   The PR adds comments in `domain.c` and `domain.ml` with a high-level
@@ -567,19 +567,19 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Sundries
 
-* [ocaml-multicore/ocaml-multicore#776](https://github.com/ocaml-multicore/ocaml-multicore/pull/776)
+* [ocaml-multicore/ocaml-multicore#776](https://github.com/ocaml-multicore/ocaml-multicore/pull/776 - [429 Too Many Requests])
   Allow Dynlink only on Domain 0
   
   Dynlink is only allowed on the main domain, and entrypoints to
   public functions need to check the same.
 
-* [ocaml-multicore/ocaml-multicore#807](https://github.com/ocaml-multicore/ocaml-multicore/pull/807)
+* [ocaml-multicore/ocaml-multicore#807](https://github.com/ocaml-multicore/ocaml-multicore/pull/807 - [429 Too Many Requests])
   Make sure variables that are not explicitly initialized during `create_domain` are initialized
   
   The PR adds initialization to variables in `runtime/domain.c` during
   `create_domain` or for any utilized sub-function.
 
-* [ocaml-multicore/ocaml-multicore#817](https://github.com/ocaml-multicore/ocaml-multicore/pull/817)
+* [ocaml-multicore/ocaml-multicore#817](https://github.com/ocaml-multicore/ocaml-multicore/pull/817 - [429 Too Many Requests])
   Synchronise the opam file to use the `ocaml-options` packages
   
   The `ocaml-variants.opam` file has been updated to use the
@@ -590,19 +590,19 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 ### Ongoing
 
-* [ocaml-multicore/multicore-opam#61](https://github.com/ocaml-multicore/multicore-opam/pull/61)
+* [ocaml-multicore/multicore-opam#61](https://github.com/ocaml-multicore/multicore-opam/pull/61 - [429 Too Many Requests])
   Remove `omake`
   
   `caml_modify_field` does not exist in trunk. The PR removes omake as
   it is only required for +effects.
 
-* [ocaml-multicore/multicore-opam#62](https://github.com/ocaml-multicore/multicore-opam/pull/62)
+* [ocaml-multicore/multicore-opam#62](https://github.com/ocaml-multicore/multicore-opam/pull/62 - [429 Too Many Requests])
   Remove `domainslib`
 
   `Domainslib.0.3.0` has been upstreamed to opam-repository and hence
   has been removed from this repository.
 
-* [ocaml-multicore/eio#116](https://github.com/ocaml-multicore/eio/pull/116)
+* [ocaml-multicore/eio#116](https://github.com/ocaml-multicore/eio/pull/116 - [429 Too Many Requests])
   Benchmark various copying systems
   
   An open discussion on benchmarking and optimisation for copying data
@@ -612,7 +612,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
   ![Eio-PR-116-Copy-screenshot|357x499](https://discuss.ocaml.org/uploads/short-url/vWmMqD2TpWcYr9iepTziQU0C8h1.png)
 
-* [ocaml-multicore/eio#120](https://github.com/ocaml-multicore/eio/pull/120)
+* [ocaml-multicore/eio#120](https://github.com/ocaml-multicore/eio/pull/120 - [429 Too Many Requests])
   Add `Fibre.fork_on_accept` and `Net.accept`
   
   The PR where `fork_on_accept` now uses an accept function in a new
@@ -624,29 +624,29 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Eio
 
-* [ocaml-multicore/eio#87](https://github.com/ocaml-multicore/eio/issues/87)
+* [ocaml-multicore/eio#87](https://github.com/ocaml-multicore/eio/issues/87 - [429 Too Many Requests])
   Eio fails to install due to vendor conflicts
   
   The [Marking uring as vendored breaks
-  installation](https://github.com/ocaml-multicore/eio/pull/89) fix
+  installation](https://github.com/ocaml-multicore/eio/pull/89 - [429 Too Many Requests]) fix
   resolves this issue. This was reported by Matt Pallissard
   (@mattpallissard).
 
-* [ocaml-multicore/eio#91](https://github.com/ocaml-multicore/eio/issues/91)
+* [ocaml-multicore/eio#91](https://github.com/ocaml-multicore/eio/issues/91 - [429 Too Many Requests])
   [Discussion] Object Capabilities / API
   
   The discussion on using an open object as the first argument of
   every function, and to use full words and expressions instead of
   `network`, `file_systems` etc. is closed now with updates to
-  [eio#90](https://github.com/ocaml-multicore/eio/pull/90).
+  [eio#90](https://github.com/ocaml-multicore/eio/pull/90 - [429 Too Many Requests]).
 
-* [ocaml-multicore/eio#101](https://github.com/ocaml-multicore/eio/issues/101)
+* [ocaml-multicore/eio#101](https://github.com/ocaml-multicore/eio/issues/101 - [429 Too Many Requests])
   Make luv backend thread-safe
   
   An update to `lib_eio_luv/eio_luv.ml` that makes the luv backend
   thread-safe, and prevents a deadlock in the execution of benchmarks.
 
-* [ocaml-multicore/eio#102](https://github.com/ocaml-multicore/eio/issues/102)
+* [ocaml-multicore/eio#102](https://github.com/ocaml-multicore/eio/issues/102 - [429 Too Many Requests])
   Use a lock-free run queue for luv backend
   
   The PR removes the need for a mutex around the queue, and there is a
@@ -694,7 +694,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
      10000,  114.80,        5.9410
   ```
 
-* [ocaml-multicore/eio#103](https://github.com/ocaml-multicore/eio/issues/103)
+* [ocaml-multicore/eio#103](https://github.com/ocaml-multicore/eio/issues/103 - [429 Too Many Requests])
   Add `Domain_manager.run` to start a domain with an event loop
   
   The `lib_eio/eio.ml` code has added `Domain_manager.run` and
@@ -702,20 +702,20 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   function must only access thread-safe values from the calling
   domain.
 
-* [ocaml-multicore/eio#104](https://github.com/ocaml-multicore/eio/issues/104)
+* [ocaml-multicore/eio#104](https://github.com/ocaml-multicore/eio/issues/104 - [429 Too Many Requests])
   Split out `Ctf_unix` module
   
   The dependency on `Unix` has been removed from the `Eio` module, and
   the `Ctf_unix.with_tracing` function has been added for convenience.
 
-* [ocaml-multicore/eio#106](https://github.com/ocaml-multicore/eio/issues/106)
+* [ocaml-multicore/eio#106](https://github.com/ocaml-multicore/eio/issues/106 - [429 Too Many Requests])
   Avoid `Fun.protect` in `Eio_linux.run`
   
   The use of `Fun.protect` is removed from
   `lib_eio_linux/eio_linux.ml` as it throws an exception, which is not
   useful when the scheduler crashes.
 
-* [ocaml-multicore/eio#107](https://github.com/ocaml-multicore/eio/issues/107)
+* [ocaml-multicore/eio#107](https://github.com/ocaml-multicore/eio/issues/107 - [429 Too Many Requests])
   Make cancellation thread-safe
   
   A cancellation context now has a list of fibres, and when a fibre is
@@ -724,13 +724,13 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   fibre's own domain, and each fibre holds a single, optionally atomic
   cancellation function.
 
-* [ocaml-multicore/eio#108](https://github.com/ocaml-multicore/eio/issues/108)
+* [ocaml-multicore/eio#108](https://github.com/ocaml-multicore/eio/issues/108 - [429 Too Many Requests])
   Clean up Waiters API
   
   The result type was not required by many users and has thus been
   removed. The relevant documentation has been updated as well.
 
-* [ocaml-multicore/eio#109](https://github.com/ocaml-multicore/eio/issues/109)
+* [ocaml-multicore/eio#109](https://github.com/ocaml-multicore/eio/issues/109 - [429 Too Many Requests])
   Use lock-free run queue in `eio_linux` tools
   
   The `lib_eio_linux/eio_linux.ml` file has been updated to use a
@@ -743,33 +743,33 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
   ![Eio-PR-109-Before-After|690x429](https://discuss.ocaml.org/uploads/short-url/sm3ND4YQkuYHmc1F2LCDDyeDCLT.png)
 
-* [ocaml-multicore/eio#110](https://github.com/ocaml-multicore/eio/issues/110)
+* [ocaml-multicore/eio#110](https://github.com/ocaml-multicore/eio/issues/110 - [429 Too Many Requests])
   Make `Waiters.wake_one` safe with cancellation
   
   As `wake_one` was being called after a cancelled waiter, we could
   not wake anything when using multiple domains. This PR fixes the
   same in `lib_eio/waiters.ml` along with a stress test.
 
-* [ocaml-multicore/eio#111](https://github.com/ocaml-multicore/eio/issues/111)
+* [ocaml-multicore/eio#111](https://github.com/ocaml-multicore/eio/issues/111 - [429 Too Many Requests])
   Restore domains test
   
   The `tests/tests_domains.md` file has now been enabled, since a fix
   to Multicore OCaml was backported to 4.12+domains. The tests also
   now run in the CI.
 
-* [ocaml-multicore/eio#112](https://github.com/ocaml-multicore/eio/issues/112)
+* [ocaml-multicore/eio#112](https://github.com/ocaml-multicore/eio/issues/112 - [429 Too Many Requests])
   Add `Stream.take_nonblocking`
   
   The `lib_eio/stream.ml` file has been updated to include a
   `Stream.take_nonblocking` function along with a couple of tests.
 
-* [ocaml-multicore/eio#113](https://github.com/ocaml-multicore/eio/issues/113)
+* [ocaml-multicore/eio#113](https://github.com/ocaml-multicore/eio/issues/113 - [429 Too Many Requests])
   Explain about `Promises` and `Streams` in the README
   
   The README has been updated with a section each on `Promises` and
   `Streams`, and the `Fibre.fork` code and tests have been simplified.
 
-* [ocaml-multicore/eio#114](https://github.com/ocaml-multicore/eio/issues/114)
+* [ocaml-multicore/eio#114](https://github.com/ocaml-multicore/eio/issues/114 - [429 Too Many Requests])
   Allow `Domain_mgr.run` to be cancelled
   
   The run() function in `lib_eio/eio.ml` has been updated to inject a
@@ -777,19 +777,19 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   another domain, and spawning when already cancelled have been added
   to `tests/test_domains.md`.
 
-* [ocaml-multicore/eio#115](https://github.com/ocaml-multicore/eio/issues/115)
+* [ocaml-multicore/eio#115](https://github.com/ocaml-multicore/eio/issues/115 - [429 Too Many Requests])
   Create fibre context before forking
   
   A fibre is created without being started immediately, which allows
   more flexibility in scheduling and reduces the number of contexts.
 
-* [ocaml-multicore/eio#117](https://github.com/ocaml-multicore/eio/issues/117)
+* [ocaml-multicore/eio#117](https://github.com/ocaml-multicore/eio/issues/117 - [429 Too Many Requests])
   Allow to set `SO_REUSEPORT` option
   
   The PR adds support to set the `SO_REUSEPORT` socket setting for the
   `linux_uring` backend.
 
-* [ocaml-multicore/eio#118](https://github.com/ocaml-multicore/eio/issues/118)
+* [ocaml-multicore/eio#118](https://github.com/ocaml-multicore/eio/issues/118 - [429 Too Many Requests])
   Improve scheduling of forks
   
   The old `Fork` effect has been implemented similar to `Fork_ignore`,
@@ -798,14 +798,14 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   at the head of the run-queue, as this new scheduling order is more
   natural, flexible and better for caching.
 
-* [ocaml-multicore/eio#119](https://github.com/ocaml-multicore/eio/issues/119)
+* [ocaml-multicore/eio#119](https://github.com/ocaml-multicore/eio/issues/119 - [429 Too Many Requests])
   Improve cancellation
   
   The `Fibre.check` function has been added to check whether the
   current context has been cancelled, and documentation on
   cancellation has been updated.
 
-* [ocaml-multicore/eio#121](https://github.com/ocaml-multicore/eio/issues/121)
+* [ocaml-multicore/eio#121](https://github.com/ocaml-multicore/eio/issues/121 - [429 Too Many Requests])
   Add rationales for end-of-life and dynamic dispatch
   
   A documentation update on `Indicating End-of-File` and `Dynamic
@@ -819,13 +819,13 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   A merge from upstream that includes updates to the dependency
   packages and addition of new packages to the repository.
 
-* [ocaml-multicore/tezos-opam-repository#8](https://github.com/ocaml-multicore/tezos-opam-repository/pull/8)
+* [ocaml-multicore/tezos-opam-repository#8](https://github.com/ocaml-multicore/tezos-opam-repository/pull/8 - [429 Too Many Requests])
   Add `domainslib.0.4.0` & `lwt_domain.0.1.0`
   
   The addition of `domainslib.0.4.0` and `lwt_domain.0.1.0` to the
   tezos-opam-repository.
 
-* [ocaml-multicore/tezos#21](https://github.com/ocaml-multicore/tezos/pull/21)
+* [ocaml-multicore/tezos#21](https://github.com/ocaml-multicore/tezos/pull/21 - [429 Too Many Requests])
   Upstream updates
 
   The latest upstream build, code and documentation changes have been
@@ -833,7 +833,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Domainslib
 
-* [ocaml-multicore/domainslib#50](https://github.com/ocaml-multicore/domainslib/pull/50)
+* [ocaml-multicore/domainslib#50](https://github.com/ocaml-multicore/domainslib/pull/50 - [429 Too Many Requests])
   Multi_channel: allow more than one instance per program with different configurations
   
   A shared global state in `Multi_channel` exists in the form of
@@ -841,7 +841,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   contributed by Edwin Torok (@edwintorok), removes the global key,
   and uses a per-channel key.
 
-* [ocaml-multicore/domainslib#60](https://github.com/ocaml-multicore/domainslib/pull/60)
+* [ocaml-multicore/domainslib#60](https://github.com/ocaml-multicore/domainslib/pull/60 - [429 Too Many Requests])
   Bug fix in `parallel_scan`
   
   The final entry in the array result was incorrect for
@@ -849,7 +849,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   array size less than the pool size.
   
 * A new
-  [domainslib.0.4.0](https://github.com/ocaml-multicore/domainslib/releases/tag/0.4.0)
+  [domainslib.0.4.0](https://github.com/ocaml-multicore/domainslib/releases/tag/0.4.0 - [429 Too Many Requests])
   has been released that includes a breaking change. We now need to
   use effect handlers for task creation, and all computations need to
   be enclosed in a `Task.run` function.
@@ -860,26 +860,26 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Ongoing
 
-* [ocaml-bench/sandmark-nightly#23](https://github.com/ocaml-bench/sandmark-nightly/issues/23)
+* [ocaml-bench/sandmark-nightly#23](https://github.com/ocaml-bench/sandmark-nightly/issues/23 - [429 Too Many Requests])
   Sandmark nightly issues
   
   A list of issues observed for the `sandmark.ocamllabs.io` service on
   results returned from Navajo and Turing machines.
 
-* [ocaml-bench/sandmark-nightly#24](https://github.com/ocaml-bench/sandmark-nightly/pull/24)
+* [ocaml-bench/sandmark-nightly#24](https://github.com/ocaml-bench/sandmark-nightly/pull/24 - [429 Too Many Requests])
   Use git clone from ocurrent-deployer
   
   An update to the Dockerfile to use git clone from `ocurrent-deployer`,
   instead of `ocaml-bench/sandmark-nightly`.
 
-* [ocaml-bench/sandmark#266](https://github.com/ocaml-bench/sandmark/issues/266)
+* [ocaml-bench/sandmark#266](https://github.com/ocaml-bench/sandmark/issues/266 - [429 Too Many Requests])
   Instrumented pausetimes for OCaml 5.00.0+trun and 4.14.0+domains
 
   The pausetimes variants in Sandmark need to be updated after trunk
   is frozen, in order to add the instrumented pausetimes for
   `5.00.0+trunk` and `4.14.0+domains`.
 
-* [ocaml-bench/sandmark#268](https://github.com/ocaml-bench/sandmark/pull/268)
+* [ocaml-bench/sandmark#268](https://github.com/ocaml-bench/sandmark/pull/268 - [429 Too Many Requests])
    Update README CI Build status to main branch
    
    The CI `Build Status` for the `main` branch in Sandmark needs to
@@ -887,13 +887,13 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Completed
 
-* [ocaml-bench/sandmark#264](https://github.com/ocaml-bench/sandmark/pull/264)
+* [ocaml-bench/sandmark#264](https://github.com/ocaml-bench/sandmark/pull/264 - [429 Too Many Requests])
   Cleanup for 4.12
   
   The `4.12.*` variants have been removed from Sandmark, and the
   scripts and documentation have been updated to reflect the same.
 
-* [ocaml-bench/sandmark#265](https://github.com/ocaml-bench/sandmark/pull/265)
+* [ocaml-bench/sandmark#265](https://github.com/ocaml-bench/sandmark/pull/265 - [429 Too Many Requests])
    Added package remove feature and builds for 5.00
    
    The `main` branch now supports a `package remove` option for the
@@ -924,7 +924,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
    The PR also pulls in the latest changes from the Sandmark master
    branch, and successfully builds 5.00.0+trunk for .drone.yml CI.
 
-* [ocaml-bench/sandmark#267](https://github.com/ocaml-bench/sandmark/pull/267)
+* [ocaml-bench/sandmark#267](https://github.com/ocaml-bench/sandmark/pull/267 - [429 Too Many Requests])
   Added support for bench.Dockerfile
   
   A `bench.Dockerfile` has been included in Sandmark to build and run
@@ -934,7 +934,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Ongoing
 
-* [ocaml-multicore-ci#15](https://github.com/ocurrent/ocaml-multicore-ci/pull/15)
+* [ocaml-multicore-ci#15](https://github.com/ocurrent/ocaml-multicore-ci/pull/15 - [429 Too Many Requests])
   Add dependency installation steps in README
   
   The following commands are required to be executed prior to
@@ -945,20 +945,20 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   $ opam install -t .
   ```
 
-* [ocurrent/ocluster#151](https://github.com/ocurrent/ocluster/pull/151)
+* [ocurrent/ocluster#151](https://github.com/ocurrent/ocluster/pull/151 - [429 Too Many Requests])
   Public `Ocluster_worker` library
   
   The PR exposes the internal library `Ocluster_worker` for
   current-bench and Sandmark, as we need a specific worker with custom
   settings to ensure that the benchmarks are stable.
 
-* [ocurrent/ocluster#154](https://github.com/ocurrent/ocluster/pull/154)
+* [ocurrent/ocluster#154](https://github.com/ocurrent/ocluster/pull/154 - [429 Too Many Requests])
   Use `opam update`, remove `--verbose`, and `--connect` options
   
   A README documentation update with the latest instructions and
   options available to use ocluster.
 
-* [ocurrent/current-bench#226](https://github.com/ocurrent/current-bench/issues/226)
+* [ocurrent/current-bench#226](https://github.com/ocurrent/current-bench/issues/226 - [429 Too Many Requests])
   Only build benchmarks whose dependencies build fine in CI
   
   The CI/CB pipeline can be integrated and extended to allow building
@@ -974,14 +974,14 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Completed
 
-* [ocurrent/current-bench#216](https://github.com/ocurrent/current-bench/pull/216)
+* [ocurrent/current-bench#216](https://github.com/ocurrent/current-bench/pull/216 - [429 Too Many Requests])
   Add a custom OCluster worker build-and-run-benchmarks
   
   The PR provides a OCluster worker that enables us to build and run
   the benchmarks from the main pipeline, and fixes the Multicore
   repository settings.
   
-* [ocurrent/current-bench#241](https://github.com/ocurrent/current-bench/pull/241)
+* [ocurrent/current-bench#241](https://github.com/ocurrent/current-bench/pull/241 - [429 Too Many Requests])
   Display min and max values when displaying multi-value datapoints
   
   The minimum and maximum values for multi-value data points are now
@@ -989,7 +989,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
   ![Current-bench-241-Min-Max|690x388](https://discuss.ocaml.org/uploads/short-url/8YoOBKutYLRMDliEnuDrk6daQC9.png)
 
-* [ocurrent/current-bench#242](https://github.com/ocurrent/current-bench/pull/242)
+* [ocurrent/current-bench#242](https://github.com/ocurrent/current-bench/pull/242 - [429 Too Many Requests])
   Workers: run one benchmark per CPU
   
   You can now run multiple benchmarks in parallel, each using its own
@@ -999,14 +999,14 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   OCAML_BENCH_DOCKER_CPU=4,5,6
   ```
 
-* [ocurrent/current-bench#252](https://github.com/ocurrent/current-bench/pull/252)
+* [ocurrent/current-bench#252](https://github.com/ocurrent/current-bench/pull/252 - [429 Too Many Requests])
   Make the Debian version more explicit
   
   The `pipeline/Dockerfile` and `pipeline/Dockerfile.env` files have
   been updated to be explicit on the Debian image
   `ocaml/opam:debian-11-ocaml-4.13` to be used.
 
-* [ocurrent/current-bench#254](https://github.com/ocurrent/current-bench/pull/254)
+* [ocurrent/current-bench#254](https://github.com/ocurrent/current-bench/pull/254 - [429 Too Many Requests])
   Allow setting a description for the metrics
   
   The current-bench frontend can now display a description for the
@@ -1014,7 +1014,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
   ![Current-bench-254-Metrics-Description|690x216](https://discuss.ocaml.org/uploads/short-url/eZ4kBExiMVCqSEwaBtdIKJEbN0c.png)
 
-* [ocurrent/current-bench#257](https://github.com/ocurrent/current-bench/pull/257)
+* [ocurrent/current-bench#257](https://github.com/ocurrent/current-bench/pull/257 - [429 Too Many Requests])
   Config repositories to run with specific workers and OCaml versions
   
   A static configuration can be provided to current-bench that

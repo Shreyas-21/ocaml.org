@@ -5,13 +5,13 @@ date: "2021-02-01"
 tags: [multicore]
 ---
 
-Welcome to the February 2021 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore) monthly report. This update along with the [previous update's](https://discuss.ocaml.org/tag/multicore-monthly) have been compiled by me, @kayceesrk and @shakthimaan. February has seen us focus heavily on stability in the multicore trees, as unlocking the ecosystem builds and running bulk CI has given us a wealth of issues to help chase down corner case issues.  The work on upstreaming the next hunk of changes to OCaml 4.13 is also making great progress.
+Welcome to the February 2021 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore - [403 Forbidden]) monthly report. This update along with the [previous update's](https://discuss.ocaml.org/tag/multicore-monthly) have been compiled by me, @kayceesrk and @shakthimaan. February has seen us focus heavily on stability in the multicore trees, as unlocking the ecosystem builds and running bulk CI has given us a wealth of issues to help chase down corner case issues.  The work on upstreaming the next hunk of changes to OCaml 4.13 is also making great progress.
 
 Overall, we remain on track to have a parallel-capable multicore runtime (versioned 5.0) after the next release of OCaml (4.13.0), although the exact release details have yet to be ratified in a core OCaml developers meeting.  Excitingly, we have also made significant progress on concurrency, and there are details below of a new paper on that topic.
 
 ## 4.12.0: released with multicore-relevant changes
 
-[OCaml 4.12.0 has been released]() with a large number of internal changes [required for multicore OCaml](https://github.com/ocaml/ocaml/issues?q=is%3Aclosed+label%3Amulticore-prerequisite+) such as GC colours handling, the removal of the page table and modifications to the heap representations.
+[OCaml 4.12.0 has been released]() with a large number of internal changes [required for multicore OCaml](https://github.com/ocaml/ocaml/issues?q=is%3Aclosed+label%3Amulticore-prerequisite+ - [403 Forbidden]) such as GC colours handling, the removal of the page table and modifications to the heap representations.
 
 From a developer perspective, there is now a new configure option called the `nnpchecker` which dynamically instruments the runtime to help you spot the use of unboxed C pointers in your bindings. This was described here [earlier against 4.10](https://discuss.ocaml.org/t/ann-a-dynamic-checker-for-detecting-naked-pointers/5805), but it is now also live on the [opam repository CI](https://github.com/ocurrent/opam-repo-ci/pull/79).  From now on, **new opam package submissions will alert you with a failing test if naked pointers are detected** in your opam package test suite.  Please do try to include tests in your opam package to gain the benefits of this! 
 
@@ -84,7 +84,7 @@ Onto the details then! The Multicore OCaml updates are listed first, which are t
 
 #### Sundries
 
-* [ocaml-multicore/ocaml-multicore#466](https://github.com/ocaml-multicore/ocaml-multicore/issues/466)
+* [ocaml-multicore/ocaml-multicore#466](https://github.com/ocaml-multicore/ocaml-multicore/issues/466 - [429 Too Many Requests])
   Fix corruption when remarking a pool in another domain and that
   domain allocates
   
@@ -94,7 +94,7 @@ Onto the details then! The Multicore OCaml updates are listed first, which are t
   for any orphaned pools or work which could not be enqueued onto a
   domain.
 
-* [ocaml-multicore/ocaml-multicore#468](https://github.com/ocaml-multicore/ocaml-multicore/issues/468)
+* [ocaml-multicore/ocaml-multicore#468](https://github.com/ocaml-multicore/ocaml-multicore/issues/468 - [1 Client error: Timeout was reached])
   Finalisers causing segfault with multiple domains
   
   A test case has been submitted where Finalisers cause segmentation
@@ -180,7 +180,7 @@ Onto the details then! The Multicore OCaml updates are listed first, which are t
 
 #### Fixes
 
-* [ocaml-bench/sandmark#208](https://github.com/ocaml-bench/sandmark/pull/208)
+* [ocaml-bench/sandmark#208](https://github.com/ocaml-bench/sandmark/pull/208 - [429 Too Many Requests])
   Fix params for simple-tests/capi
   
   The arguments to the `simple-tests/capi` benchmarks are now passed

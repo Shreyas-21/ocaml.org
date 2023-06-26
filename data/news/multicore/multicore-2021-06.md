@@ -441,19 +441,19 @@ Multicore OCaml.
   The `Eio.Dir` module now contains a `with_open_in`, `with_open_out`
   and `with_open_dir` helper functions.
 
-* [ocaml-multicore/eio#58](https://github.com/ocaml-multicore/eio/pull/58)
+* [ocaml-multicore/eio#58](https://github.com/ocaml-multicore/eio/pull/58 - [403 Forbidden])
   Add `Eio_linux.{readv, writev}`
 
   The `Eio_linux.{readv, writev}` functions have been added to
   `lib_eio_linux/eio_linux.ml` which uses the new OCaml-Uring API.
 
-* [ocaml-multicore/eio#59](https://github.com/ocaml-multicore/eio/pull/59)
+* [ocaml-multicore/eio#59](https://github.com/ocaml-multicore/eio/pull/59 - [403 Forbidden])
   Add `Eio_linux.noop` and a simple benchmark
 
   A `Eio_linux.noop` implementation has been added for benchmarking
   Uring dispatch.
 
-* [ocaml-multicore/eio#61](https://github.com/ocaml-multicore/eio/pull/61)
+* [ocaml-multicore/eio#61](https://github.com/ocaml-multicore/eio/pull/61 - [403 Forbidden])
   Add generic Enter effect to simplify scheduler
 
   A `Enter` effect has been introduced to simplify the scheduler
@@ -464,45 +464,45 @@ Multicore OCaml.
 
 ##### Improvements
 
-* [ocaml-multicore/eio#38](https://github.com/ocaml-multicore/eio/pull/38)
+* [ocaml-multicore/eio#38](https://github.com/ocaml-multicore/eio/pull/38 - [403 Forbidden])
   Rename Flow.write to Flow.copy
 
   The code and documentation have been updated to rename `Flow.write`
   to `Flow.copy` for better clarity.
 
-* [ocaml-multicore/eio#36](https://github.com/ocaml-multicore/eio/pull/36)
+* [ocaml-multicore/eio#36](https://github.com/ocaml-multicore/eio/pull/36 - [403 Forbidden])
   Use uring for accept
 
   The `enqueue_accept` function now uses `Uring.accept` along with the
   `effect Accept`.
 
-* [ocaml-multicore/eio#37](https://github.com/ocaml-multicore/eio/pull/37)
+* [ocaml-multicore/eio#37](https://github.com/ocaml-multicore/eio/pull/37 - [403 Forbidden])
   Performance improvements
 
   Optimisation for `Eunix.free` and process completed events with
   `Uring.peek` for better performance results.
 
-* [ocaml-multicore/eio#48](https://github.com/ocaml-multicore/eio/pull/48)
+* [ocaml-multicore/eio#48](https://github.com/ocaml-multicore/eio/pull/48 - [403 Forbidden])
   Simplify `Suspend` operation
 
   The `Suspend` effect has been simplified by replacing the older
   `Await` and `Yield` effects with the code from Eio.
 
-* [ocaml-multicore/eio#52](https://github.com/ocaml-multicore/eio/pull/52)
+* [ocaml-multicore/eio#52](https://github.com/ocaml-multicore/eio/pull/52 - [403 Forbidden])
   Split Linux support out to `eio_linux` library
 
   `eunix` now has common code that is shared by different backends,
   and `eio_linux` provides a Linux io-uring backend. The tests and the
   documentation have been updated to reflect the change.
 
-* [ocaml-multicore/eio#57](https://github.com/ocaml-multicore/eio/pull/57)
+* [ocaml-multicore/eio#57](https://github.com/ocaml-multicore/eio/pull/57 - [403 Forbidden])
   Reraise exceptions with backtraces
 
   Added support to store a reference to a backtrace when a switch
   catches an exception. This is useful when you want to reraise the
   exception later.
 
-* [ocaml-multicore/eio#60](https://github.com/ocaml-multicore/eio/pull/60)
+* [ocaml-multicore/eio#60](https://github.com/ocaml-multicore/eio/pull/60 - [403 Forbidden])
   Simplify handling of completions
 
   The PR adds `Job` and `Job_no_cancel` in `type io_job` along with
@@ -510,26 +510,26 @@ Multicore OCaml.
 
 ##### Cleanups
 
-* [ocaml-multicore/eio#42](https://github.com/ocaml-multicore/eio/pull/42)
+* [ocaml-multicore/eio#42](https://github.com/ocaml-multicore/eio/pull/42 - [403 Forbidden])
   Merge fibreslib into eio
 
   The `Fibreslib` code is now merged with `eio`. You will now need to
   open `Eio.Std` instead of opening `Fibreslib`.
 
-* [ocaml-multicore/eio#47](https://github.com/ocaml-multicore/eio/pull/47)
+* [ocaml-multicore/eio#47](https://github.com/ocaml-multicore/eio/pull/47 - [403 Forbidden])
   Clean up the network API
 
   The network APIs have been updated with few changes such as renaming
   `bind` to `listen`, replacing `Unix.shutdown_command` with our own
   type in Eio API, and replacing `Unix.sockaddr` with a custom type.
 
-* [ocaml-multicore/eio#49](https://github.com/ocaml-multicore/eio/pull/49)
+* [ocaml-multicore/eio#49](https://github.com/ocaml-multicore/eio/pull/49 - [403 Forbidden])
   Remove `Eio.Private.Waiters` and `Eio.Private.Switch`
 
   The `Eio.Private.Waiters` and `Eio.Private.Switch` modules have been
   removed, and waiting is now handled using the Eio library.
 
-* [ocaml-multicore/eio#55](https://github.com/ocaml-multicore/eio/pull/55)
+* [ocaml-multicore/eio#55](https://github.com/ocaml-multicore/eio/pull/55 - [403 Forbidden])
   Some API and README cleanups
 
   The PR has multiple cleanups and documentation changes. The
@@ -540,26 +540,26 @@ Multicore OCaml.
 
 ##### Documentation
 
-* [ocaml-multicore/eio#43](https://github.com/ocaml-multicore/eio/pull/43)
+* [ocaml-multicore/eio#43](https://github.com/ocaml-multicore/eio/pull/43 - [403 Forbidden])
   Add design note about determinism
 
   The README.md documentation has been updated with few design notes
   on Determinism.
 
-* [ocaml-multicore/eio#50](https://github.com/ocaml-multicore/eio/pull/50)
+* [ocaml-multicore/eio#50](https://github.com/ocaml-multicore/eio/pull/50 - [403 Forbidden])
   README improvements
 
   Updated README.md and added `doc/prelude.ml` for use with MDX.
 
 #### Handling Cancellation
 
-* [ocaml-multicore/eio#39](https://github.com/ocaml-multicore/eio/pull/39)
+* [ocaml-multicore/eio#39](https://github.com/ocaml-multicore/eio/pull/39 - [403 Forbidden])
   Allow cancelling accept operations
 
   The PR now supports cancelling the server accept and read
   operations.
 
-* [ocaml-multicore/eio#40](https://github.com/ocaml-multicore/eio/pull/40)
+* [ocaml-multicore/eio#40](https://github.com/ocaml-multicore/eio/pull/40 - [403 Forbidden])
   Support cancelling the remaining Uring operations
 
   The cancellation request of `connect`, `wait_readable` and

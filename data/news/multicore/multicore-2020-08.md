@@ -110,7 +110,7 @@ Contributions such as the above towards adapting your projects with our benchmar
   for the generator example by using `caml_domain_alone`, and using
   `caml_gc_log` under `DEBUG` mode.
 
-* [ocaml-multicore/ocaml-multicore#389](https://github.com/ocaml-multicore/ocaml-multicore/pull/389)
+* [ocaml-multicore/ocaml-multicore#389](https://github.com/ocaml-multicore/ocaml-multicore/pull/389 - [403 Forbidden])
   Avoid holding domain_lock when using backup thread
 
   The wait time for the main OCaml thread is reduced by altering the
