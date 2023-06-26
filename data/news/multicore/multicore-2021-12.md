@@ -275,7 +275,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   25   1.90E+00      2.10E+00   10.53%
   ```
 
-* [ocaml-multicore/ocaml-multicore#770](https://github.com/ocaml-multicore/ocaml-multicore/pull/770)
+* [ocaml-multicore/ocaml-multicore#770](https://github.com/ocaml-multicore/ocaml-multicore/pull/770 - [403 Forbidden])
   Backport of PR770
   
   The `otherlibs/systhreads/st_stubs.c` file has been formatted to
@@ -640,13 +640,13 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   `network`, `file_systems` etc. is closed now with updates to
   [eio#90](https://github.com/ocaml-multicore/eio/pull/90).
 
-* [ocaml-multicore/eio#101](https://github.com/ocaml-multicore/eio/issues/101)
+* [ocaml-multicore/eio#101](https://github.com/ocaml-multicore/eio/issues/101 - [403 Forbidden])
   Make luv backend thread-safe
   
   An update to `lib_eio_luv/eio_luv.ml` that makes the luv backend
   thread-safe, and prevents a deadlock in the execution of benchmarks.
 
-* [ocaml-multicore/eio#102](https://github.com/ocaml-multicore/eio/issues/102)
+* [ocaml-multicore/eio#102](https://github.com/ocaml-multicore/eio/issues/102 - [403 Forbidden])
   Use a lock-free run queue for luv backend
   
   The PR removes the need for a mutex around the queue, and there is a
@@ -694,7 +694,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
      10000,  114.80,        5.9410
   ```
 
-* [ocaml-multicore/eio#103](https://github.com/ocaml-multicore/eio/issues/103)
+* [ocaml-multicore/eio#103](https://github.com/ocaml-multicore/eio/issues/103 - [403 Forbidden])
   Add `Domain_manager.run` to start a domain with an event loop
   
   The `lib_eio/eio.ml` code has added `Domain_manager.run` and
@@ -702,20 +702,20 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   function must only access thread-safe values from the calling
   domain.
 
-* [ocaml-multicore/eio#104](https://github.com/ocaml-multicore/eio/issues/104)
+* [ocaml-multicore/eio#104](https://github.com/ocaml-multicore/eio/issues/104 - [403 Forbidden])
   Split out `Ctf_unix` module
   
   The dependency on `Unix` has been removed from the `Eio` module, and
   the `Ctf_unix.with_tracing` function has been added for convenience.
 
-* [ocaml-multicore/eio#106](https://github.com/ocaml-multicore/eio/issues/106)
+* [ocaml-multicore/eio#106](https://github.com/ocaml-multicore/eio/issues/106 - [403 Forbidden])
   Avoid `Fun.protect` in `Eio_linux.run`
   
   The use of `Fun.protect` is removed from
   `lib_eio_linux/eio_linux.ml` as it throws an exception, which is not
   useful when the scheduler crashes.
 
-* [ocaml-multicore/eio#107](https://github.com/ocaml-multicore/eio/issues/107)
+* [ocaml-multicore/eio#107](https://github.com/ocaml-multicore/eio/issues/107 - [403 Forbidden])
   Make cancellation thread-safe
   
   A cancellation context now has a list of fibres, and when a fibre is
@@ -724,13 +724,13 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   fibre's own domain, and each fibre holds a single, optionally atomic
   cancellation function.
 
-* [ocaml-multicore/eio#108](https://github.com/ocaml-multicore/eio/issues/108)
+* [ocaml-multicore/eio#108](https://github.com/ocaml-multicore/eio/issues/108 - [403 Forbidden])
   Clean up Waiters API
   
   The result type was not required by many users and has thus been
   removed. The relevant documentation has been updated as well.
 
-* [ocaml-multicore/eio#109](https://github.com/ocaml-multicore/eio/issues/109)
+* [ocaml-multicore/eio#109](https://github.com/ocaml-multicore/eio/issues/109 - [403 Forbidden])
   Use lock-free run queue in `eio_linux` tools
   
   The `lib_eio_linux/eio_linux.ml` file has been updated to use a
@@ -743,33 +743,33 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
   ![Eio-PR-109-Before-After|690x429](https://discuss.ocaml.org/uploads/short-url/sm3ND4YQkuYHmc1F2LCDDyeDCLT.png)
 
-* [ocaml-multicore/eio#110](https://github.com/ocaml-multicore/eio/issues/110)
+* [ocaml-multicore/eio#110](https://github.com/ocaml-multicore/eio/issues/110 - [403 Forbidden])
   Make `Waiters.wake_one` safe with cancellation
   
   As `wake_one` was being called after a cancelled waiter, we could
   not wake anything when using multiple domains. This PR fixes the
   same in `lib_eio/waiters.ml` along with a stress test.
 
-* [ocaml-multicore/eio#111](https://github.com/ocaml-multicore/eio/issues/111)
+* [ocaml-multicore/eio#111](https://github.com/ocaml-multicore/eio/issues/111 - [403 Forbidden])
   Restore domains test
   
   The `tests/tests_domains.md` file has now been enabled, since a fix
   to Multicore OCaml was backported to 4.12+domains. The tests also
   now run in the CI.
 
-* [ocaml-multicore/eio#112](https://github.com/ocaml-multicore/eio/issues/112)
+* [ocaml-multicore/eio#112](https://github.com/ocaml-multicore/eio/issues/112 - [403 Forbidden])
   Add `Stream.take_nonblocking`
   
   The `lib_eio/stream.ml` file has been updated to include a
   `Stream.take_nonblocking` function along with a couple of tests.
 
-* [ocaml-multicore/eio#113](https://github.com/ocaml-multicore/eio/issues/113)
+* [ocaml-multicore/eio#113](https://github.com/ocaml-multicore/eio/issues/113 - [403 Forbidden])
   Explain about `Promises` and `Streams` in the README
   
   The README has been updated with a section each on `Promises` and
   `Streams`, and the `Fibre.fork` code and tests have been simplified.
 
-* [ocaml-multicore/eio#114](https://github.com/ocaml-multicore/eio/issues/114)
+* [ocaml-multicore/eio#114](https://github.com/ocaml-multicore/eio/issues/114 - [403 Forbidden])
   Allow `Domain_mgr.run` to be cancelled
   
   The run() function in `lib_eio/eio.ml` has been updated to inject a
@@ -777,19 +777,19 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   another domain, and spawning when already cancelled have been added
   to `tests/test_domains.md`.
 
-* [ocaml-multicore/eio#115](https://github.com/ocaml-multicore/eio/issues/115)
+* [ocaml-multicore/eio#115](https://github.com/ocaml-multicore/eio/issues/115 - [403 Forbidden])
   Create fibre context before forking
   
   A fibre is created without being started immediately, which allows
   more flexibility in scheduling and reduces the number of contexts.
 
-* [ocaml-multicore/eio#117](https://github.com/ocaml-multicore/eio/issues/117)
+* [ocaml-multicore/eio#117](https://github.com/ocaml-multicore/eio/issues/117 - [403 Forbidden])
   Allow to set `SO_REUSEPORT` option
   
   The PR adds support to set the `SO_REUSEPORT` socket setting for the
   `linux_uring` backend.
 
-* [ocaml-multicore/eio#118](https://github.com/ocaml-multicore/eio/issues/118)
+* [ocaml-multicore/eio#118](https://github.com/ocaml-multicore/eio/issues/118 - [403 Forbidden])
   Improve scheduling of forks
   
   The old `Fork` effect has been implemented similar to `Fork_ignore`,
@@ -798,14 +798,14 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   at the head of the run-queue, as this new scheduling order is more
   natural, flexible and better for caching.
 
-* [ocaml-multicore/eio#119](https://github.com/ocaml-multicore/eio/issues/119)
+* [ocaml-multicore/eio#119](https://github.com/ocaml-multicore/eio/issues/119 - [403 Forbidden])
   Improve cancellation
   
   The `Fibre.check` function has been added to check whether the
   current context has been cancelled, and documentation on
   cancellation has been updated.
 
-* [ocaml-multicore/eio#121](https://github.com/ocaml-multicore/eio/issues/121)
+* [ocaml-multicore/eio#121](https://github.com/ocaml-multicore/eio/issues/121 - [403 Forbidden])
   Add rationales for end-of-life and dynamic dispatch
   
   A documentation update on `Indicating End-of-File` and `Dynamic

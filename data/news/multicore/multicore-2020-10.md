@@ -7,11 +7,11 @@ tags: [multicore]
 
 Welcome to the October 2020 multicore OCaml report, compiled by @shakthimaan, @kayceesrk and of course myself. The [previous monthly (https://discuss.ocaml.org/tag/multicore-monthly) updates are also available for your perusal.
 
-**OCaml 4.12.0-dev:** The upstream OCaml tree has been branched for the 4.12 release, and the [OCaml readiness team](https://github.com/ocaml/opam-repository/issues/17530) is busy stabilising it with the ecosystem. The 4.12.0 development stream has significant progress towards multicore support, especially with the runtime handling of naked pointers. The release will ship with a dynamic checker for naked pointers that you can use to verify that your own codebase is clean of them, as this will be a prerequisite for OCaml 5.0 and multicore compatibility. This is activated via the `--enable-naked-pointers-checker` configure option.
+**OCaml 4.12.0-dev:** The upstream OCaml tree has been branched for the 4.12 release, and the [OCaml readiness team](https://github.com/ocaml/opam-repository/issues/17530 - [403 Forbidden]) is busy stabilising it with the ecosystem. The 4.12.0 development stream has significant progress towards multicore support, especially with the runtime handling of naked pointers. The release will ship with a dynamic checker for naked pointers that you can use to verify that your own codebase is clean of them, as this will be a prerequisite for OCaml 5.0 and multicore compatibility. This is activated via the `--enable-naked-pointers-checker` configure option.
 
 **Convergence with upstream and multicore trees:** The multicore OCaml trees have seen significant robustness improvements as we've converged our trees with upstream OCaml (possible now that the upstream architectural changes are synched with the requirements of multicore). In particular, the handling of global C roots is much better in multicore now as it uses the upstream OCaml scheme, and the GC colour scheme also exactly matches upstream OCaml's.  This means that community libraries from `opam` work increasingly well when built with multicore OCaml (using the `no-effects-syntax` branch).
 
-**Features:** Multicore OCaml is also using domain local allocation buffers now to simplify its internals.  We are also now working on benchmarking the IO subsystem, and support for CPU parallelism for the Lwt concurrency library has been added, as well as refreshing the new Asynchronous Effect-based IO ([aeio](https://github.com/kayceesrk/ocaml-aeio)) with Multicore OCaml, Lwt, and httpaf in an [http-effects](https://github.com/sadiqj/http-effects) library.
+**Features:** Multicore OCaml is also using domain local allocation buffers now to simplify its internals.  We are also now working on benchmarking the IO subsystem, and support for CPU parallelism for the Lwt concurrency library has been added, as well as refreshing the new Asynchronous Effect-based IO ([aeio](https://github.com/kayceesrk/ocaml-aeio - [403 Forbidden])) with Multicore OCaml, Lwt, and httpaf in an [http-effects](https://github.com/sadiqj/http-effects - [403 Forbidden]) library.
 
 **Benchmarking:** The Sandmark benchmarking test suite has additional configuration options, and there are new proposals in that project to leverage as much of the OCaml tools and ecosystem as much as possible.
 
@@ -21,7 +21,7 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
 
 ### Ongoing
 
-* [ocaml-multicore/ocaml-multicore#422](https://github.com/ocaml-multicore/ocaml-multicore/pull/422)
+* [ocaml-multicore/ocaml-multicore#422](https://github.com/ocaml-multicore/ocaml-multicore/pull/422 - [403 Forbidden])
   Simplify minor heaps configuration logic and masking
   
   The PR is a step towards using Domain local allocation buffers. A
@@ -29,7 +29,7 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
   `Is_young` for relying on a boundary check. The `Minor_heap_max` can
   be overridden using OCAMLRUNPARAM environment variable.
 
-* [ocaml-multicore/ocaml-multicore#426](https://github.com/ocaml-multicore/ocaml-multicore/pull/426)
+* [ocaml-multicore/ocaml-multicore#426](https://github.com/ocaml-multicore/ocaml-multicore/pull/426 - [403 Forbidden])
   Replace global roots implementation
 
   An effort to replace the existing global roots implementation to be
@@ -37,17 +37,17 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
   per-domain skip list, and a global orphans when a domain is
   terminated.
 
-* [ocaml-multicore/ocaml-multiore#427](https://github.com/ocaml-multicore/ocaml-multicore/pull/427)
+* [ocaml-multicore/ocaml-multiore#427](https://github.com/ocaml-multicore/ocaml-multicore/pull/427 - [403 Forbidden])
   Garbage Collector colours change backport
 
   The [Garbage Collector colour scheme
-  changes](https://github.com/ocaml/ocaml/pull/9756) in the major
+  changes](https://github.com/ocaml/ocaml/pull/9756 - [403 Forbidden]) in the major
   collector have now been backported to Multicore OCaml. The
   `mark_entry` does not include `end`, `mark_stack_push` resembles
   closer to trunk, and `caml_shrink_mark_stack` has been adapted from
   trunk.
 
-* [ocaml-multicore/ocaml-multicore#429](https://github.com/ocaml-multicore/ocaml-multicore/pull/429)
+* [ocaml-multicore/ocaml-multicore#429](https://github.com/ocaml-multicore/ocaml-multicore/pull/429 - [403 Forbidden])
   Fix a STW interrupt race
 
   The STW interrupt race in
@@ -59,14 +59,14 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
 
 #### Systhreads support
 
-* [ocaml-multicore/ocaml-multicore#381](https://github.com/ocaml-multicore/ocaml-multicore/pull/381)
+* [ocaml-multicore/ocaml-multicore#381](https://github.com/ocaml-multicore/ocaml-multicore/pull/381 - [403 Forbidden])
   Reimplementing Systhreads with pthreads (Domain execution contexts)
 
   The re-implementation of Systhreads with pthreads has been completed
   for Multicore OCaml. The Domain Execution Context (DEC) is
   introduced which allows multiple threads to run atop a domain.
 
-* [ocaml-multicore/ocaml-multicore#410](https://github.com/ocaml-multicore/ocaml-multicore/pull/410)
+* [ocaml-multicore/ocaml-multicore#410](https://github.com/ocaml-multicore/ocaml-multicore/pull/410 - [403 Forbidden])
   systhreads: `caml_c_thread_register` and `caml_c_thread_unregister`
   
   The `caml_c_thread_register` and `caml_c_thread_unregister`
@@ -76,14 +76,14 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
 
 #### Domain Local Storage
 
-* [ocaml-multicore/ocaml-multicore#404](https://github.com/ocaml-multicore/ocaml-multicore/pull/404)
+* [ocaml-multicore/ocaml-multicore#404](https://github.com/ocaml-multicore/ocaml-multicore/pull/404 - [403 Forbidden])
   Domain.DLS.new_key takes an initialiser
   
   The `Domain.DLS.new_key` now accepts an initialiser argument to
   assign an associated value to a key, if not initialised
   already. Also, `Domain.DLS.get` no longer returns an option value.
 
-* [ocaml-multicore/ocaml-multicore#405](https://github.com/ocaml-multicore/ocaml-multicore/pull/405)
+* [ocaml-multicore/ocaml-multicore#405](https://github.com/ocaml-multicore/ocaml-multicore/pull/405 - [403 Forbidden])
   Rework Domain.DLS.get search function such that it no longer allocates
   
   The `Domain.DLS.get` has been updated to remove any memory
@@ -93,7 +93,7 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
 
 #### Lwt
 
-* [ocaml-multicore/multicore-opam#33](https://github.com/ocaml-multicore/multicore-opam/pull/33)
+* [ocaml-multicore/multicore-opam#33](https://github.com/ocaml-multicore/multicore-opam/pull/33 - [403 Forbidden])
   Add lwt.5.3.0+multicore
   
   The Lwt.5.3.0 concurrency library has been added to support CPU
@@ -102,14 +102,14 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
   introducing its installation and usage has been written by Sudha
   Parimala.
 
-* The [Asynchronous Effect-based IO](https://github.com/kayceesrk/ocaml-aeio) builds with a recent
+* The [Asynchronous Effect-based IO](https://github.com/kayceesrk/ocaml-aeio - [403 Forbidden]) builds with a recent
   Lwt, and the HTTP effects demo has been updated to work with
   Multicore OCaml, Lwt, and httpaf. The demo source code is available
-  at the [http-effects](https://github.com/sadiqj/http-effects) repo.
+  at the [http-effects](https://github.com/sadiqj/http-effects - [403 Forbidden]) repo.
 
 #### Sundries
 
-* [ocaml-multicore/ocaml-multicore#406](https://github.com/ocaml-multicore/ocaml-multicore/pull/406)
+* [ocaml-multicore/ocaml-multicore#406](https://github.com/ocaml-multicore/ocaml-multicore/pull/406 - [403 Forbidden])
   Remove ephemeron usage of RPC
   
   The inter-domain mechanism is not required with the stop-the-world
@@ -117,19 +117,19 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
   implementation. The PR also does clean up and simplifies the
   ephemeron data structure and code.
 
-* [ocaml-multicore/ocaml-multicore#411](https://github.com/ocaml-multicore/ocaml-multicore/pull/411)
+* [ocaml-multicore/ocaml-multicore#411](https://github.com/ocaml-multicore/ocaml-multicore/pull/411 - [403 Forbidden])
   Fix typo for presume and presume_arg in `internal_variable_names`
   
   A minor typo bug fix to rename `Presume` and `Presume_arg` in
   `internal_variables_names.ml`.
 
-* [ocaml-multicore/ocaml-multicore#414](https://github.com/ocaml-multicore/ocaml-multicore/pull/414)
+* [ocaml-multicore/ocaml-multicore#414](https://github.com/ocaml-multicore/ocaml-multicore/pull/414 - [403 Forbidden])
   Fix up `Ppoll` `semantics_of_primitives` entry
   
   The `semantics_of_primitives` entry for `Ppoll` has been fixed which
   was causing flambda builds to remove poll points.
 
-* [ocaml-multicore/ocaml-multicore#416](https://github.com/ocaml-multicore/ocaml-multicore/pull/416)
+* [ocaml-multicore/ocaml-multicore#416](https://github.com/ocaml-multicore/ocaml-multicore/pull/416 - [403 Forbidden])
   Fix callback effect bug
 
   The PR fixes a bug when the C-to-OCaml callback prevents effects
@@ -143,7 +143,7 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
 
 #### Configuration
 
-* [ocaml-bench/ocaml-bench-scripts#12](https://github.com/ocaml-bench/ocaml_bench_scripts/pull/12)
+* [ocaml-bench/ocaml-bench-scripts#12](https://github.com/ocaml-bench/ocaml_bench_scripts/pull/12 - [403 Forbidden])
   Add support for parallel multibench targets and JSON input
   
   The `RUN_CONFIG_JSON` and `BUILD_BENCH_TARGET` variables are now
@@ -151,7 +151,7 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
   benchmarks. Default values are specified so that the serial
   benchmarks can still run without explicitly requiring the same.
 
-* [ocaml-bench/sandmark#180](https://github.com/ocaml-bench/sandmark/issues/180)
+* [ocaml-bench/sandmark#180](https://github.com/ocaml-bench/sandmark/issues/180 - [403 Forbidden])
   Notebook Refactoring and User changes
   
   A refactoring effort is underway to make the parallel benchmark
@@ -159,14 +159,14 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
   installation have direct access to the benchmark results produced
   from `ocaml-bench-scripts` on the system.
 
-* [ocaml-bench/sandmark#189](https://github.com/ocaml-bench/sandmark/pull/189)
+* [ocaml-bench/sandmark#189](https://github.com/ocaml-bench/sandmark/pull/189 - [403 Forbidden])
   Add environment support for wrapper in JSON configuration file
   
   The OCAMLRUNPARAM is now passed as an environment variable to the
   benchmarks during runtime, so that, different parameter values can
   be used to obtain multiple results for comparison. The use case and
   the discussion are available at [Running benchmarks with varying
-  OCAMLRUNPARAM](https://github.com/ocaml-bench/sandmark/issues/184)
+  OCAMLRUNPARAM](https://github.com/ocaml-bench/sandmark/issues/184 - [403 Forbidden])
   issue. The environment variables can be specified in the
   `run_config.json` file, as shown below:
   
@@ -180,7 +180,7 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
 
 #### Proposals
 
-* [ocaml-bench/sandmark#159](https://github.com/ocaml-bench/sandmark/issues/159)
+* [ocaml-bench/sandmark#159](https://github.com/ocaml-bench/sandmark/issues/159 - [403 Forbidden])
   Implement a better way to describe tasklet cpulist
 
   The discussion to implement a better way to obtain the taskset list
@@ -188,7 +188,7 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
   to be able to specify hyper-threaded cores, NUMA zones, and the
   specific cores to use for the parallel benchmarks.
 
-* [ocaml-bench/sandmark#179](https://github.com/ocaml-bench/sandmark/issues/179)
+* [ocaml-bench/sandmark#179](https://github.com/ocaml-bench/sandmark/issues/179 - [403 Forbidden])
   [RFC] Classifying benchmarks based on running time
   
   A proposal to categorize the benchmarks based on their running time
@@ -200,12 +200,12 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
   * `gt_100s`: Benchmarks that run for at least 100 seconds.
   
   The PR for the same is available at [Classification of
-  benchmarks](https://github.com/ocaml-bench/sandmark/pull/188).
+  benchmarks](https://github.com/ocaml-bench/sandmark/pull/188 - [403 Forbidden]).
 
 * We are exploring the use of `opam-compiler` switch environment to
   build the Sandmark benchmark test suite. The merge of [systhreads
   compatibility
-  support](https://github.com/ocaml-multicore/ocaml-multicore/pull/407)
+  support](https://github.com/ocaml-multicore/ocaml-multicore/pull/407 - [403 Forbidden])
   now enables us to install dune natively inside the switch
   environment, along with the other benchmarks. With this approach, we
   hope to modularize our benchmarking test suite, and converge to
@@ -213,14 +213,14 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
 
 #### Sundries
 
-* [ocaml-bench/sandmark#181](https://github.com/ocaml-bench/sandmark/pull/181)
+* [ocaml-bench/sandmark#181](https://github.com/ocaml-bench/sandmark/pull/181 - [403 Forbidden])
   Lock-free map bench
 
   An implementation of a concurrent hash-array mapped trie that is
   lock-free, and is based on Prokopec, A. et. al. (2011). This
   cache-aware implementation benchmark is currently under review.
 
-* [ocaml-bench/sandmark#183](https://github.com/ocaml-bench/sandmark/pull/183)
+* [ocaml-bench/sandmark#183](https://github.com/ocaml-bench/sandmark/pull/183 - [403 Forbidden])
   Use crout_decomposition name for numerical analysis benchmark
   
   A couple of LU decomposition benchmarks exist in the Sandmark
@@ -228,13 +228,13 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
   `numerical-analysis/lu_decomposition.ml` benchmark to
   `crout_decomposition.ml`. This is to address [Rename
   lu_decomposition benchmark in
-  numerical-analysis](https://github.com/ocaml-bench/sandmark/issues/182)
+  numerical-analysis](https://github.com/ocaml-bench/sandmark/issues/182 - [403 Forbidden])
   any naming confusion between the two benchmarks, as their
   implementations are different.
 
 ### Completed
 
-* [ocaml-bench/sandmark#177](https://github.com/ocaml-bench/sandmark/pull/177)
+* [ocaml-bench/sandmark#177](https://github.com/ocaml-bench/sandmark/pull/177 - [403 Forbidden])
   Display raw baseline numbers in normalized graphs
 
   The raw baseline numbers are now included in the normalized graphs
@@ -243,20 +243,20 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
   
 ![PR 177 Image |690x258](https://discuss.ocaml.org/uploads/short-url/1gub2PiCejOQBoMqPvuhDoxHpJo.png) 
 
-* [ocaml-bench/sandmark#178](https://github.com/ocaml-bench/sandmark/pull/178)
+* [ocaml-bench/sandmark#178](https://github.com/ocaml-bench/sandmark/pull/178 - [403 Forbidden])
   Change to new Domain.DLS API with Initializer
   
   The `multicore-minilight` and `multicore-numerical` benchmarks have
   now been updated to use the new Domain.DLS API with initializer.
 
-* [ocaml-bench/sandmark#185](https://github.com/ocaml-bench/sandmark/pull/185)
+* [ocaml-bench/sandmark#185](https://github.com/ocaml-bench/sandmark/pull/185 - [403 Forbidden])
   Clean up existing effect benchmarks
  
   The PR ensures that the code compiles without any warnings, and adds
   a `multicore_effects_run_config.json` configuration file, and a
   `run_all_effect.sh` script to execute the same.
 
-* [ocaml-bench/sandmark#186](https://github.com/ocaml-bench/sandmark/pull/186)
+* [ocaml-bench/sandmark#186](https://github.com/ocaml-bench/sandmark/pull/186 - [403 Forbidden])
   Very simple effect microbenchmarks to cover code paths
   
   A set of four microbenchmarks to test the throughput of our effects
@@ -264,7 +264,7 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
   `effect_throughput_clone`, `effect_throughput_val`,
   `effect_throughput_perform`, and `effect_throughput_perform_drop`.
 
-* [ocaml-bench/sandmark#187](https://github.com/ocaml-bench/sandmark/pull/187)
+* [ocaml-bench/sandmark#187](https://github.com/ocaml-bench/sandmark/pull/187 - [403 Forbidden])
   Implementation of 'recursion' benchmarks for effects
   
   A collection of recursion benchmarks to measure the overhead of
@@ -276,14 +276,14 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
 
 ### Ongoing
 
-* [ocaml/ocaml#9876](https://github.com/ocaml/ocaml/pull/9876)
+* [ocaml/ocaml#9876](https://github.com/ocaml/ocaml/pull/9876 - [403 Forbidden])
   Do not cache young_limit in a processor register
 
   The PR removes the caching of `young_limit` in a register for ARM64,
   PowerPC and RISC-V ports. The Sandmark benchmarks are presently
   being tested on the respective hardware.
 
-* [ocaml/ocaml#9934](https://github.com/ocaml/ocaml/pull/9934)
+* [ocaml/ocaml#9934](https://github.com/ocaml/ocaml/pull/9934 - [403 Forbidden])
   Prefetching optimisations for sweeping
   
   The Sandmark benchmarking tests were performed for analysing a
@@ -292,7 +292,7 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
 
 ### Completed
 
-* [ocaml/ocaml#9947](https://github.com/ocaml/ocaml/pull/9947)
+* [ocaml/ocaml#9947](https://github.com/ocaml/ocaml/pull/9947 - [403 Forbidden])
   Add a naked pointers dynamic checker
   
   The check for "naked pointers" (dangerous out-of-heap pointers) is
@@ -300,7 +300,7 @@ As with previous updates, the Multicore OCaml ongoing, and completed tasks are l
   naked pointers and dynamic checker, and no naked pointers have been
   added in the PR.
 
-* [ocaml/ocaml#9951](https://github.com/ocaml/ocaml/pull/9951/)
+* [ocaml/ocaml#9951](https://github.com/ocaml/ocaml/pull/9951/ - [403 Forbidden])
   Ensure that the mark stack push optimisation handles naked pointers
   
   The PR adds a precise check on whether to push an object into the

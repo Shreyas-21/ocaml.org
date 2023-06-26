@@ -649,13 +649,13 @@ Multicore OCaml.
   now available for 4.13.0+trunk, and we are currently porting the
   Irmin Layers benchmark in Sandmark from using Irmin 2.4 to 2.6.
 
-* [ocaml-bench/sandmark#231](https://github.com/ocaml-bench/sandmark/issues/231)
+* [ocaml-bench/sandmark#231](https://github.com/ocaml-bench/sandmark/issues/231 - [403 Forbidden])
   View results for a set of benchmarks in the nightly notebooks
 
   A feature request to filter the list of benchmarks when using the
   Sandmark Jupyter notebooks.
 
-* [ocaml-bench/sandmark#233](https://github.com/ocaml-bench/sandmark/pull/233)
+* [ocaml-bench/sandmark#233](https://github.com/ocaml-bench/sandmark/pull/233 - [403 Forbidden])
   Update pausetimes_multicore to fit with the latest Multicore changes
 
   The pausetimes are now updated for both the 4.12.0 upstream and
@@ -666,7 +666,7 @@ Multicore OCaml.
 ![Sandmark-PR-233-Serial-Pausetimes|690x229](https://discuss.ocaml.org/uploads/short-url/m41amKGFNBx8T5zrassBWsdJlk9.png)
 ![Sandmark-PR-233-Parallel-Pausetimes|690x355](https://discuss.ocaml.org/uploads/short-url/t8BuHiEO8g6bs8fvv7stdBp0Q7z.png)
 
-* [ocaml-bench/sandmark#235](https://github.com/ocaml-bench/sandmark/issues/235)
+* [ocaml-bench/sandmark#235](https://github.com/ocaml-bench/sandmark/issues/235 - [403 Forbidden])
   Update selected benchmarks as a set for baseline benchmark
 
   The baseline benchmark for comparison should only be one from the
@@ -674,7 +674,7 @@ Multicore OCaml.
 
 ![Sandmark-Issue-235|383x82](https://discuss.ocaml.org/uploads/short-url/zUiPdeScykJgbHhx4HrLIBegOIr.png)
 
-* [ocaml-bench/sandmark#236](https://github.com/ocaml-bench/sandmark/issues/236)
+* [ocaml-bench/sandmark#236](https://github.com/ocaml-bench/sandmark/issues/236 - [403 Forbidden])
   Implement pausetimes support in sandmark_nightly
 
   The sequential and parallel pausetimes graph results need to be
@@ -683,7 +683,7 @@ Multicore OCaml.
   Parallelism ont OCaml, ICFP 2020
   paper](https://arxiv.org/pdf/2004.11663.pdf).
 
-* [ocaml-bench/sandmark#237](https://github.com/ocaml-bench/sandmark/issues/237)
+* [ocaml-bench/sandmark#237](https://github.com/ocaml-bench/sandmark/issues/237 - [403 Forbidden])
   Run sandmark_nightly on a larger machine
 
   The testing of Sandmark nightly sequential and parallel benchmark

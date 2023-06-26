@@ -5,7 +5,7 @@ date: "2020-06-01"
 tags: [multicore]
 ---
 
-Welcome to the June 2020 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore) report! As with [previous updates](https://discuss.ocaml.org/tag/multicore-monthly), many thanks to @shakthimaan and @kayceesrk for collating the updates for the month of June 2020. *This is an incremental update; new readers may find it helpful to flick through the previous posts first.*
+Welcome to the June 2020 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore - [403 Forbidden]) report! As with [previous updates](https://discuss.ocaml.org/tag/multicore-monthly), many thanks to @shakthimaan and @kayceesrk for collating the updates for the month of June 2020. *This is an incremental update; new readers may find it helpful to flick through the previous posts first.*
 
 This month has seen a tremendous surge of activity on the upstream OCaml project to prepare for multicore integration, as @xavierleroy and the core team have driven a number of initiatives to prepare the OCaml project for the full multicore featureset.  To reflect this, from next month we will have a status page on the ocaml-multicore wiki with the current status of both our multicore branch and the upstream OCaml project itself.
 
@@ -198,7 +198,7 @@ The Multicore OCaml updates are first listed in our report, which are followed b
   Thanks to @dinosaure for updating the decompress benchmarks in order
   to run them with dune.2.6.0 for Multicore OCaml 4.10.0.
 
-* [ocaml-bench/sandmark#132](https://github.com/ocaml-bench/sandmark/pull/132)
+* [ocaml-bench/sandmark#132](https://github.com/ocaml-bench/sandmark/pull/132 - [403 Forbidden])
   Update dependency packages to use dune.2.6.0 and Multicore OCaml 4.10.0
 
   Sandmark has been running with dune.1.11.4, and we need to move to
@@ -268,7 +268,7 @@ The Multicore OCaml updates are first listed in our report, which are followed b
 
 ### Completed
 
-* [ocaml/ocaml#9619](https://github.com/ocaml/ocaml/pull/9619)
+* [ocaml/ocaml#9619](https://github.com/ocaml/ocaml/pull/9619 - [403 Forbidden])
   A self-describing representation for function closures
 
   The PR provides a way to record the position of the environment for
@@ -320,7 +320,7 @@ The Multicore OCaml updates are first listed in our report, which are followed b
 
   The hashing functions have been updated to use the latest closure
   representation from
-  [ocaml/ocaml#9619](https://github.com/ocaml/ocaml/pull/9619) for the
+  [ocaml/ocaml#9619](https://github.com/ocaml/ocaml/pull/9619 - [403 Forbidden]) for the
   no-naked-pointers mode.
 
 * [ocaml/ocaml#9698](https://github.com/ocaml/ocaml/pull/9698)
