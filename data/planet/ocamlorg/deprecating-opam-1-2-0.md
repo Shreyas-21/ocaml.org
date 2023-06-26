@@ -22,7 +22,7 @@ CI tests for new packages regularly fail on 1.2.0, even if they succeed on 1.2.2
 and higher.
 
 As we prepare the plan for [1.2.2 -> 2.0
-migration](https://github.com/ocaml/opam/issues/2918), it is clear that we need
+migration](https://github.com/ocaml/opam/issues/2918 - [403 Forbidden]), it is clear that we need
 a "one-in one-out" policy on releases in order to preserve the overall health of
 the package repository -- maintaining three separate releases and formats of the
 repository is not practical. Therefore the 1.2.0 release needs to be actively
@@ -44,7 +44,7 @@ users of 1.2.0 to a frozen mirror of the repository, making new package updates
 unavailable to them.
 
 If there are any remaining users of opam 1.2.0, particularly industrial ones, please reach
-out (_e.g._ on [Github](https://github.com/ocaml/opam-repository/issues)). By
+out (_e.g._ on [Github](https://github.com/ocaml/opam-repository/issues - [403 Forbidden])). By
 performing an active deprecation of an older release, we hope we can focus our
 efforts on ensuring the opam users have a good out-of-the-box experience with
 opam 1.2.2 and the forthcoming opam 2.0.

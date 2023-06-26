@@ -9,7 +9,7 @@ Welcome to the June 2020 [Multicore OCaml](https://github.com/ocaml-multicore/oc
 
 This month has seen a tremendous surge of activity on the upstream OCaml project to prepare for multicore integration, as @xavierleroy and the core team have driven a number of initiatives to prepare the OCaml project for the full multicore featureset.  To reflect this, from next month we will have a status page on the ocaml-multicore wiki with the current status of both our multicore branch and the upstream OCaml project itself.
 
-Why not from this month? Well, there's good news and bad news.  [Last month](https://discuss.ocaml.org/t/multicore-ocaml-may-2020-update/5898), I observed that we are a PR away from most of the opam ecosystem working with the multicore branch.  The good news is that we are still a single PR away from it working, but it's a different one :-) The retrofitting of the `Threads` library has brought up [some design complexities](https://github.com/ocaml-multicore/ocaml-multicore/pull/342), and so rather than putting in a "bandaid" fix, we are integrating a comprehensive solution that will work with system threads, domains and (eventually) fibres. That work has taken some time to get right, and I hope to be able to update you all on an opam-friendly OCaml 4.10.0+multicore in a few weeks.
+Why not from this month? Well, there's good news and bad news.  [Last month](https://discuss.ocaml.org/t/multicore-ocaml-may-2020-update/5898), I observed that we are a PR away from most of the opam ecosystem working with the multicore branch.  The good news is that we are still a single PR away from it working, but it's a different one :-) The retrofitting of the `Threads` library has brought up [some design complexities](https://github.com/ocaml-multicore/ocaml-multicore/pull/342 - [403 Forbidden]), and so rather than putting in a "bandaid" fix, we are integrating a comprehensive solution that will work with system threads, domains and (eventually) fibres. That work has taken some time to get right, and I hope to be able to update you all on an opam-friendly OCaml 4.10.0+multicore in a few weeks.
 
 Aside from this, there have been a number of other improvements going into the multicore branches: [mingw Windows support](https://github.com/ocaml-multicore/ocaml-multicore/pull/351), [callstack improvements](https://github.com/ocaml-multicore/ocaml-multicore/pull/363), [fixing the Unix module](https://github.com/ocaml-multicore/ocaml-multicore/pull/346) and so on. The full list is in the detailed report later in this update.
 
@@ -46,7 +46,7 @@ The Multicore OCaml updates are first listed in our report, which are followed b
   An RFC proposal to implement a domain-local storage in Multicore
   OCaml. Kindly review the idea and share your feedback!
 
-* [ocaml-multicore/ocaml-multicore#342](https://github.com/ocaml-multicore/ocaml-multicore/pull/342)
+* [ocaml-multicore/ocaml-multicore#342](https://github.com/ocaml-multicore/ocaml-multicore/pull/342 - [403 Forbidden])
   Implementing the threads library with Domains
 
   An effort to rebase @jhwoodyatt's implementation of the Thread
@@ -92,7 +92,7 @@ The Multicore OCaml updates are first listed in our report, which are followed b
   The DWARF information emitted for `extcall noalloc` had broken
   backtraces and this PR fixes the same.
 
-* [ocaml-multicore/ocaml-multicore#345](https://github.com/ocaml-multicore/ocaml-multicore/pull/345)
+* [ocaml-multicore/ocaml-multicore#345](https://github.com/ocaml-multicore/ocaml-multicore/pull/345 - [403 Forbidden])
   Absolute exception stack
 
   The representation of the exception stack is changed from relative
@@ -192,7 +192,7 @@ The Multicore OCaml updates are first listed in our report, which are followed b
   by specifying the `--cpu-list` to be used for parallel benchmark
   runs.
 
-* [ocaml-bench/sandmark#131](https://github.com/ocaml-bench/sandmark/pull/131)
+* [ocaml-bench/sandmark#131](https://github.com/ocaml-bench/sandmark/pull/131 - [403 Forbidden])
   Update decompress benchmarks
 
   Thanks to @dinosaure for updating the decompress benchmarks in order
@@ -268,7 +268,7 @@ The Multicore OCaml updates are first listed in our report, which are followed b
 
 ### Completed
 
-* [ocaml/ocaml#9619](https://github.com/ocaml/ocaml/pull/9619)
+* [ocaml/ocaml#9619](https://github.com/ocaml/ocaml/pull/9619 - [403 Forbidden])
   A self-describing representation for function closures
 
   The PR provides a way to record the position of the environment for
@@ -320,7 +320,7 @@ The Multicore OCaml updates are first listed in our report, which are followed b
 
   The hashing functions have been updated to use the latest closure
   representation from
-  [ocaml/ocaml#9619](https://github.com/ocaml/ocaml/pull/9619) for the
+  [ocaml/ocaml#9619](https://github.com/ocaml/ocaml/pull/9619 - [403 Forbidden]) for the
   no-naked-pointers mode.
 
 * [ocaml/ocaml#9698](https://github.com/ocaml/ocaml/pull/9698)

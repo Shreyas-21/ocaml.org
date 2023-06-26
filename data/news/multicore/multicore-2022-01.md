@@ -187,7 +187,7 @@ As always, the Multicore OCaml updates are listed first, which are then followed
   condition in `caml_mem_map`, and debugging printf statements have
   been removed.
 
-* [ocaml/ocaml#10925](https://github.com/ocaml/ocaml/issues/10925)
+* [ocaml/ocaml#10925](https://github.com/ocaml/ocaml/issues/10925 - [403 Forbidden])
   Rename symbol for `Caml_state` to `caml_state`
   
   `Caml_state` is a macro in Mac OS, and hence the same has been
@@ -577,13 +577,13 @@ As always, the Multicore OCaml updates are listed first, which are then followed
   domains, allow passing pipes, check or report the process's exit
   status etc.
 
-* [ocaml-multicore/eio#138](https://github.com/ocaml-multicore/eio/issues/138)
+* [ocaml-multicore/eio#138](https://github.com/ocaml-multicore/eio/issues/138 - [403 Forbidden])
   Integrate Eio's CTF tracing with OCaml's tracing
   
   The proposed `eventring` to replace the OCaml CTF-based `eventlog`
   system can allow users to add custom events that need to be stored.
 
-* [ocaml-multicore/eio#140](https://github.com/ocaml-multicore/eio/issues/140)
+* [ocaml-multicore/eio#140](https://github.com/ocaml-multicore/eio/issues/140 - [403 Forbidden])
   Decide on `cstruct` vs `bytes`
   
   The IO operations with the kernel require that the GC does not move
@@ -592,12 +592,12 @@ As always, the Multicore OCaml updates are listed first, which are then followed
   moved, then using `bytes` can be an option. Performance measurements
   to compare `cstruct` and `bytes` need to be performed.
 
-* [ocaml-multicore/eio#146](https://github.com/ocaml-multicore/eio/issues/146)
+* [ocaml-multicore/eio#146](https://github.com/ocaml-multicore/eio/issues/146 - [403 Forbidden])
   `lib_eio`: Add `take_all` function
   
   The `take_all` function has been added to `lib_eio/stream.ml`.
 
-* [ocaml-multicore/eio#155](https://github.com/ocaml-multicore/eio/issues/155)
+* [ocaml-multicore/eio#155](https://github.com/ocaml-multicore/eio/issues/155 - [403 Forbidden])
   Add `Eio_unix.FD`
   
   An `FD` module has been added to `lib_eio/unix/eio_unix.ml` to be
@@ -605,25 +605,25 @@ As always, the Multicore OCaml updates are listed first, which are then followed
 
 #### Sundries
 
-* [ocaml-multicore/parallel-programming-in-multicore-ocaml#13](https://github.com/ocaml-multicore/parallel-programming-in-multicore-ocaml/issues/13)
+* [ocaml-multicore/parallel-programming-in-multicore-ocaml#13](https://github.com/ocaml-multicore/parallel-programming-in-multicore-ocaml/issues/13 - [403 Forbidden])
   Setup CI
   
   A weekly CI build using GitHub Actions will be useful to detect any
   build failures.
 
-* [ocaml-multicore/tezos#13](https://github.com/ocaml-multicore/tezos/pull/23)
+* [ocaml-multicore/tezos#13](https://github.com/ocaml-multicore/tezos/pull/23 - [403 Forbidden])
   Merge upstream updates
   
   An issue tracker to merge the January 24, 2022 updates to the
   `4.12.0+domains` branch.
 
-* [ocaml-multicore/tezos#24](https://github.com/ocaml-multicore/tezos/issues/24)
+* [ocaml-multicore/tezos#24](https://github.com/ocaml-multicore/tezos/issues/24 - [403 Forbidden])
   Test suite failure
   
   An `Alcotest_engine__Core.Make(P) (M)` error has been reported when
   running the test suite.
 
-* [ocaml-multicore/effects-examples#26](https://github.com/ocaml-multicore/effects-examples/pull/26)
+* [ocaml-multicore/effects-examples#26](https://github.com/ocaml-multicore/effects-examples/pull/26 - [403 Forbidden])
   Port to OCaml 5.00
   
   A work-in-progress to port all the Effects examples to run with
@@ -635,20 +635,20 @@ As always, the Multicore OCaml updates are listed first, which are then followed
 
 ##### Added
 
-* [ocaml-multicore/eio#120](https://github.com/ocaml-multicore/eio/pull/120)
+* [ocaml-multicore/eio#120](https://github.com/ocaml-multicore/eio/pull/120 - [403 Forbidden])
   Add `Fibre.fork_on_accept` and `Net.accept`
   
   This PR that updates `fork_on_accept` to use an accept function in a
   new switch, and passes the successful result to a handler function
   in a new fibre has been merged.
 
-* [ocaml-multicore/eio#130](https://github.com/ocaml-multicore/eio/pull/130)
+* [ocaml-multicore/eio#130](https://github.com/ocaml-multicore/eio/pull/130 - [403 Forbidden])
   Add Luv polling functions
   
   The Luv polling functions wrapped in Eio have been added to
   `lib_eio_luv/eio_luv.ml` for Lwt integration.
 
-* [ocaml-multicore/eio#133](https://github.com/ocaml-multicore/eio/pull/133)
+* [ocaml-multicore/eio#133](https://github.com/ocaml-multicore/eio/pull/133 - [403 Forbidden])
   Add `Switch.dump` and `Cancel.dump` for debugging
   
   The `Switch.dump` and `Cancel.dump` functions have been added for
@@ -662,13 +662,13 @@ As always, the Multicore OCaml updates are listed first, which are then followed
         on (protected) [7]
   ```
 
-* [ocaml-multicore/eio#135](https://github.com/ocaml-multicore/eio/pull/135)
+* [ocaml-multicore/eio#135](https://github.com/ocaml-multicore/eio/pull/135 - [403 Forbidden])
   Add `~close_unix` flag to `FD.of_unix`
   
   The user can now handle closing of the FD using the `close_unix`
   flag for better integration with APIs.
 
-* [ocaml-multicore/eio#139](https://github.com/ocaml-multicore/eio/pull/139)
+* [ocaml-multicore/eio#139](https://github.com/ocaml-multicore/eio/pull/139 - [403 Forbidden])
   Add `eio.unix` module for Unix integration
   
   A new `eio.unix` module provides both `await_readable` and
@@ -676,27 +676,27 @@ As always, the Multicore OCaml updates are listed first, which are then followed
   backends. Eio needs to work on browsers and unikernels, and hence it
   must not depend directly on `Unix`.
 
-* [ocaml-multicore/eio#141](https://github.com/ocaml-multicore/eio/pull/141)
+* [ocaml-multicore/eio#141](https://github.com/ocaml-multicore/eio/pull/141 - [403 Forbidden])
   `lib_eio`: implement `Stream.is_empty`
   
   A `length` and `is_empty` function have been implemented in
   `lib_eio/stream.ml` sources.
 
-* [ocaml-multicore/eio#159](https://github.com/ocaml-multicore/eio/pull/159)
+* [ocaml-multicore/eio#159](https://github.com/ocaml-multicore/eio/pull/159 - [403 Forbidden])
   Add `Eio.Buf_read`
   
   The addition of `Buf_read` in Eio provides a low-level API to view
   the internal buffer and to mark bytes as consumed. Also, it now has
   a high-level API to read characters, strings, and multi-line text.
 
-* [ocaml-multicore/eio#161](https://github.com/ocaml-multicore/eio/pull/161)
+* [ocaml-multicore/eio#161](https://github.com/ocaml-multicore/eio/pull/161 - [403 Forbidden])
   Add more functions to `Buf_read`
   
   The functions `peek_char`, `skip`, `pair`, `map`, `bind`, `*>` and
   `<*` have been added to `lib_eio/buf_read.ml` to match the Angstrom
   API. Additional fuzz testing with crowbar have also been included.
 
-* [ocaml-multicore/eio#163](https://github.com/ocaml-multicore/eio/pull/163)
+* [ocaml-multicore/eio#163](https://github.com/ocaml-multicore/eio/pull/163 - [403 Forbidden])
   Add `Buf_read.{seq,lines}` and `Dir.{load,save}` convenience functions
   
   A `at_end_of_input` function has been added, and `eof` has been
@@ -707,40 +707,40 @@ As always, the Multicore OCaml updates are listed first, which are then followed
 
 ##### Build
 
-* [ocaml-multicore/eio#128](https://github.com/ocaml-multicore/eio/pull/128)
+* [ocaml-multicore/eio#128](https://github.com/ocaml-multicore/eio/pull/128 - [403 Forbidden])
   Depend on `base-domains`
   
   The opam repository now provides a `base-domains` package, which
   will be used instead of hard-coding an explicit dependency on
   `ocaml.4.12.0+domains`.
 
-* [ocaml-multicore/eio#137](https://github.com/ocaml-multicore/eio/pull/137)
+* [ocaml-multicore/eio#137](https://github.com/ocaml-multicore/eio/pull/137 - [403 Forbidden])
   Rename `eunix` to `eio.utils`
   
   The collection of utility modules for building `Eio` backends have
   been renamed from `enix` to `eio.utils`, as a separate OPAM package
   is not required.
 
-* [ocaml-multicore/eio#147](https://github.com/ocaml-multicore/eio/pull/147)
+* [ocaml-multicore/eio#147](https://github.com/ocaml-multicore/eio/pull/147 - [403 Forbidden])
   Remove unused `bigstringaf` dependency
   
   The `bigstringaf` dependency is no longer required and the same has
   been removed.
 
-* [ocaml-multicore/eio#149](https://github.com/ocaml-multicore/eio/pull/149)
+* [ocaml-multicore/eio#149](https://github.com/ocaml-multicore/eio/pull/149 - [403 Forbidden])
   Remove dependency on ppxlib
   
   The `lib_ctf/ctf.ml` file was using ppxlib, and the relevant code
   has been inlined. Hence, the dependency on `ppxlib` has been removed
   to build for 5.00.0.
 
-* [ocaml-multicore/eio#151](https://github.com/ocaml-multicore/eio/pull/151)
+* [ocaml-multicore/eio#151](https://github.com/ocaml-multicore/eio/pull/151 - [403 Forbidden])
   Add support for OCaml 5.00+trunk
   
   The PR updates `eio` to build for OCaml 5.00.0+trunk and keeps
   compatibility with 4.12+domains.
 
-* [ocaml-multicore/eio#157](https://github.com/ocaml-multicore/eio/pull/157)
+* [ocaml-multicore/eio#157](https://github.com/ocaml-multicore/eio/pull/157 - [403 Forbidden])
   Remove `Unix` dependency from Eio
   
   The dependency on Unix is removed from Eio in order to use it in a
@@ -749,27 +749,27 @@ As always, the Multicore OCaml updates are listed first, which are then followed
 
 ##### Improvements
 
-* [ocaml-multicore/eio#156](https://github.com/ocaml-multicore/eio/pull/156)
+* [ocaml-multicore/eio#156](https://github.com/ocaml-multicore/eio/pull/156 - [403 Forbidden])
   [eio_linux] Allow running uring in polling mode
   
   A `polling_timeout` option has been added to run uring in polling
   mode. This is faster because Linux can start handling requests
   without waiting for us to submit them.
 
-* [ocaml-multicore/eio#158](https://github.com/ocaml-multicore/eio/pull/158)
+* [ocaml-multicore/eio#158](https://github.com/ocaml-multicore/eio/pull/158 - [403 Forbidden])
   Split `eio.ml` out into separate modules
   
   A code refactor to split the `lib_eio/eio.ml` into separate modules.
 
 ##### Fixes
 
-* [ocaml-multicore/eio#134](https://github.com/ocaml-multicore/eio/pull/134)
+* [ocaml-multicore/eio#134](https://github.com/ocaml-multicore/eio/pull/134 - [403 Forbidden])
   Simplify and improve error reporting
   
   An error raised and lost when cancelling an operation is now
   fixed. The cancellation contexts are now handled by the switches.
 
-* [ocaml-multicore/eio#160](https://github.com/ocaml-multicore/eio/pull/160)
+* [ocaml-multicore/eio#160](https://github.com/ocaml-multicore/eio/pull/160 - [403 Forbidden])
   Fix `Buf_read.take_all`
   
   A fix in `lib_eio/buf_read.ml` to read everything in the stream and

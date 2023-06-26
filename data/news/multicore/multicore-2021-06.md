@@ -5,7 +5,7 @@ date: "2021-06-01"
 tags: [multicore]
 ---
 
-Welcome to the June 2021 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore) monthly report! This month's update along with the [previous update's](https://discuss.ocaml.org/tag/multicore-monthly) have been compiled by @avsm, @ctk21, @kayceesrk and @shakthimaan.
+Welcome to the June 2021 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore - [403 Forbidden]) monthly report! This month's update along with the [previous update's](https://discuss.ocaml.org/tag/multicore-monthly) have been compiled by @avsm, @ctk21, @kayceesrk and @shakthimaan.
 
 Our overall goal remains on track for generating a preview tree for OCaml 5.0 multicore domains-only parallelism over the summer.
 
@@ -13,29 +13,29 @@ Our overall goal remains on track for generating a preview tree for OCaml 5.0 mu
 
 In [May's update](https://discuss.ocaml.org/t/multicore-ocaml-may-2021/7990#ecosystem-changes-to-prepare-for-500-domains-only-2), I noted that our focus was now on adapting the ecosystem to work well with multicore, and I'm pleased to report that this is progressing very well.
 
-- The 4.12.0+domains multicore compiler variant has been [merged into mainline opam-repo](https://github.com/ocaml/opam-repository/pull/18960), so you can now `opam switch 4.12.0+domains` directly. The `base-domains` package is also available to mark your opam project as _requiring_ the `Domains` module, so you can even publish your early multicore-capable libraries to the mainline opam repository now.
+- The 4.12.0+domains multicore compiler variant has been [merged into mainline opam-repo](https://github.com/ocaml/opam-repository/pull/18960 - [403 Forbidden]), so you can now `opam switch 4.12.0+domains` directly. The `base-domains` package is also available to mark your opam project as _requiring_ the `Domains` module, so you can even publish your early multicore-capable libraries to the mainline opam repository now.
 
-- The OCaml standard library was made safe for parallel use by multiple domains ([wiki](https://github.com/ocaml-multicore/ocaml-multicore/wiki/Safety-of-Stdlib-under-Multicore-OCaml), [issue](https://github.com/ocaml/ocaml/issues/10453), [fixes](https://github.com/ocaml-multicore/ocaml-multicore/issues?q=is%3Aissue+label%3A%22stdlib+safety%22+is%3Aclosed)); and in particularly the `Format` and `Random` modules. These modules were the main sources of incompatibilities we found when running existing OCaml code with multiple domains.
+- The OCaml standard library was made safe for parallel use by multiple domains ([wiki](https://github.com/ocaml-multicore/ocaml-multicore/wiki/Safety-of-Stdlib-under-Multicore-OCaml - [403 Forbidden]), [issue](https://github.com/ocaml/ocaml/issues/10453 - [403 Forbidden]), [fixes](https://github.com/ocaml-multicore/ocaml-multicore/issues?q=is%3Aissue+label%3A%22stdlib+safety%22+is%3Aclosed - [403 Forbidden])); and in particularly the `Format` and `Random` modules. These modules were the main sources of incompatibilities we found when running existing OCaml code with multiple domains.
 
 * The `Domain` module has had its interface slimmed with the removal of `critical_section`, `wait`, `notify` which has allowed significant runtime simplification. The GC C-API interface is now implemented and this means that Jane Street's `Base`, `Core`, and `Async` now compile on `4.12+domains` without modifications; for example `opam install patdiff` works out of the box on a `4.12+domains` switch!
 
-*  [Domainslib 0.3.0](https://github.com/ocaml-multicore/domainslib/releases/tag/0.3.0) has been released which incorporates multiple improvements including the work-stealing deques for task distribution. The performance of reading domain local variables has also been improved with a primitive and a O(1) lookup.  The chapter on [`Parallel Programming in
-Multicore OCaml`](https://github.com/ocaml-multicore/parallel-programming-in-multicore-ocaml) has been updated to reflect the latest developments with Domainslib.
+*  [Domainslib 0.3.0](https://github.com/ocaml-multicore/domainslib/releases/tag/0.3.0 - [403 Forbidden]) has been released which incorporates multiple improvements including the work-stealing deques for task distribution. The performance of reading domain local variables has also been improved with a primitive and a O(1) lookup.  The chapter on [`Parallel Programming in
+Multicore OCaml`](https://github.com/ocaml-multicore/parallel-programming-in-multicore-ocaml - [403 Forbidden]) has been updated to reflect the latest developments with Domainslib.
 
-This means that big application stacks should now compile pretty well with 4.12.0+domains (applications like the Tezos node and patdiff exercise a lot of the dependency trees in opam). If you do find incompatibilities, please do report them on the [repository](https://github.com/ocaml-multicore/ocaml-multicore/issues).
+This means that big application stacks should now compile pretty well with 4.12.0+domains (applications like the Tezos node and patdiff exercise a lot of the dependency trees in opam). If you do find incompatibilities, please do report them on the [repository](https://github.com/ocaml-multicore/ocaml-multicore/issues - [403 Forbidden]).
 
 ## 4.12.0+domains+effects
 
 Most of our focus has been on getting the domains-only trees (for OCaml 5.0) up to speed, but we have been progressing the direct-style effects-based IO stack as well.
 
 - The `uring` bindings to Linux Io_uring are now available on opam-repository, so you can try it out on sequential OCaml too. A good mini-project would be to add a uring backend to the existing Async or Lwt engines, if anyone wants to try a substantial contribution.
-- The [`eio` library](https://github.com/ocaml-multicore/eio) is fairly usable now, for both filesystem and networking. We've submitted a talk to the OCaml workshop to dive into the innards of it in more detail, so stay tuned for that in the coming months if accepted.  The main changes here have been performance improvements, and the HTTP stack is fairy competitive with (e.g.) `rust-hyper`.
+- The [`eio` library](https://github.com/ocaml-multicore/eio - [403 Forbidden]) is fairly usable now, for both filesystem and networking. We've submitted a talk to the OCaml workshop to dive into the innards of it in more detail, so stay tuned for that in the coming months if accepted.  The main changes here have been performance improvements, and the HTTP stack is fairy competitive with (e.g.) `rust-hyper`.
 
 We will soon also have a variant of this tree that removes the custom effect syntax and implements the fibres (the runtime piece) as `Obj` functions.  This will further improve ecosystem compatibility and allow us to build direct-style OCaml libraries that use fibres internally to provide concurrency, but without exposing any use of effects in their interfaces.
 
 ## Benchmarking and performance
 
-We are always keen to get more benchmarks that exercise multicore features; if you want to try multicore out and help write benchmarks there are some suggestions on the [wiki](https://github.com/ocaml-multicore/ocaml-multicore/wiki/Multicore-benchmarking-projects). We've got a private server which runs a Sandmark nightly benchmark pipeline with Jupyter notebooks, which we can give access to anyone who submits benchmarks. We continue to test integration of Sandmark with [current-bench](https://github.com/ocurrent/current-bench) for better integration with GitHub PRs.
+We are always keen to get more benchmarks that exercise multicore features; if you want to try multicore out and help write benchmarks there are some suggestions on the [wiki](https://github.com/ocaml-multicore/ocaml-multicore/wiki/Multicore-benchmarking-projects - [403 Forbidden]). We've got a private server which runs a Sandmark nightly benchmark pipeline with Jupyter notebooks, which we can give access to anyone who submits benchmarks. We continue to test integration of Sandmark with [current-bench](https://github.com/ocurrent/current-bench - [403 Forbidden]) for better integration with GitHub PRs.
 
 As always, the Multicore OCaml ongoing and completed tasks are listed first, which are then followed by updates from the ecosystem and their associated libraries. The Sandmark benchmarking and nightly build efforts are then mentioned. Finally, the status of the upstream OCaml Safepoints PR is provided for your reference.
 
@@ -43,37 +43,37 @@ As always, the Multicore OCaml ongoing and completed tasks are listed first, whi
 
 ### Ongoing
 
-* [ocaml-multicore/ocaml-multicore#573](https://github.com/ocaml-multicore/ocaml-multicore/pull/573)
+* [ocaml-multicore/ocaml-multicore#573](https://github.com/ocaml-multicore/ocaml-multicore/pull/573 - [403 Forbidden])
   Backport trunk safepoints PR to multicore
 
   A work-in-progress to backport the Safepoints PR from ocaml/ocaml to
   Multicore OCaml.
 
-* [ocaml-multicore/ocaml-multicore#584](https://github.com/ocaml-multicore/ocaml-multicore/pull/584)
+* [ocaml-multicore/ocaml-multicore#584](https://github.com/ocaml-multicore/ocaml-multicore/pull/584 - [403 Forbidden])
   Modernise signal handling
 
   A patch to bring the Multicore OCaml signals implementation closer
   to upstream OCaml.
 
-* [ocaml-multicore/ocaml-multicore#598](https://github.com/ocaml-multicore/ocaml-multicore/pull/598)
+* [ocaml-multicore/ocaml-multicore#598](https://github.com/ocaml-multicore/ocaml-multicore/pull/598 - [403 Forbidden])
   Do not deliver signals to threads that have blocked them
 
   A draft PR to not deliver signals to threads that are in a blocked
   state. The without-systhreads case needs to be handled.
 
-* [ocaml-multicore/ocaml-multicore#600](https://github.com/ocaml-multicore/ocaml-multicore/pull/600)
+* [ocaml-multicore/ocaml-multicore#600](https://github.com/ocaml-multicore/ocaml-multicore/pull/600 - [403 Forbidden])
   Expose a few more GC variables in headers
 
   The `caml_young_start`, `caml_young_limit` and `caml_minor_heap_wsz`
   variables have been defined in the runtime.
 
-* [ocaml-multicore/ocaml-multicore#601](https://github.com/ocaml-multicore/ocaml-multicore/pull/601)
+* [ocaml-multicore/ocaml-multicore#601](https://github.com/ocaml-multicore/ocaml-multicore/pull/601 - [403 Forbidden])
   Domain better participants
 
   The iterations `0(Max_domains)` from STW signalling and
   `0(n_running_domains)` from domain creation have now been removed.
 
-* [ocaml-multicore/ocaml-multicore#603](https://github.com/ocaml-multicore/ocaml-multicore/pull/603)
+* [ocaml-multicore/ocaml-multicore#603](https://github.com/ocaml-multicore/ocaml-multicore/pull/603 - [403 Forbidden])
   Systhreads tick thread
 
   An initial draft PR for porting the tick thread to Multicore OCaml.
@@ -82,27 +82,27 @@ As always, the Multicore OCaml ongoing and completed tasks are listed first, whi
 
 #### Enhancements
 
-* [ocaml-multicore/ocaml-multicore#552](https://github.com/ocaml-multicore/ocaml-multicore/pull/552)
+* [ocaml-multicore/ocaml-multicore#552](https://github.com/ocaml-multicore/ocaml-multicore/pull/552 - [403 Forbidden])
   Add a `force_instrumented_runtime` option to configure
 
   The `configure` script now accepts a new
   `--enable-force-instrumented-runtime` option to facilitate use of
   the instrumented runtime on linker invocations to obtain event logs.
 
-* [ocaml-multicore/ocaml-multicore#558](https://github.com/ocaml-multicore/ocaml-multicore/pull/558)
+* [ocaml-multicore/ocaml-multicore#558](https://github.com/ocaml-multicore/ocaml-multicore/pull/558 - [403 Forbidden])
   Refactor `Domain.{spawn/join}` to use no critical sections
 
   The critical sections in `Domain.{spawn/join}` and the use of
   `Domain.wait` have been removed.
 
-* [ocaml-multicore/ocaml-multicore#561](https://github.com/ocaml-multicore/ocaml-multicore/pull/561)
+* [ocaml-multicore/ocaml-multicore#561](https://github.com/ocaml-multicore/ocaml-multicore/pull/561 - [403 Forbidden])
   Slim down `Domain.Sync`: remove `wait`, `notify`, `critical_section`
 
   A breaking change in `Domain.Sync` that removes `critical_section`,
   `notify`, `wait`, `wait_for`, and `wait_until`. This is to remove
   the need for domain-to-domain messaging in the runtime.
 
-* [ocaml-multicore/ocaml-multicore#576](https://github.com/ocaml-multicore/ocaml-multicore/pull/576)
+* [ocaml-multicore/ocaml-multicore#576](https://github.com/ocaml-multicore/ocaml-multicore/pull/576 - [403 Forbidden])
   Including Git hash in runtime
 
   A Git hash is now printed in the runtime as shown below:
@@ -113,7 +113,7 @@ As always, the Multicore OCaml ongoing and completed tasks are listed first, whi
   Built with git hash 'ae3fb4bb6' on branch 'runtime_version' with tag '<tag unavailable>'
   ```
 
-* [ocaml-multicore/ocaml-multicore#579](https://github.com/ocaml-multicore/ocaml-multicore/pull/579)
+* [ocaml-multicore/ocaml-multicore#579](https://github.com/ocaml-multicore/ocaml-multicore/pull/579 - [403 Forbidden])
   Primitive for fetching DLS root
 
   A new primitive has been implemented for fetching DLS, and is now a
@@ -121,25 +121,25 @@ As always, the Multicore OCaml ongoing and completed tasks are listed first, whi
 
 #### Upstream
 
-* [ocaml-multicore/ocaml-multicore#555](https://github.com/ocaml-multicore/ocaml-multicore/pull/555)
+* [ocaml-multicore/ocaml-multicore#555](https://github.com/ocaml-multicore/ocaml-multicore/pull/555 - [403 Forbidden])
   runtime: `CAML_TRACE_VERSION` is now set to a Multicore specific value
 
   A `CAML_TRACE_VERSION` is defined to distinguish between Multicore
   OCaml and trunk for the runtime.
 
-* [ocaml-multicore/ocaml-multicore#581](https://github.com/ocaml-multicore/ocaml-multicore/pull/581)
+* [ocaml-multicore/ocaml-multicore#581](https://github.com/ocaml-multicore/ocaml-multicore/pull/581 - [403 Forbidden])
   Move our usage of inline to `Caml_inline`
 
   We now use `Caml_inline` for all the C inlining in the runtime to
   align with upstream OCaml.
 
-* [ocaml-multicore/ocaml-multicore#589](https://github.com/ocaml-multicore/ocaml-multicore/pull/589)
+* [ocaml-multicore/ocaml-multicore#589](https://github.com/ocaml-multicore/ocaml-multicore/pull/589 - [403 Forbidden])
   Reintroduce `adjust_gc_speed`
 
   The `caml_adjust_gc_speed` function from trunk has been reintroduced
   to the Multicore OCaml runtime.
 
-* [ocaml-multicore/ocaml-multicore#590](https://github.com/ocaml-multicore/ocaml-multicore/pull/590)
+* [ocaml-multicore/ocaml-multicore#590](https://github.com/ocaml-multicore/ocaml-multicore/pull/590 - [403 Forbidden])
   runtime: stub `caml_stat_*` interfaces in gc_ctrl
 
   The creation of `caml_stat_*` stub functions in gc_ctrl.h to
@@ -148,31 +148,31 @@ As always, the Multicore OCaml ongoing and completed tasks are listed first, whi
 
 #### Fixes
 
-* [ocaml-multicore/ocaml-multicore#562](https://github.com/ocaml-multicore/ocaml-multicore/pull/562)
+* [ocaml-multicore/ocaml-multicore#562](https://github.com/ocaml-multicore/ocaml-multicore/pull/562 - [403 Forbidden])
   Import fixes to the minor heap allocation code from DLABs
 
   The multiplication factor of two used for minor heap allocation has
   been removed, and the `Minor_heap_max` limit from config.h is no
   longer converted to a byte size for Multicore OCaml.
 
-* [ocaml-multicore/ocaml-multicore#593](https://github.com/ocaml-multicore/ocaml-multicore/pull/593)
+* [ocaml-multicore/ocaml-multicore#593](https://github.com/ocaml-multicore/ocaml-multicore/pull/593 - [403 Forbidden])
   Fix two issues with ephemerons
 
   A patch to simplify ephemeron handover during termination.
 
-* [ocaml-multicore/ocaml-multicore#594](https://github.com/ocaml-multicore/ocaml-multicore/pull/594)
+* [ocaml-multicore/ocaml-multicore#594](https://github.com/ocaml-multicore/ocaml-multicore/pull/594 - [403 Forbidden])
   Fix finaliser handover issue
 
   The `caml_finish_major_cycle` is used leading to the major GC phase
   `Phase_sweep_and_mark_main` for the correct handoff of finalisers.
 
-* [ocaml-multicore/ocaml-multicore#596](https://github.com/ocaml-multicore/ocaml-multicore/pull/596)
+* [ocaml-multicore/ocaml-multicore#596](https://github.com/ocaml-multicore/ocaml-multicore/pull/596 - [403 Forbidden])
   systhreads: do `st_thread_id` after initializing the thread descriptor
 
   The thread ID was set even before initializing the thread
   descriptor, and this PR fixes the order.
 
-* [ocaml-multicore/ocaml-multicore#604](https://github.com/ocaml-multicore/ocaml-multicore/pull/604)
+* [ocaml-multicore/ocaml-multicore#604](https://github.com/ocaml-multicore/ocaml-multicore/pull/604 - [403 Forbidden])
   Fix unguarded `caml_skiplist_empty` in `caml_scan_global_young_roots`
 
   The PR introduces a `caml_iterate_global_roots` function and fixes a
@@ -180,20 +180,20 @@ As always, the Multicore OCaml ongoing and completed tasks are listed first, whi
 
 #### Cleanups
 
-* [ocaml-multicore/ocaml-multicore#567](https://github.com/ocaml-multicore/ocaml-multicore/pull/567)
+* [ocaml-multicore/ocaml-multicore#567](https://github.com/ocaml-multicore/ocaml-multicore/pull/567 - [403 Forbidden])
   Simplify some of the minor_gc code
 
   The `not_alone` variable has been cleaned up with a simplification
   to the minor_gc.c code.
 
-* [ocaml-multicore/ocaml-multicore#580](https://github.com/ocaml-multicore/ocaml-multicore/pull/580)
+* [ocaml-multicore/ocaml-multicore#580](https://github.com/ocaml-multicore/ocaml-multicore/pull/580 - [403 Forbidden])
   Remove struct domain
 
   The `caml_domain_state` is now the single source of domain
   information with the removal of `struct domain`. `struct
   dom_internal` is no longer leaking across the runtime.
 
-* [ocaml-multicore/ocaml-multicore#583](https://github.com/ocaml-multicore/ocaml-multicore/pull/583)
+* [ocaml-multicore/ocaml-multicore#583](https://github.com/ocaml-multicore/ocaml-multicore/pull/583 - [403 Forbidden])
   Removing interrupt queues
 
   The locking of `struct_interruptor` when receiving interrupts and
@@ -691,7 +691,7 @@ Multicore OCaml.
   deploy the same on a 64+ core machine to benefit from the recent
   improvements to Domainslib.
 
-* [ocaml-bench/sandmark#241](https://github.com/ocaml-bench/sandmark/pull/241)
+* [ocaml-bench/sandmark#241](https://github.com/ocaml-bench/sandmark/pull/241 - [1 Client error: Failure when receiving data from the peer])
   Switch to default Random module
 
   An on-going discussion on whether to switch to using `Random.State`

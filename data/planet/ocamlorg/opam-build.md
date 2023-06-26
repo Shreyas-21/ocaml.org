@@ -121,9 +121,9 @@ significantly before release.
 
 Another use-case that we are striving to improve is sharing of development
 setups (share sets of pinned packages, depend on specific remotes or git hashes,
-etc.). We have [many](https://github.com/ocaml/opam/issues/2762)
-[ideas](https://github.com/ocaml/opam/issues/2495) to
-[improve](https://github.com/ocaml/opam/issues/1734) on this, but `opam build`
+etc.). We have [many](https://github.com/ocaml/opam/issues/2762 - [403 Forbidden])
+[ideas](https://github.com/ocaml/opam/issues/2495 - [403 Forbidden]) to
+[improve](https://github.com/ocaml/opam/issues/1734 - [403 Forbidden]) on this, but `opam build`
 is not, as of today, a direct solution to this. In particular, installing this
 way still relies on the default opam repository; a way to define specific
 options for the switch that is implicitely created on `opam build` is in the

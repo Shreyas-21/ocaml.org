@@ -12,8 +12,8 @@ blogging about them here along with the OPAM tool itself.
 
 At the time of writing, interfaces to these tools are available for
 Emacs and Vim.  Efforts are underway to add support for other editors,
-including [Acme](https://github.com/raphael-proust/merlin-acme) and
-[Sublime Text 3](https://github.com/def-lkb/sublime-text-merlin).
+including [Acme](https://github.com/raphael-proust/merlin-acme - [403 Forbidden]) and
+[Sublime Text 3](https://github.com/def-lkb/sublime-text-merlin - [403 Forbidden]).
 
 # Overview
 
@@ -21,7 +21,7 @@ The first tool, [ocp-indent](http://www.typerex.org/ocp-indent.html),
 handles the task of indenting your OCaml files.  It is an OCaml executable that
 can be used from the command line or directly from your editor.
 
-The second tool, [merlin](http://the-lambda-church.github.io/merlin/) performs
+The second tool, [merlin](http://the-lambda-church.github.io/merlin/ - [404 Not Found]) performs
 "static analysis" of your source files.  The analysis is then used to provide error reporting, source
 browsing, auto-completion and more.
 
@@ -38,7 +38,7 @@ ocp-indent for fine-tuned indentation:
 Indeed the indentation behaviour of ocp-indent can be configured through several
 options, directing how it will behave when encountering different OCaml language constructs.
 These options can either be set in a configuration file (such as 
-[this example configuration](https://github.com/OCamlPro/ocp-indent/blob/master/.ocp-indent))
+[this example configuration](https://github.com/OCamlPro/ocp-indent/blob/master/.ocp-indent - [403 Forbidden]))
 or passed directly as parameters when ocp-indent is invoked from the command line. 
 
 Finally, ocp-indent will also recognize a number of common syntax extensions of the
@@ -83,10 +83,10 @@ file.  This can be done by adding the following lines to your `.emacs`:
 ```
 
 For more information about merlin setup, you can look at
-[the dedicated merlin wiki](https://github.com/the-lambda-church/merlin/wiki).
+[the dedicated merlin wiki](https://github.com/the-lambda-church/merlin/wiki - [403 Forbidden]).
 
 **Vim & ocp-indent.**  We recommend using the
-[ocp-indent-vim](https://github.com/def-lkb/ocp-indent-vim) plugin instead of
+[ocp-indent-vim](https://github.com/def-lkb/ocp-indent-vim - [403 Forbidden]) plugin instead of
 the default one. It provides interactive indentation "as you type", while the
 official mode only provides an indenting function to call manually but
 no passive indentation.
@@ -95,7 +95,7 @@ This mode does require vim to be compiled with Python support, while the
 official one doesn't.
 
 Installing is as simple as cloning
-[ocp-indent-vim](https://github.com/def-lkb/ocp-indent-vim) and adding the
+[ocp-indent-vim](https://github.com/def-lkb/ocp-indent-vim - [403 Forbidden]) and adding the
 directory to your runtime-path.
 
 Assuming your clone is in `~/my-clone-of/ocp-indent-vim`, add this to `.vimrc`:
@@ -106,7 +106,7 @@ set rtp+=~/my-clone-of/ocp-indent-vim
 
 **Vim & merlin.**  A comprehensive guide to the installation procedure for
 merlin is available on [the dedicated
-merlin wiki](https://github.com/the-lambda-church/merlin/wiki).  Once again, if you
+merlin wiki](https://github.com/the-lambda-church/merlin/wiki - [403 Forbidden]).  Once again, if you
 just want to get started the following lines contain everything you need.
 
 Loading merlin in vim boils down to adding the plugin directory to the
@@ -126,7 +126,7 @@ execute "set rtp+=" . g:opamshare . "/merlin/vim"
 To maintain synchronization with the compiler, merlin needs some information
 about the structure of your project: build and source directories, package
 dependencies, syntax extensions.  This structure can be described in a `.merlin` file in the root directory of your project.
-The [`.merlin` file for the merlin project](https://github.com/the-lambda-church/merlin/blob/master/.merlin) illustrates the syntax.
+The [`.merlin` file for the merlin project](https://github.com/the-lambda-church/merlin/blob/master/.merlin - [403 Forbidden]) illustrates the syntax.
 
 The `.merlin` file will be loaded the next time you open an OCaml file in the editor.
 

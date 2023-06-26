@@ -28,11 +28,11 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Upstream
 
-* [ocaml-multicore/ocaml-multicore#637](https://github.com/ocaml-multicore/ocaml-multicore/issues/637)
+* [ocaml-multicore/ocaml-multicore#637](https://github.com/ocaml-multicore/ocaml-multicore/issues/637 - [1 Client error: Failure when receiving data from the peer])
   `caml_page_table_lookup` is not available in ocaml-multicore
   
   The [Remove the remanents of page table
-  functionality](https://github.com/ocaml-multicore/ocaml-multicore/pull/642)
+  functionality](https://github.com/ocaml-multicore/ocaml-multicore/pull/642 - [1 Client error: Failure when receiving data from the peer])
   PR should now fix this issue.
   
 * [ocaml-multicore/ocaml-multicore#707](https://github.com/ocaml-multicore/ocaml-multicore/pull/707)

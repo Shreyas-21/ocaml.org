@@ -13,5 +13,5 @@ Import some code from [topkg](http://erratique.ch/software/topkg).
   re-implementations;
 - Remove the IPC layer which is used between `topkg` and `topkg-care`;
 - Bundle everything as a single binary;
-- Assume that the package is built using [dune](https://github.com/ocaml/dune);
+- Assume that the package is built using [dune](https://github.com/ocaml/dune - [403 Forbidden]);
 - Do not read/need a `pkg/pkg.ml` file.

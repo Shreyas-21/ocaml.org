@@ -13,7 +13,7 @@ Since its inception, [LexiFi's](https://www.lexifi.com/) software has been writt
 
 In hindsight, the bet on OCaml turned out to be an excellent one. It has allowed [LexiFi](https://www.lexifi.com/) to develop software with unsurpassed agility and robustness. OCaml enabled a small group of developers to drive a large codebase over two decades of evolutions while keeping code simple and easy-to-read. It also efficiently solves an ever-growing set of problems for our clients.
 
-Lastly, excellent cross-system support of the OCaml toolchain has been a key advantage in simplifying software development and deployment across Unix, Windows, and the Web (thanks to the excellent [`js_of_ocaml`](https://github.com/ocsigen/js_of_ocaml)).
+Lastly, excellent cross-system support of the OCaml toolchain has been a key advantage in simplifying software development and deployment across Unix, Windows, and the Web (thanks to the excellent [`js_of_ocaml`](https://github.com/ocsigen/js_of_ocaml - [403 Forbidden])).
 
 All in all, OCaml is a beautiful marriage of pragmatism, efficiency, and solid theoretical foundations, and this combination fits perfectly with the needs and vision of [LexiFi](https://www.lexifi.com/).
 
@@ -37,11 +37,11 @@ OCaml shines at these kinds of tasks, which are its bread and butter. The result
 
 ### Challenge
 
-One of the challenges LexiFi had to solve was how to make it as easy as possible for its users to enter new contracts into the system. This means developing solutions to *import* contracts described in other formats and used by existing platforms, such as SIX's [IBT](https://www.finextra.com/pressarticle/24905/six-swiss-exchange-introduces-universal-data-interface), Barclays's [COMET](https://barxis.barcap.com/CH/2/en/static/cometintro.app), or plain PDF [termsheets](https://en.wikipedia.org/wiki/Term_sheet), the *lingua franca* of the financial industry.
+One of the challenges LexiFi had to solve was how to make it as easy as possible for its users to enter new contracts into the system. This means developing solutions to *import* contracts described in other formats and used by existing platforms, such as SIX's [IBT](https://www.finextra.com/pressarticle/24905/six-swiss-exchange-introduces-universal-data-interface), Barclays's [COMET](https://barxis.barcap.com/CH/2/en/static/cometintro.app - [1 Client error: Failure when receiving data from the peer]), or plain PDF [termsheets](https://en.wikipedia.org/wiki/Term_sheet), the *lingua franca* of the financial industry.
 
 ### Solution
 
-In each one of these cases, LexiFi has developed small **combinator** libraries to parse, analyze, and convert these imported documents into LexiFi's internal representation based on the **contract algebra**. They do this by leveraging the existing mature libraries from the OCaml ecosystem, such as [`camlpdf`](https://github.com/johnwhitington/camlpdf) to parse PDF documents, [`xmlm`](https://erratique.ch/software/xmlm) to parse XML, and others.
+In each one of these cases, LexiFi has developed small **combinator** libraries to parse, analyze, and convert these imported documents into LexiFi's internal representation based on the **contract algebra**. They do this by leveraging the existing mature libraries from the OCaml ecosystem, such as [`camlpdf`](https://github.com/johnwhitington/camlpdf - [403 Forbidden]) to parse PDF documents, [`xmlm`](https://erratique.ch/software/xmlm) to parse XML, and others.
 
 ### Results
 

@@ -632,7 +632,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   A tree of cancellation contexts can now be dumped to the output, and
   this is useful for debugging.
 
-* [ocaml-multicore/eio#99](https://github.com/ocaml-multicore/eio/pull/99)
+* [ocaml-multicore/eio#99](https://github.com/ocaml-multicore/eio/pull/99 - [403 Forbidden])
   Make enqueue thread-safe
 
   Thread-safe promises, streams and semaphores have been added to
@@ -662,7 +662,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
          true, 10000000,  303.89,        0.0000
   ```
 
-* [ocaml-multicore/eio#100](https://github.com/ocaml-multicore/eio/pull/100)
+* [ocaml-multicore/eio#100](https://github.com/ocaml-multicore/eio/pull/100 - [403 Forbidden])
   Propogate backtraces in more places
 
   The `libe_eio/fibre.ml` and `lib_eio_linux/eio_linux.ml` have been
@@ -670,31 +670,31 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Tezos
 
-* [ocaml-multicore/tezos#10](https://github.com/ocaml-multicore/tezos/pull/10)
+* [ocaml-multicore/tezos#10](https://github.com/ocaml-multicore/tezos/pull/10 - [403 Forbidden])
   Fix `make build-deps`, fix NixOS support
 
   The patch fixes `make build-deps/build-dev-deps`, and `conf-perl`
   has been removed from the `tezos-opam-repository`.
 
-* [ocaml-multicore/tezos#15](https://github.com/ocaml-multicore/tezos/pull/15)
+* [ocaml-multicore/tezos#15](https://github.com/ocaml-multicore/tezos/pull/15 - [403 Forbidden])
   Fix `scripts/version.h`
 
   The CI build failure is now fixed with proper exporting of variables
   in `scripts/version.h` file.
 
-* [ocaml-multicore/tezos#16](https://github.com/ocaml-multicore/tezos/pull/16)
+* [ocaml-multicore/tezos#16](https://github.com/ocaml-multicore/tezos/pull/16 - [403 Forbidden])
   Fix `make build-deps` and `make build-dev-deps` to install correct OCaml switch
 
   The hardcoded OCaml switches have now been removed from the script
   file and the switch information from `script/version.h` is used with
   `make build-deps` and `make build-dev-deps` targets.
 
-* [ocaml-multicore/tezos#17](https://github.com/ocaml-multicore/tezos/pull/17)
+* [ocaml-multicore/tezos#17](https://github.com/ocaml-multicore/tezos/pull/17 - [403 Forbidden])
   Enable CI on pull request to `4.12.0+domains` branch
 
   CI has been enabled for pull requests for the 4.12.0+domains branch.
 
-* [ocaml-multicore/tezos#20](https://github.com/ocaml-multicore/tezos/pull/20)
+* [ocaml-multicore/tezos#20](https://github.com/ocaml-multicore/tezos/pull/20 - [403 Forbidden])
   Upstream updates
 
   A merge of the latest upstream build, code and documentation changes
@@ -702,26 +702,26 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Sundries
 
-* [ocaml-multicore/tezos-opam-repository#6](https://github.com/ocaml-multicore/tezos-opam-repository/pull/6)
+* [ocaml-multicore/tezos-opam-repository#6](https://github.com/ocaml-multicore/tezos-opam-repository/pull/6 - [403 Forbidden])
   Updates
 
   The dependency packages in the `tezos-opam-repository` have been
   updated, and `mtime.1.3.0` has been added as a dependency.
 
-* [ocaml-multicore/ocaml-uring#40](https://github.com/ocaml-multicore/ocaml-uring/pull/40)
+* [ocaml-multicore/ocaml-uring#40](https://github.com/ocaml-multicore/ocaml-uring/pull/40 - [403 Forbidden])
   Remove test dependencies on `Bos` and `Rresult`
 
   The `Bos` and `Rresult` dependencies have been removed from the
   project as we already depend on OCaml >= 4.12 which provides the
   required functions.
 
-* [ocaml-multicore/ocaml-uring#42](https://github.com/ocaml-multicore/ocaml-uring/pull/42)
+* [ocaml-multicore/ocaml-uring#42](https://github.com/ocaml-multicore/ocaml-uring/pull/42 - [403 Forbidden])
   Handle race in `test_cancel_late`
 
   A race condition from `test_cancel_late` in `tests/main.ml` has been
   fixed with this merged PR.
 
-* [ocaml-multicore/domainslib#51](https://github.com/ocaml-multicore/domainslib/pull/51)
+* [ocaml-multicore/domainslib#51](https://github.com/ocaml-multicore/domainslib/pull/51 - [403 Forbidden])
   Utilise effect handlers
 
   The tasks are now created using effect handlers, and a new
@@ -733,7 +733,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Ongoing
 
-* [ocaml-bench/sandmark-nightly#21](https://github.com/ocaml-bench/sandmark-nightly/issues/21)
+* [ocaml-bench/sandmark-nightly#21](https://github.com/ocaml-bench/sandmark-nightly/issues/21 - [403 Forbidden])
   Add 5.00 variants
 
   Multicore OCaml now tracks OCaml trunk, and 4.12.0+domains+effects
@@ -747,7 +747,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   * OCaml 5.00, sequential, pausetimes
   * OCaml 5.00, parallel, pausetimes
 
-* [ocaml-bench/sandmark#262](https://github.com/ocaml-bench/sandmark/issues/262)
+* [ocaml-bench/sandmark#262](https://github.com/ocaml-bench/sandmark/issues/262 - [403 Forbidden])
   `ocaml-migrate-parsetree.2.2.0+stock` fails to compile with ocaml.5.00.0+trunk
 
   The `ocaml-migrate-parsetree` dependency does not work with OCaml
@@ -760,33 +760,33 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Completed
 
-* [ocaml-bench/sandmark-nightly#22](https://github.com/ocaml-bench/sandmark-nightly/pull/22)
+* [ocaml-bench/sandmark-nightly#22](https://github.com/ocaml-bench/sandmark-nightly/pull/22 - [403 Forbidden])
   Fix dataframe intersection order issue
 
   The `dataframe_intersection` function has been updated to properly
   filter out benchmarks that are not present for the variants that are
   being compared.
 
-* [ocaml-bench/sandmark#248](https://github.com/ocaml-bench/sandmark/issues/248)
+* [ocaml-bench/sandmark#248](https://github.com/ocaml-bench/sandmark/issues/248 - [403 Forbidden])
   Coq fails to build
 
   A new Coq tarball,
-  [coq-multicore-2021-09-24](https://github.com/ejgallego/coq/releases/tag/multicore-2021-09-24),
+  [coq-multicore-2021-09-24](https://github.com/ejgallego/coq/releases/tag/multicore-2021-09-24 - [403 Forbidden]),
   is now used to build with Sandmark for the various OCaml variants.
 
-* [ocaml-bench/sandmark#257](https://github.com/ocaml-bench/sandmark/pull/257)
+* [ocaml-bench/sandmark#257](https://github.com/ocaml-bench/sandmark/pull/257 - [403 Forbidden])
   Added latest Coq 2019-09 to Sandmark
 
   The Coq benchmarks in Sandmark now build fine for 4.14.0+domains and
   OCaml 5.00.
 
-* [ocaml-bench/sandmark#260](https://github.com/ocaml-bench/sandmark/pull/260)
+* [ocaml-bench/sandmark#260](https://github.com/ocaml-bench/sandmark/pull/260 - [403 Forbidden])
   Add 5.00 branch for sequential run. Fix notebook.
 
   Sandmark can now build the new 5.00 OCaml variant to build both
   sequential and parallel benchmarks in the CI.
 
-* [ocaml-bench/sandmark#261](https://github.com/ocaml-bench/sandmark/pull/261)
+* [ocaml-bench/sandmark#261](https://github.com/ocaml-bench/sandmark/pull/261 - [403 Forbidden])
   Update benchmark and domainslib to support OCaml 4.14.0+domains (OCaml 5.0)
 
   We now can build Sandmark benchmarks for OCaml 5.00, and the PR
@@ -796,20 +796,20 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Ongoing
 
-* [ocurrent/current-bench#219](https://github.com/ocurrent/current-bench/issues/219)
+* [ocurrent/current-bench#219](https://github.com/ocurrent/current-bench/issues/219 - [403 Forbidden])
   Support overlay of graphs from different compiler variants
 
   At present, we are able to view the front-end graphs per OCaml
   version. We need to overlay graphs across compiler variants for
   better comparison and visualization.
 
-* [ocurrent/current-bench#220](https://github.com/ocurrent/current-bench/issues/220)
+* [ocurrent/current-bench#220](https://github.com/ocurrent/current-bench/issues/220 - [403 Forbidden])
   Setup current-bench and Sandmark for nightly runs
 
   On a tuned machine, we need to setup current-bench (backend and
   frontend) for Sandmark and schedule nightly runs.
 
-* [ocurrent/current-bench#221](https://github.com/ocurrent/current-bench/issues/221)
+* [ocurrent/current-bench#221](https://github.com/ocurrent/current-bench/issues/221 - [403 Forbidden])
   Support developer repository, branch and commits for Sandmark runs
 
   A request to run current-bench for developer branches on a nightly
@@ -817,27 +817,27 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Completed
 
-* [ocurrent/curren-bench#106](https://github.com/ocurrent/current-bench/issues/106)
+* [ocurrent/curren-bench#106](https://github.com/ocurrent/current-bench/issues/106 - [403 Forbidden])
   Use `--privileged` with Docker run_args for Multicore OCaml
 
   The current-bench master (`3b3b31b...`) is able to run Multicore
   OCaml Sandmark benchmarks in Docker without requiring the
   `--privileged` option.
 
-* [ocurrent/current-bench#146](https://github.com/ocurrent/current-bench/issues/146)
+* [ocurrent/current-bench#146](https://github.com/ocurrent/current-bench/issues/146 - [403 Forbidden])
   Replicate `ocaml-bench-server` setup
 
   `current-bench` now supports the use of a custom `bench.Dockerfile`
   which allows you to override the TAG and OCaml variants to be used
   with Sandmark.
 
-* [ocurrent/current-bench#190](https://github.com/ocurrent/current-bench/pull/190)
+* [ocurrent/current-bench#190](https://github.com/ocurrent/current-bench/pull/190 - [403 Forbidden])
   Allow selected projects to run on more than one CPU
 
   A `OCAML_BENCH_MULTICORE_REPOSITORIES` environment variable has been
   added to build projects on more than one CPU core.
 
-* [ocurrent/current-bench#195](https://github.com/ocurrent/current-bench/pull/195)
+* [ocurrent/current-bench#195](https://github.com/ocurrent/current-bench/pull/195 - [403 Forbidden])
   Add instructions to start just frontend and DB containers
 
   The HACKING.md file has been updated with instructions to just start

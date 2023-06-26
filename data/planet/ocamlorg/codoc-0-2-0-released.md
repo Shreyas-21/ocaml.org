@@ -8,7 +8,7 @@ description: "Release announcement for codoc 0.2.0"
 Last week, we
 [published](https://lists.ocaml.org/pipermail/platform/2015-February/000539.html)
 an *alpha* version of a new OCaml documentation generator,
-[codoc 0.2.0](https://github.com/dsheets/codoc).
+[codoc 0.2.0](https://github.com/dsheets/codoc - [403 Forbidden]).
 In the 2014 OCaml workshop presentation ([abstract][], [slides][], [video][]),
 we mentioned the 'module wall' for documentation and this attempts to fix it.
 To try it out, simply follow the directions in the README on that repository,
@@ -51,7 +51,7 @@ an `.ml` or `.mli` file with the definitions that they correspond to.
 
 Associating comments with definitions is handled by the OCamldoc
 tool, which does this in two steps. First it parses the file using the regular
-OCaml parser or [camlp4](https://github.com/ocaml/camlp4), just as in
+OCaml parser or [camlp4](https://github.com/ocaml/camlp4 - [403 Forbidden]), just as in
 normal compilation. It uses the syntax tree from the first step and then
 re-parses the file looking for comments. This second parse is guided by the
 location information in the syntax tree; for example if there is a definition
@@ -73,7 +73,7 @@ case.
 
 Our current prototype associates comments with definitions within the
 compiler itself. This relies on a patch to the OCaml compiler
-([pull request #51 on GitHub](https://github.com/ocaml/ocaml/pull/51)).
+([pull request #51 on GitHub](https://github.com/ocaml/ocaml/pull/51 - [403 Forbidden])).
 Comment association is activated by the `-doc` command-line flag. It
 uses (a rewritten version of) the same two-step algorithm currently
 used by OCamldoc. The comments are then attached to the appropriate node
@@ -143,14 +143,14 @@ historical artefact that is no longer necessary.
 #### Present
 
 Our current prototype creates an intermediate form in the
-[doc-ock](https://github.com/lpw25/doc-ock-lib) library. This form can be
+[doc-ock](https://github.com/lpw25/doc-ock-lib - [403 Forbidden]) library. This form can be
 currently be created from `.cmti` files or `.cmi` files. `.cmi` files do
 not contain enough information for complete documentation, but you can
 use them to produce partial documentation if the `.cmti` files are not
 available to you.
 
 This intermediate form can be serialised to XML using
-[doc-ock-xml](https://github.com/lpw25/doc-ock-xml).
+[doc-ock-xml](https://github.com/lpw25/doc-ock-xml - [403 Forbidden]).
 
 #### Future
 
@@ -217,7 +217,7 @@ uses of OCaml's module system (e.g. it fails to resolve the path
 #### Present
 
 In our current prototype, path and reference resolution are performed by
-the [doc-ock](https://github.com/lpw25/doc-ock-lib) library. The implementation
+the [doc-ock](https://github.com/lpw25/doc-ock-lib - [403 Forbidden]) library. The implementation
 amounts to a reimplementation of OCaml's module system that tracks
 additional information required to produce accurate paths and references
 (it is also lazy to improve performance). The system uses the digests
@@ -250,26 +250,26 @@ hierarchies, documentation issues, and hierarchically localized configuration.
 `codoc` also defines a scriptable command-line interface giving users access
 to its internal documentation phases: extraction, linking, and rendering. The
 latest instructions on how to use the CLI can be found in the
-[README](https://github.com/dsheets/codoc).  We provide an OPAM remote with
+[README](https://github.com/dsheets/codoc - [403 Forbidden]).  We provide an OPAM remote with
 all the working versions of the new libraries and compiler patches required to
 drive the new documentation engine.
 
 #### Future
 
-As previously mentioned, [codoc](https://github.com/dsheets/codoc) and its
-constituent libraries [doc-ock-lib](https://github.com/lpw25/doc-ock-lib)
-and [doc-ock-xml](https://github.com/dsheets/doc-ock-xml) are still under
+As previously mentioned, [codoc](https://github.com/dsheets/codoc - [403 Forbidden]) and its
+constituent libraries [doc-ock-lib](https://github.com/lpw25/doc-ock-lib - [403 Forbidden])
+and [doc-ock-xml](https://github.com/dsheets/doc-ock-xml - [403 Forbidden]) are still under
 heavy development and are not yet feature complete. Notably, there are some
 important outstanding issues:
 
-1. Class and class type documentation has no generated HTML. ([issue codoc#9](https://github.com/dsheets/codoc/issues/9))
-2. CSS is subpar. ([issue codoc#27](https://github.com/dsheets/codoc/issues/22))
-3. codoc HTML does not understand `--package`. ([issue codoc#42](https://github.com/dsheets/codoc/issues/42))
-4. opam doc is too invasive (temporary for demonstration purposes; tracked by ([issue codoc#48](https://github.com/dsheets/codoc/issues/48)))
-5. Documentation syntax errors are not reported in the correct phase or obviously enough. ([issue codoc#58](https://github.com/dsheets/codoc/issues/58))
-6. Character sets are not handled correctly ([issue doc-ock-lib#43](https://github.com/lpw25/doc-ock-lib/issues/43))
-7. -pack and cmt extraction are not supported ([issue doc-ock-lib#35](https://github.com/lpw25/doc-ock-lib/issues/35) and [issue doc-ock-lib#3](https://github.com/lpw25/doc-ock-lib/issues/3))
-8. Inclusion/substitution is not supported ([issue doc-ock-lib#2](https://github.com/lpw25/doc-ock-lib/issues/2))
+1. Class and class type documentation has no generated HTML. ([issue codoc#9](https://github.com/dsheets/codoc/issues/9 - [403 Forbidden]))
+2. CSS is subpar. ([issue codoc#27](https://github.com/dsheets/codoc/issues/22 - [403 Forbidden]))
+3. codoc HTML does not understand `--package`. ([issue codoc#42](https://github.com/dsheets/codoc/issues/42 - [403 Forbidden]))
+4. opam doc is too invasive (temporary for demonstration purposes; tracked by ([issue codoc#48](https://github.com/dsheets/codoc/issues/48 - [403 Forbidden])))
+5. Documentation syntax errors are not reported in the correct phase or obviously enough. ([issue codoc#58](https://github.com/dsheets/codoc/issues/58 - [403 Forbidden]))
+6. Character sets are not handled correctly ([issue doc-ock-lib#43](https://github.com/lpw25/doc-ock-lib/issues/43 - [403 Forbidden]))
+7. -pack and cmt extraction are not supported ([issue doc-ock-lib#35](https://github.com/lpw25/doc-ock-lib/issues/35 - [403 Forbidden]) and [issue doc-ock-lib#3](https://github.com/lpw25/doc-ock-lib/issues/3 - [403 Forbidden]))
+8. Inclusion/substitution is not supported ([issue doc-ock-lib#2](https://github.com/lpw25/doc-ock-lib/issues/2 - [403 Forbidden]))
 
 We are very happy to take bug reports and patches at
 <https://github.com/dsheets/codoc/issues>. For wider suggestions, comments,

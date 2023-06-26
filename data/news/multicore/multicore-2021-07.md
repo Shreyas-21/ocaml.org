@@ -5,18 +5,18 @@ date: "2021-07-01"
 tags: [multicore]
 ---
 
-Welcome to the July 2021 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore) monthly report! This month's update along with the [previous updates](https://discuss.ocaml.org/tag/multicore-monthly) has been compiled by me, @ctk21, @kayceesrk and @shakthimaan. As August is usually a period of downtime in Europe, the next update may be merged with the September one in a couple of months (but given our geographically diverse nature now, if enough progress happens in August I'll do an update).
+Welcome to the July 2021 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore - [403 Forbidden]) monthly report! This month's update along with the [previous updates](https://discuss.ocaml.org/tag/multicore-monthly) has been compiled by me, @ctk21, @kayceesrk and @shakthimaan. As August is usually a period of downtime in Europe, the next update may be merged with the September one in a couple of months (but given our geographically diverse nature now, if enough progress happens in August I'll do an update).
 
 The overall status of the multicore efforts are right on track: our contributions to the next OCaml release have been [incorporated in 4.13.0~alpha2](https://discuss.ocaml.org/t/ocaml-4-13-0-second-alpha-release/8164), and our focus remains on crushing incompatibilities and bugs to generate domains-only parallelism patches suitable for upstream review and release.  As a lower priority activity, we continue to develop the experimental "effects-based" IO stack, which will feature in the upcoming virtual OCaml Workshop at ICFP in August 2021.
 
 The `4.12.0+domains` trees continue to see a tail of bugs being steadily fixed. After last month's call, we saw a number of external contributors step up to submit fixes in addition to the multicore and core OCaml teams. We would like to acknowledge and thank them!
 
-* @emillon (Etienne Millon) for running the Jane Street `core` v0.14 test suite with 4.12.0+domains and sharing the test results (and finding a [multicore GC edge case bug](https://github.com/ocaml-multicore/ocaml-multicore/issues/624) while at it).
+* @emillon (Etienne Millon) for running the Jane Street `core` v0.14 test suite with 4.12.0+domains and sharing the test results (and finding a [multicore GC edge case bug](https://github.com/ocaml-multicore/ocaml-multicore/issues/624 - [403 Forbidden]) while at it).
 * @Termina1 (Vyacheslav Shebanov) for testing the compilation of `batteries` 3.30 with Multicore OCaml 4.12.0+domains.
 * @nbecker (Nils Becker) for reporting on `parallel_map` and `parallel_scan` for domainslib.
 * Filip Koprivec for identifying a memory leak when using `flush_all` with `ocamlc` with 4.12.0+domains.
 
-All of these fixes, combined with some big-ticket compatibility changes (listed below) are getting me pretty close to using 4.12.0+domains as my daily OCaml opam switch of choice. I encourage you to also give it a try and report (good or bad) results on [the multicore OCaml tracker](https://github.com/ocaml-multicore/ocaml-multicore/issues).  If these sorts of problems grab your attention, then [Segfault Systems is hiring in India](https://segfault.systems/careers.html) to work with @kayceesrk and the team there on multicore OCaml.
+All of these fixes, combined with some big-ticket compatibility changes (listed below) are getting me pretty close to using 4.12.0+domains as my daily OCaml opam switch of choice. I encourage you to also give it a try and report (good or bad) results on [the multicore OCaml tracker](https://github.com/ocaml-multicore/ocaml-multicore/issues - [403 Forbidden]).  If these sorts of problems grab your attention, then [Segfault Systems is hiring in India](https://segfault.systems/careers.html) to work with @kayceesrk and the team there on multicore OCaml.
 
 For benchmarking, the Jupyter notebooks for the Sandmark nightly benchmark runs have  been updated, and we continue to test the Sandmark builds for the  4.12+ variants and 4.14.0+trunk. Progress has been made to integrate  `current-bench` OCurrent pipeline with the Sandmark 2.0 -alpha branch  changes to reproduce the current Sandmark functionality, which will allow GitHub PRs to be benchmarked systematically before being merged.
 
@@ -28,13 +28,13 @@ As always, the Multicore OCaml ongoing and completed tasks are listed first, whi
 
 #### CI Compatibility
 
-* [ocaml-multicore/ocaml-multicore#602](https://github.com/ocaml-multicore/ocaml-multicore/issues/602)
+* [ocaml-multicore/ocaml-multicore#602](https://github.com/ocaml-multicore/ocaml-multicore/issues/602 - [403 Forbidden])
   Inclusion of most of OCaml headers results in requiring pthread
   
   The inclusion of multiple nested header files requires `pthread` and
   the `decompress` testsuite fails.
 
-* [ocaml-multicore/ocaml-multicore#607](https://github.com/ocaml-multicore/ocaml-multicore/issues/607)
+* [ocaml-multicore/ocaml-multicore#607](https://github.com/ocaml-multicore/ocaml-multicore/issues/607 - [403 Forbidden])
   `caml_young_end` is not a `value *` anymore
 
   An inconsistency observed in the CI where `caml_young_end` is now a
@@ -42,13 +42,13 @@ As always, the Multicore OCaml ongoing and completed tasks are listed first, whi
 
 #### Crashes
 
-* [ocaml-multicore/ocaml-multicore#608](https://github.com/ocaml-multicore/ocaml-multicore/issues/608)
+* [ocaml-multicore/ocaml-multicore#608](https://github.com/ocaml-multicore/ocaml-multicore/issues/608 - [403 Forbidden])
   Parmap testsuite crash
   
   `Parmap` is causing a segfault when its testsuite is run against
   Multicore OCaml.
 
-* [ocaml-multicore/ocaml-multicore#611](https://github.com/ocaml-multicore/ocaml-multicore/issues/611)
+* [ocaml-multicore/ocaml-multicore#611](https://github.com/ocaml-multicore/ocaml-multicore/issues/611 - [403 Forbidden])
   Crash running Multicore binary under AFL
   
   The `bun` package crashes with Multicore OCaml 4.12+domains, but,
@@ -56,18 +56,18 @@ As always, the Multicore OCaml ongoing and completed tasks are listed first, whi
 
 #### Package Builds
   
-* [ocaml-multicore/ocaml-multicore#609](https://github.com/ocaml-multicore/ocaml-multicore/issues/609)
+* [ocaml-multicore/ocaml-multicore#609](https://github.com/ocaml-multicore/ocaml-multicore/issues/609 - [403 Forbidden])
   lablgtk's example segfaults
   
   An ongoing effort to compile lablgtk with OCaml and Multicore OCaml.
 
-* [ocaml-multicore/ocaml-multicore#624](https://github.com/ocaml-multicore/ocaml-multicore/issues/624)
+* [ocaml-multicore/ocaml-multicore#624](https://github.com/ocaml-multicore/ocaml-multicore/issues/624 - [403 Forbidden])
   core v0.14: test triggers a segfault in the GC
   
   A segfault caused by running `core.v0.14` test suite with Multicore
   OCaml 4.12.0+domains as reported by @emillon.
 
-* [ocaml-multicore/ocaml-multicore#625](https://github.com/ocaml-multicore/ocaml-multicore/issues/625)
+* [ocaml-multicore/ocaml-multicore#625](https://github.com/ocaml-multicore/ocaml-multicore/issues/625 - [403 Forbidden])
   Cannot compile batteries on OCaml Multicore 4.12.0+domains
   
   An effort by Vyacheslav Shebanov (@Termina1) to compile
@@ -75,7 +75,7 @@ As always, the Multicore OCaml ongoing and completed tasks are listed first, whi
 
 #### Upstream
 
-* [ocaml-multicore/ocaml-multicore#573](https://github.com/ocaml-multicore/ocaml-multicore/pull/573)
+* [ocaml-multicore/ocaml-multicore#573](https://github.com/ocaml-multicore/ocaml-multicore/pull/573 - [403 Forbidden])
   Backport trunk safepoints PR to multicore
 
   The Safepoints implementation is being backported to Multicore
@@ -85,13 +85,13 @@ As always, the Multicore OCaml ongoing and completed tasks are listed first, whi
 ![OCaml-Multicore-PR-573-Time|458x500](https://discuss.ocaml.org/uploads/short-url/irThoi4RbupKLP9YOqiDuCHehA1.png)
 ![OCaml-Multicore-PR-573-Speedup|458x500](https://discuss.ocaml.org/uploads/short-url/bJSpY5klM9MvO4sUrPJ3YD6463I.png)
 
-* [ocaml-multicore/ocaml-multicore#617](https://github.com/ocaml-multicore/ocaml-multicore/issues/617)
+* [ocaml-multicore/ocaml-multicore#617](https://github.com/ocaml-multicore/ocaml-multicore/issues/617 - [403 Forbidden])
   Some of the compatibility macros are not placed in the same headers as in upstream OCaml
   
   The introduction of a compatibility layer for GC statistics need to
   be consistent with trunk.
 
-* [ocaml-multicore/ocaml-multicore#618](https://github.com/ocaml-multicore/ocaml-multicore/issues/618)
+* [ocaml-multicore/ocaml-multicore#618](https://github.com/ocaml-multicore/ocaml-multicore/issues/618 - [403 Forbidden])
   Review io.c for thread-safety and add parallel tests
   
   The thread-safety fixes in io.c requires a review and additional
