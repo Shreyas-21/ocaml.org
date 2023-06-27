@@ -1,2 +1,6 @@
-https://github.com/ocaml/ocaml/issue
 https://github.com/ocaml/ocaml/pull
+https://github.com/ocaml/ocaml/issues
+https://github.com/ocaml-multicore/ocaml-multicore/pull
+https://github.com/ocaml-multicore/ocaml-multicore/issues
+https://github.com/ocaml-bench/sandmark/pull
+https://github.com/ocaml-bench/sandmark/issues
