@@ -43,7 +43,7 @@ jobs:
 
       - name: Annotate broken links
         run: |
-          _opam/bin/olinkcheck --annotate-in-file md data
+          _opam/bin/olinkcheck --annotate-in-file md data --exclude-list=.github/workflows/list.txt
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
