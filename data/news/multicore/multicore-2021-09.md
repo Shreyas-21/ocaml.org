@@ -5,12 +5,12 @@ date: "2021-09-01"
 tags: [multicore]
 ---
 
-Welcome to the September 2021 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore) monthly report! This month's update along with the [previous updates](https://discuss.ocaml.org/tag/multicore-monthly) have been compiled by me, @ctk21, @kayceesrk and @shakthimaan. The team has been working over the past few months to finish the [last few features](https://github.com/ocaml-multicore/ocaml-multicore/projects/4) necessary to reach feature parity with stock OCaml. We also worked closely with the core OCaml team to develop the timeline for upstreaming Multicore OCaml to stock OCaml, and have now agreed that:
+Welcome to the September 2021 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore - [403 Forbidden]) monthly report! This month's update along with the [previous updates](https://discuss.ocaml.org/tag/multicore-monthly) have been compiled by me, @ctk21, @kayceesrk and @shakthimaan. The team has been working over the past few months to finish the [last few features](https://github.com/ocaml-multicore/ocaml-multicore/projects/4 - [403 Forbidden]) necessary to reach feature parity with stock OCaml. We also worked closely with the core OCaml team to develop the timeline for upstreaming Multicore OCaml to stock OCaml, and have now agreed that:
 
 **OCaml 5.0 will support shared-memory parallelism through domains _and_ direct-style concurrency through effect handlers (without syntactic support)**. 
 
-- The [Domain mechanism](https://github.com/ocaml-multicore/parallel-programming-in-multicore-ocaml) permits OCaml programmers to speed up OCaml code by taking advantage of parallel processing via multiple cores available on modern processors. 
-- Effect handlers allow OCaml programmers to write [high-performance concurrent programs in direct-style](https://github.com/ocaml-multicore/eio), without the use of monadic concurrency as is the case today with the Lwt and Async libraries. Effect handlers also serve as a useful abstraction to build other non-local control-flow abstractions such as [generators](https://github.com/ocaml-multicore/effects-examples/blob/master/generator.ml), [lightweight threads](https://github.com/ocaml-multicore/effects-examples/blob/master/sched.ml), etc. OCaml will be one of [the first industrial-strength languages to support effect handlers](https://arxiv.org/abs/2104.00250). 
+- The [Domain mechanism](https://github.com/ocaml-multicore/parallel-programming-in-multicore-ocaml - [403 Forbidden]) permits OCaml programmers to speed up OCaml code by taking advantage of parallel processing via multiple cores available on modern processors. 
+- Effect handlers allow OCaml programmers to write [high-performance concurrent programs in direct-style](https://github.com/ocaml-multicore/eio - [403 Forbidden]), without the use of monadic concurrency as is the case today with the Lwt and Async libraries. Effect handlers also serve as a useful abstraction to build other non-local control-flow abstractions such as [generators](https://github.com/ocaml-multicore/effects-examples/blob/master/generator.ml - [403 Forbidden]), [lightweight threads](https://github.com/ocaml-multicore/effects-examples/blob/master/sched.ml - [403 Forbidden]), etc. OCaml will be one of [the first industrial-strength languages to support effect handlers](https://arxiv.org/abs/2104.00250). 
 
 The new code will have to go through the usual rigorous review process of contributions to upstream OCaml, but we expect to advance the review process over the next few months. 
 
@@ -34,7 +34,7 @@ You can read more about effect handlers in OCaml in the [full paper](https://arx
 
 ## Why is there no syntactic support for effect handlers in OCaml 5.0?
 
-Effect handlers currently in Multicore OCaml do not ensure [*effect safety*](https://arxiv.org/abs/2104.00250). That is, the compiler will not ensure that all the effects performed by the program are handled. Instead, unhandled effects lead to exceptions at runtime. Since we plan to extend OCaml with support for an [effect system](https://github.com/ocaml/subsystem-meetings/tree/main/effect_system/2021-09-30) in the future, OCaml 5.0 will not feature the syntactic support for programming with effect handlers. Instead, we expose the same features through functions from the standard library, reserving the syntax decisions for when the effect system  lands. The function based effect handlers is just as expressive as the current syntaxful version in Multicore OCaml. As an example, the syntax-free version of:
+Effect handlers currently in Multicore OCaml do not ensure [*effect safety*](https://arxiv.org/abs/2104.00250). That is, the compiler will not ensure that all the effects performed by the program are handled. Instead, unhandled effects lead to exceptions at runtime. Since we plan to extend OCaml with support for an [effect system](https://github.com/ocaml/subsystem-meetings/tree/main/effect_system/2021-09-30 - [403 Forbidden]) in the future, OCaml 5.0 will not feature the syntactic support for programming with effect handlers. Instead, we expose the same features through functions from the standard library, reserving the syntax decisions for when the effect system  lands. The function based effect handlers is just as expressive as the current syntaxful version in Multicore OCaml. As an example, the syntax-free version of:
 
 ```ocaml
 effect E : string 
@@ -83,7 +83,7 @@ The `4.12+domains` opam switch has _all_ the features that will go into OCaml 5.
 
 The `4.12+domains+effects` opam switch will be preserved, but the syntax will not be upstreamed. This switch is mainly useful to try out the examples of OCaml effect handlers in the academic literature.
 
-To learn more about programming using this effect system, see the [eio](https://github.com/ocaml-multicore/eio) library and [this recent talk](https://watch.ocaml.org/videos/watch/74ece0a8-380f-4e2a-bef5-c6bb9092be89). In the next few weeks, the `eio` library will be ported to `4.12+domains` to use the function based effect handlers so that it is ready for OCaml 5.0.
+To learn more about programming using this effect system, see the [eio](https://github.com/ocaml-multicore/eio - [403 Forbidden]) library and [this recent talk](https://watch.ocaml.org/videos/watch/74ece0a8-380f-4e2a-bef5-c6bb9092be89). In the next few weeks, the `eio` library will be ported to `4.12+domains` to use the function based effect handlers so that it is ready for OCaml 5.0.
 
 ## Onto the September 21 update
 
@@ -272,25 +272,25 @@ As always, the Multicore OCaml updates are listed first, which are then followed
 
 ##### Ongoing
 
-* [ocaml-multicore/domainslib#43](https://github.com/ocaml-multicore/domainslib/issues/43)
+* [ocaml-multicore/domainslib#43](https://github.com/ocaml-multicore/domainslib/issues/43 - [403 Forbidden])
   Possible bug in `Task.pool` management
   
   A segmentation fault on Task.pool management when using 14 cores as
   reported by @nilsbecker (Nils Becker).
 
-* [ocaml-multicore/multicore-opam#59](https://github.com/ocaml-multicore/multicore-opam/pull/59)
+* [ocaml-multicore/multicore-opam#59](https://github.com/ocaml-multicore/multicore-opam/pull/59 - [403 Forbidden])
   Fix batteries after ocaml-multicore/ocaml-multicore#514
   
   Update the `batteries.3.3.0+multicore` opam file for
   `batteries-included` with the correct src URL.
 
-* [ocaml-multicore/multicore-opam#60](https://github.com/ocaml-multicore/multicore-opam/issues/60)
+* [ocaml-multicore/multicore-opam#60](https://github.com/ocaml-multicore/multicore-opam/issues/60 - [403 Forbidden])
   Multicore domains+effects language server does not work with VS Code
   
   A `Request textDocument/hover failed` error shows up with VS Code
   when using Multicore domains+effects language server.
 
-* [ocaml-multicore/eio#81](https://github.com/ocaml-multicore/eio/issues/81)
+* [ocaml-multicore/eio#81](https://github.com/ocaml-multicore/eio/issues/81 - [403 Forbidden])
   Is IO prioritisation possible?
   
   A query on IO prioritisation and on scheduling of fibres for
@@ -300,32 +300,32 @@ As always, the Multicore OCaml updates are listed first, which are then followed
 
 ###### Build
 
-* [ocaml-multicore/eventlog-tools](https://github.com/ocaml-multicore/eventlog-tools/pull/3)
+* [ocaml-multicore/eventlog-tools](https://github.com/ocaml-multicore/eventlog-tools/pull/3 - [403 Forbidden])
   Use ocaml/setup-ocaml@v2
   
   The GitHub workflows have now been updated to use 4.12.x
   ocaml-compiler and `ocaml/setup-ocaml@v2` in
   `.github/workflows/main.yml` file.
 
-* [ocaml-multicore/tezos#3](https://github.com/ocaml-multicore/tezos/pull/3)
+* [ocaml-multicore/tezos#3](https://github.com/ocaml-multicore/tezos/pull/3 - [403 Forbidden])
   Add cron job and run tests
   
   The CI Dockerfile and GitHub workflows have been changed to run the
   tests periodically for Tezos on Multicore OCaml.
 
-* [ocaml-multicore/tezos#4](https://github.com/ocaml-multicore/tezos/pull/4)
+* [ocaml-multicore/tezos#4](https://github.com/ocaml-multicore/tezos/pull/4 - [403 Forbidden])
   Run cronjob daily
   
   The GitHub cronjob is now scheduled to run daily for the Tezos
   builds from scratch.
 
-* [ocaml-multicore/retro-httpaf-bench#12](https://github.com/ocaml-multicore/retro-httpaf-bench/issues/12)
+* [ocaml-multicore/retro-httpaf-bench#12](https://github.com/ocaml-multicore/retro-httpaf-bench/issues/12 - [403 Forbidden])
   Dockerfile fails to build
   
   The issue no longer exists, and the Dockerfile now builds fine in
   the CI as well.
 
-* [ocaml-multicore/eio#80](https://github.com/ocaml-multicore/eio/issues/80)
+* [ocaml-multicore/eio#80](https://github.com/ocaml-multicore/eio/issues/80 - [403 Forbidden])
   ENOMEM with README example
   
   @cjen1 (Chris Jensen) reported a `Unix.ENOMEM` error that prevented
@@ -343,31 +343,31 @@ As always, the Multicore OCaml updates are listed first, which are then followed
   
 ###### Documentation
 
-* [ocaml-multicore/parallel-programming-in-multicore-ocaml#10](https://github.com/ocaml-multicore/parallel-programming-in-multicore-ocaml/pull/10)
+* [ocaml-multicore/parallel-programming-in-multicore-ocaml#10](https://github.com/ocaml-multicore/parallel-programming-in-multicore-ocaml/pull/10 - [403 Forbidden])
   Edited for flow/syntax/consistency
   
   The Parallel Programming in Multicore OCaml chapter has been
   reviewed and updated for consistency, syntax flow and readability.
 
-* [ocaml-multicore/eio#79](https://github.com/ocaml-multicore/eio/pull/79)
+* [ocaml-multicore/eio#79](https://github.com/ocaml-multicore/eio/pull/79 - [403 Forbidden])
   Initial edits for consistency, formatting and clarity
   
   The README in the Eio project has been updated for consistency,
   formatting and readability.
 
-* The [ocaml2020-workshop-parallel](https://github.com/ocaml-multicore/multicore-talks/tree/master/ocaml2020-workshop-parallel)
+* The [ocaml2020-workshop-parallel](https://github.com/ocaml-multicore/multicore-talks/tree/master/ocaml2020-workshop-parallel - [403 Forbidden])
   README has been updated with reference links to books, videos,
   project repository, and the OCaml Multicore wiki.
    
 ###### Benchmarks
 
-* [ocaml-multicore/retro-httpaf-bench#15](https://github.com/ocaml-multicore/retro-httpaf-bench/pull/15)
+* [ocaml-multicore/retro-httpaf-bench#15](https://github.com/ocaml-multicore/retro-httpaf-bench/pull/15 - [403 Forbidden])
   Optimise Go code
 
   The `nethttp-go/httpserv.go` Go benchmark now uses `Write` instead
   of `fmt.Fprintf` with removal of yield() for optimization.
 
-* [ocaml-multicore/retro-httpaf-bench](https://github.com/ocaml-multicore/retro-httpaf-bench/pull/16)
+* [ocaml-multicore/retro-httpaf-bench](https://github.com/ocaml-multicore/retro-httpaf-bench/pull/16 - [403 Forbidden])
   Add an async HTTP benchmark
   
   @anuragsoni (Anurag Soni) has contributed an async HTTP benchmark
@@ -382,32 +382,32 @@ As always, the Multicore OCaml updates are listed first, which are then followed
 
 #### Ongoing
 
-* [ocaml-bench/sandmark-nightly#10](https://github.com/ocaml-bench/sandmark-nightly/issues/10)
+* [ocaml-bench/sandmark-nightly#10](https://github.com/ocaml-bench/sandmark-nightly/issues/10 - [403 Forbidden])
   Dockerize sandmark-nightly
   
   The sandmark-nightly service needs to be dockerized to be able to
   run on multiple machines.
   
-* [ocaml-bench/sandmark-nightly#11](https://github.com/ocaml-bench/sandmark-nightly/issues/11)
+* [ocaml-bench/sandmark-nightly#11](https://github.com/ocaml-bench/sandmark-nightly/issues/11 - [403 Forbidden])
   Refactor the sandmark-nightly notebooks
   
   The code in the sandmark-nightly notebooks need to be refactored and
   modularized so that they can be reused as a library.
 
-* [ocaml-bench/sandmark-nightly#12](https://github.com/ocaml-bench/sandmark-nightly/issues/12)
+* [ocaml-bench/sandmark-nightly#12](https://github.com/ocaml-bench/sandmark-nightly/issues/12 - [403 Forbidden])
   Normalization graphs (with greater than two benchmarks) needs to be fixed
   
   The normalization graphs only produce one coloured bar group even if
   there are more than two benchmarks. It needs to show more than one
   coloured graph when compared with the baseline.
 
-* [ocaml-bench/sandmark-nightly#13](https://github.com/ocaml-bench/sandmark-nightly/issues/13)
+* [ocaml-bench/sandmark-nightly#13](https://github.com/ocaml-bench/sandmark-nightly/issues/13 - [403 Forbidden])
   Store the logs from the nightly runs along with the results
   
   The nightly run logs can be stored as they are useful for debugging
   any failures.
 
-* [ocaml-bench/sandmark-nightly#14](https://github.com/ocaml-bench/sandmark-nightly/issues/14)
+* [ocaml-bench/sandmark-nightly#14](https://github.com/ocaml-bench/sandmark-nightly/issues/14 - [403 Forbidden])
   Add `best-fit` variant to sequential benchmarks
   
   The sandmark-nightly runs should include the best-fit allocator as
@@ -418,13 +418,13 @@ As always, the Multicore OCaml updates are listed first, which are then followed
   $ OCAMLRUNPARAM="a=2" ./a.out
   ```
 
-* [ocaml-bench/sandmark-nightly#16](https://github.com/ocaml-bench/sandmark-nightly/issues/16)
+* [ocaml-bench/sandmark-nightly#16](https://github.com/ocaml-bench/sandmark-nightly/issues/16 - [403 Forbidden])
   Cubicle and Coq benchmarks are missing from the latest navajo nightly runs
   
   The UI for the sequential benchmarks fail to load normalized graphs
   because of missing Cubicle and Coq benchmark .bench files.
 
-* [ocaml-bench/sandmark-nightly#17](https://github.com/ocaml-bench/sandmark-nightly/issues/17)
+* [ocaml-bench/sandmark-nightly#17](https://github.com/ocaml-bench/sandmark-nightly/issues/17 - [403 Forbidden])
   Navajo runs are on stale Sandmark
   
   The Sandmark deployed on navajo needs to be updated to the latest
@@ -440,12 +440,12 @@ As always, the Multicore OCaml updates are listed first, which are then followed
   
   A new Coq tarball to build with Multicore OCaml is now available for
   testing at
-  [coq-multicore-2021-09-24](https://github.com/ejgallego/coq/releases/tag/multicore-2021-09-24).
+  [coq-multicore-2021-09-24](https://github.com/ejgallego/coq/releases/tag/multicore-2021-09-24 - [403 Forbidden]).
   
 * Sandmark `2.0-beta`
 
   The Sandmark
-  [2.0-beta](https://github.com/ocaml-bench/sandmark/tree/2.0-beta)
+  [2.0-beta](https://github.com/ocaml-bench/sandmark/tree/2.0-beta - [403 Forbidden])
   branch is now available for testing. It includes new features such
   as package override option, adding meta-information to the benchmark
   results, running multiple iterations, classification of benchmarks,

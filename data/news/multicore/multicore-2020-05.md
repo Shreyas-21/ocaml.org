@@ -9,13 +9,13 @@ tags: [multicore]
 
 Welcome to the May 2020 update from the Multicore OCaml team! As with [previous updates](https://discuss.ocaml.org/tag/multicore-monthly), many thanks to @shakthimaan and @kayceesrk for help assembling this month's roundup.  
 
-A major milestone in May 2020 has been the completion of rebasing of Multicore OCaml all the way from 4.06 to 4.10! The Parallel Minor GC variant that performs stop-the-world parallel minor collection is the [default branch](https://github.com/ocaml-multicore/ocaml-multicore/tree/parallel_minor_gc) for the compiler, which means that compatibility with C bindings is now much simpler than with the older minor GC design.
+A major milestone in May 2020 has been the completion of rebasing of Multicore OCaml all the way from 4.06 to 4.10! The Parallel Minor GC variant that performs stop-the-world parallel minor collection is the [default branch](https://github.com/ocaml-multicore/ocaml-multicore/tree/parallel_minor_gc - [403 Forbidden]) for the compiler, which means that compatibility with C bindings is now much simpler than with the older minor GC design.
 
 I've received many questions asking if this means that multicore OCaml will "just work" with the opam ecosystem now.  Not quite yet: we estimate that we are now one PR away from this working, which requires that the existing `Threads` module is backported to multicore OCaml to support the older (non-parallel-in-the-runtime but concurrent) uses of threading that existing OCaml supports.  This effort was begun a year ago by @jhw in [#240](https://github.com/ocaml-multicore/ocaml-multicore/pull/240) and now rebased and being reviewed by @engil in [#342](https://github.com/ocaml-multicore/ocaml-multicore/pull/342). Once that is merged and tested by us on a bunch of packages and bulk builds, we should be good to start using Multicore OCaml with opam. Stay tuned for more on that next month!
 
 The ongoing and completed tasks for the Multicore OCaml are listed first, which are then followed by improvements to the Sandmark benchmarking project. Finally, the status of the contributions to upstream OCaml are mentioned for your reference.  This month has also seen a meeting of the core OCaml runtime developers to assign post-rebasing tasks (such as also porting statmemprof, how to handle non-x86 architectures, Windows support, etc) to ensure a more complete view of the upstreaming tasks ahead.  The task list is long, but steadily decreasing in length.
 
-As to how to contribute currently, there is an incredibly exciting seam of work that has now started on the appropriate programming abstractions to support parallel algorithms in OCaml. See [this thread](https://discuss.ocaml.org/t/language-abstractions-and-scheduling-techniques-for-efficient-execution-of-parallel-algorithms-on-multicore-hardware/5822/19) for more on that, and also on the [Domainslib](https://github.com/ocaml-multicore/domainslib) repository for more low-level examples of traditional parallel algorithms.  In a month or so, we expect that the multicore switch will also be more suitable for use with opam, but don't let that stop you from porting your favourite parallel benchmark to Domainslib today.
+As to how to contribute currently, there is an incredibly exciting seam of work that has now started on the appropriate programming abstractions to support parallel algorithms in OCaml. See [this thread](https://discuss.ocaml.org/t/language-abstractions-and-scheduling-techniques-for-efficient-execution-of-parallel-algorithms-on-multicore-hardware/5822/19) for more on that, and also on the [Domainslib](https://github.com/ocaml-multicore/domainslib - [403 Forbidden]) repository for more low-level examples of traditional parallel algorithms.  In a month or so, we expect that the multicore switch will also be more suitable for use with opam, but don't let that stop you from porting your favourite parallel benchmark to Domainslib today.
 
 ## Multicore OCaml
 
@@ -27,7 +27,7 @@ As to how to contribute currently, there is an incredibly exciting seam of work 
   A new proposal for implementing a domain-local storage in Multicore
   OCaml has been created.
 
-* [ocaml-multicore/domainslib#8](https://github.com/ocaml-multicore/domainslib/issues/8)
+* [ocaml-multicore/domainslib#8](https://github.com/ocaml-multicore/domainslib/issues/8 - [403 Forbidden])
   Task library slowdown if the number of domains is greater than 8
   
   This is an ongoing investigation on why there is a slowdown with
@@ -69,7 +69,7 @@ As to how to contribute currently, there is an incredibly exciting seam of work 
 
   The rebasing of Multicore OCaml to 4.11 branch
   (`parallel_minor_gc_4_11`) point is now complete!  The
-  [opam](https://github.com/ocaml-multicore/multicore-opam/pull/18/)
+  [opam](https://github.com/ocaml-multicore/multicore-opam/pull/18/ - [403 Forbidden])
   file for 4.10.0+multicore has been made the default in the
   multicore-opam repository.
   
@@ -82,7 +82,7 @@ As to how to contribute currently, there is an incredibly exciting seam of work 
 
 * The Multicore OCaml major GC implementation verification using the
   SPIN model checker is available at the following GitHub repository
-  [ocaml-multicore/multicore-ocaml-verify](https://github.com/kayceesrk/multicore-ocaml-verify).
+  [ocaml-multicore/multicore-ocaml-verify](https://github.com/kayceesrk/multicore-ocaml-verify - [403 Forbidden]).
 
 ## Benchmarking
 
@@ -165,7 +165,7 @@ As to how to contribute currently, there is an incredibly exciting seam of work 
   been created. Please feel free to review the document and share your
   valuable feedback.
   
-* [ocaml/dune#3500](https://github.com/ocaml/dune/issues/3500) 
+* [ocaml/dune#3500](https://github.com/ocaml/dune/issues/3500 - [403 Forbidden]) 
   Support building executables against OCaml 4.11 instrumented runtime
   
   OCaml 4.11.0 has built-in support for the instrumented runtime, and

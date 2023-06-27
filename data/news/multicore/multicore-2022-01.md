@@ -5,11 +5,11 @@ date: "2022-01-01"
 tags: [multicore]
 ---
 
-Welcome to the January 2022 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore) monthly update! This update along with the [previous updates](https://discuss.ocaml.org/tag/multicore-monthly) has been compiled by @avsm, @ctk21, @kayceesrk and @shakthimaan.
+Welcome to the January 2022 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore - [403 Forbidden]) monthly update! This update along with the [previous updates](https://discuss.ocaml.org/tag/multicore-monthly) has been compiled by @avsm, @ctk21, @kayceesrk and @shakthimaan.
 
 @xavierleroy clicked "merge" on the [upstream Multicore OCaml PR#10831](https://github.com/ocaml/ocaml/pull/10831#issuecomment-1008935795) to upstream OCaml, which simultaneously made for a great start to the new year and prepared us for the hard work ahead to get to a stable release of OCaml 5.00.0! Since the merge, we have continued to work on the release via bug fixes, code improvements, and tooling support directly in the main ocaml repository. Notably, a new draft PR for [ARM64 backend support](https://github.com/ocaml/ocaml/pull/10972) has already been proposed.
 
-OCaml 5.0 trunk also [removes a number of deprecated modules](https://github.com/ocaml/ocaml/blob/3e622e41aca318df0d8ccfeb5c65272a0d2acfa3/Changes#L47-L66), and renames `EffectHandlers` to `Effect` for consistency with the rest of the standard library. In the ecosystem, several of the key support libraries like `uring`, `multicore-opam`, and `domainslib` have had updates to work with 5.0.0+trunk. The Eio effects-based direct-style parallel IO for OCaml has had significant enhancements, and now also builds with OCaml 5.00.0+trunk. The Sandmark benchmarking suite now provides a `5.00.0+stable` and `5.00.0+trunk` OCaml variants to build the benchmarks for trunk.
+OCaml 5.0 trunk also [removes a number of deprecated modules](https://github.com/ocaml/ocaml/blob/3e622e41aca318df0d8ccfeb5c65272a0d2acfa3/Changes#L47-L66 - [403 Forbidden]), and renames `EffectHandlers` to `Effect` for consistency with the rest of the standard library. In the ecosystem, several of the key support libraries like `uring`, `multicore-opam`, and `domainslib` have had updates to work with 5.0.0+trunk. The Eio effects-based direct-style parallel IO for OCaml has had significant enhancements, and now also builds with OCaml 5.00.0+trunk. The Sandmark benchmarking suite now provides a `5.00.0+stable` and `5.00.0+trunk` OCaml variants to build the benchmarks for trunk.
 
 # OCaml 5.00 Release Planning
 
@@ -557,19 +557,19 @@ As always, the Multicore OCaml updates are listed first, which are then followed
 
 #### Eio
 
-* [ocaml-multicore/eio#124](https://github.com/ocaml-multicore/eio/issues/124)
+* [ocaml-multicore/eio#124](https://github.com/ocaml-multicore/eio/issues/124 - [403 Forbidden])
   Decide how to represent pathnames
   
   The paths in Eio are strings, but, we need to think on how to
   provide support for Windows paths.
 
-* [ocaml-multicore/eio#125](https://github.com/ocaml-multicore/eio/issues/125)
+* [ocaml-multicore/eio#125](https://github.com/ocaml-multicore/eio/issues/125 - [403 Forbidden])
   Test on Windows
   
   Eio needs to be supported on Windows, and a CI must be setup for
   this environment.
 
-* [ocaml-multicore/eio#126](https://github.com/ocaml-multicore/eio/issues/126)
+* [ocaml-multicore/eio#126](https://github.com/ocaml-multicore/eio/issues/126 - [403 Forbidden])
   API for spawning sub-processes
   
   A mechanism to create and manage sub-processes, similar to
@@ -577,13 +577,13 @@ As always, the Multicore OCaml updates are listed first, which are then followed
   domains, allow passing pipes, check or report the process's exit
   status etc.
 
-* [ocaml-multicore/eio#138](https://github.com/ocaml-multicore/eio/issues/138)
+* [ocaml-multicore/eio#138](https://github.com/ocaml-multicore/eio/issues/138 - [403 Forbidden])
   Integrate Eio's CTF tracing with OCaml's tracing
   
   The proposed `eventring` to replace the OCaml CTF-based `eventlog`
   system can allow users to add custom events that need to be stored.
 
-* [ocaml-multicore/eio#140](https://github.com/ocaml-multicore/eio/issues/140)
+* [ocaml-multicore/eio#140](https://github.com/ocaml-multicore/eio/issues/140 - [403 Forbidden])
   Decide on `cstruct` vs `bytes`
   
   The IO operations with the kernel require that the GC does not move
@@ -592,12 +592,12 @@ As always, the Multicore OCaml updates are listed first, which are then followed
   moved, then using `bytes` can be an option. Performance measurements
   to compare `cstruct` and `bytes` need to be performed.
 
-* [ocaml-multicore/eio#146](https://github.com/ocaml-multicore/eio/issues/146)
+* [ocaml-multicore/eio#146](https://github.com/ocaml-multicore/eio/issues/146 - [403 Forbidden])
   `lib_eio`: Add `take_all` function
   
   The `take_all` function has been added to `lib_eio/stream.ml`.
 
-* [ocaml-multicore/eio#155](https://github.com/ocaml-multicore/eio/issues/155)
+* [ocaml-multicore/eio#155](https://github.com/ocaml-multicore/eio/issues/155 - [403 Forbidden])
   Add `Eio_unix.FD`
   
   An `FD` module has been added to `lib_eio/unix/eio_unix.ml` to be
@@ -605,25 +605,25 @@ As always, the Multicore OCaml updates are listed first, which are then followed
 
 #### Sundries
 
-* [ocaml-multicore/parallel-programming-in-multicore-ocaml#13](https://github.com/ocaml-multicore/parallel-programming-in-multicore-ocaml/issues/13)
+* [ocaml-multicore/parallel-programming-in-multicore-ocaml#13](https://github.com/ocaml-multicore/parallel-programming-in-multicore-ocaml/issues/13 - [403 Forbidden])
   Setup CI
   
   A weekly CI build using GitHub Actions will be useful to detect any
   build failures.
 
-* [ocaml-multicore/tezos#13](https://github.com/ocaml-multicore/tezos/pull/23)
+* [ocaml-multicore/tezos#13](https://github.com/ocaml-multicore/tezos/pull/23 - [403 Forbidden])
   Merge upstream updates
   
   An issue tracker to merge the January 24, 2022 updates to the
   `4.12.0+domains` branch.
 
-* [ocaml-multicore/tezos#24](https://github.com/ocaml-multicore/tezos/issues/24)
+* [ocaml-multicore/tezos#24](https://github.com/ocaml-multicore/tezos/issues/24 - [403 Forbidden])
   Test suite failure
   
   An `Alcotest_engine__Core.Make(P) (M)` error has been reported when
   running the test suite.
 
-* [ocaml-multicore/effects-examples#26](https://github.com/ocaml-multicore/effects-examples/pull/26)
+* [ocaml-multicore/effects-examples#26](https://github.com/ocaml-multicore/effects-examples/pull/26 - [403 Forbidden])
   Port to OCaml 5.00
   
   A work-in-progress to port all the Effects examples to run with
@@ -635,20 +635,20 @@ As always, the Multicore OCaml updates are listed first, which are then followed
 
 ##### Added
 
-* [ocaml-multicore/eio#120](https://github.com/ocaml-multicore/eio/pull/120)
+* [ocaml-multicore/eio#120](https://github.com/ocaml-multicore/eio/pull/120 - [403 Forbidden])
   Add `Fibre.fork_on_accept` and `Net.accept`
   
   This PR that updates `fork_on_accept` to use an accept function in a
   new switch, and passes the successful result to a handler function
   in a new fibre has been merged.
 
-* [ocaml-multicore/eio#130](https://github.com/ocaml-multicore/eio/pull/130)
+* [ocaml-multicore/eio#130](https://github.com/ocaml-multicore/eio/pull/130 - [403 Forbidden])
   Add Luv polling functions
   
   The Luv polling functions wrapped in Eio have been added to
   `lib_eio_luv/eio_luv.ml` for Lwt integration.
 
-* [ocaml-multicore/eio#133](https://github.com/ocaml-multicore/eio/pull/133)
+* [ocaml-multicore/eio#133](https://github.com/ocaml-multicore/eio/pull/133 - [403 Forbidden])
   Add `Switch.dump` and `Cancel.dump` for debugging
   
   The `Switch.dump` and `Cancel.dump` functions have been added for
@@ -662,13 +662,13 @@ As always, the Multicore OCaml updates are listed first, which are then followed
         on (protected) [7]
   ```
 
-* [ocaml-multicore/eio#135](https://github.com/ocaml-multicore/eio/pull/135)
+* [ocaml-multicore/eio#135](https://github.com/ocaml-multicore/eio/pull/135 - [403 Forbidden])
   Add `~close_unix` flag to `FD.of_unix`
   
   The user can now handle closing of the FD using the `close_unix`
   flag for better integration with APIs.
 
-* [ocaml-multicore/eio#139](https://github.com/ocaml-multicore/eio/pull/139)
+* [ocaml-multicore/eio#139](https://github.com/ocaml-multicore/eio/pull/139 - [403 Forbidden])
   Add `eio.unix` module for Unix integration
   
   A new `eio.unix` module provides both `await_readable` and

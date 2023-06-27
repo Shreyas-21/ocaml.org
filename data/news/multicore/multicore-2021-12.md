@@ -5,11 +5,11 @@ date: "2021-12-01"
 tags: [multicore]
 ---
 
-Welcome to the December 2021 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore) monthly report! The [previous updates](https://discuss.ocaml.org/tag/multicore-monthly) along with this update have been compiled by myself, @ctk21, @kayceesrk and @shakthimaan.
+Welcome to the December 2021 [Multicore OCaml](https://github.com/ocaml-multicore/ocaml-multicore - [403 Forbidden]) monthly report! The [previous updates](https://discuss.ocaml.org/tag/multicore-monthly) along with this update have been compiled by myself, @ctk21, @kayceesrk and @shakthimaan.
 
 Well, it's finally here! @kayceesrk opened the [Multicore OCaml PR#10831](https://github.com/ocaml/ocaml/pull/10831) to the main OCaml development repository that represents the "minimum viable" implementation of multicore OCaml that we decided on in [November's core team review](https://discuss.ocaml.org/t/multicore-ocaml-november-2021-with-results-of-code-review/8934#core-team-code-review-1).  The branch pushes the limits of GitHub's rendering capability, with around 4000 commits.
 
-Once the PR was opened just before Christmas, the remaining effort has been for a number of developers to pore over [the diff](http://github.com/ocaml/ocaml/pull/10831.diff) and look for any unexpected changes that crept in during multicore development. A large number of code changes, improvements and fixes have been merged into the ocaml-multicore trees since the PR was opened to facilitate this upstreaming process. We're expecting to have the PR merged during January, and then will continue onto the "post-MVP" tasks described last month, but working directly from ocaml/ocaml from now on.  We therefore remain on track to release OCaml 5.00 in 2022.
+Once the PR was opened just before Christmas, the remaining effort has been for a number of developers to pore over [the diff](http://github.com/ocaml/ocaml/pull/10831.diff - [403 Forbidden]) and look for any unexpected changes that crept in during multicore development. A large number of code changes, improvements and fixes have been merged into the ocaml-multicore trees since the PR was opened to facilitate this upstreaming process. We're expecting to have the PR merged during January, and then will continue onto the "post-MVP" tasks described last month, but working directly from ocaml/ocaml from now on.  We therefore remain on track to release OCaml 5.00 in 2022.
 
 In the multicore ecosystem, progress also continued:
 - `Eio` continues to improve as the recommended effects-based direct-style IO library to
@@ -86,7 +86,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   changes for x86, ARM, PPC and s390x architectures.
 
 * A new
-  [ocaml-multicore/ocaml](https://github.com/ocaml-multicore/ocaml)
+  [ocaml-multicore/ocaml](https://github.com/ocaml-multicore/ocaml - [403 Forbidden])
   project repository has been created from `ocaml/ocaml` to keep it in
   sync with trunk.
 
@@ -348,7 +348,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   concurrency through effect handlers. It is backward compatible with
   respect to language features, C API and performance of
   single-threaded code. The scalability results on parallel benchmarks
-  from [Sandmark](https://github.com/ocaml-bench/sandmark) on a two
+  from [Sandmark](https://github.com/ocaml-bench/sandmark - [403 Forbidden]) on a two
   processor, AMD EPYC 7551 server with 64 cores is shown below:
 
   ![OCaml-PR-10831-Speedup|674x500](https://discuss.ocaml.org/uploads/short-url/qlsUnoibozBfJJxEnFKEE2Xynkp.png)
@@ -590,19 +590,19 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 ### Ongoing
 
-* [ocaml-multicore/multicore-opam#61](https://github.com/ocaml-multicore/multicore-opam/pull/61)
+* [ocaml-multicore/multicore-opam#61](https://github.com/ocaml-multicore/multicore-opam/pull/61 - [403 Forbidden])
   Remove `omake`
   
   `caml_modify_field` does not exist in trunk. The PR removes omake as
   it is only required for +effects.
 
-* [ocaml-multicore/multicore-opam#62](https://github.com/ocaml-multicore/multicore-opam/pull/62)
+* [ocaml-multicore/multicore-opam#62](https://github.com/ocaml-multicore/multicore-opam/pull/62 - [403 Forbidden])
   Remove `domainslib`
 
   `Domainslib.0.3.0` has been upstreamed to opam-repository and hence
   has been removed from this repository.
 
-* [ocaml-multicore/eio#116](https://github.com/ocaml-multicore/eio/pull/116)
+* [ocaml-multicore/eio#116](https://github.com/ocaml-multicore/eio/pull/116 - [403 Forbidden])
   Benchmark various copying systems
   
   An open discussion on benchmarking and optimisation for copying data
@@ -612,7 +612,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
   ![Eio-PR-116-Copy-screenshot|357x499](https://discuss.ocaml.org/uploads/short-url/vWmMqD2TpWcYr9iepTziQU0C8h1.png)
 
-* [ocaml-multicore/eio#120](https://github.com/ocaml-multicore/eio/pull/120)
+* [ocaml-multicore/eio#120](https://github.com/ocaml-multicore/eio/pull/120 - [403 Forbidden])
   Add `Fibre.fork_on_accept` and `Net.accept`
   
   The PR where `fork_on_accept` now uses an accept function in a new
@@ -624,29 +624,29 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Eio
 
-* [ocaml-multicore/eio#87](https://github.com/ocaml-multicore/eio/issues/87)
+* [ocaml-multicore/eio#87](https://github.com/ocaml-multicore/eio/issues/87 - [403 Forbidden])
   Eio fails to install due to vendor conflicts
   
   The [Marking uring as vendored breaks
-  installation](https://github.com/ocaml-multicore/eio/pull/89) fix
+  installation](https://github.com/ocaml-multicore/eio/pull/89 - [403 Forbidden]) fix
   resolves this issue. This was reported by Matt Pallissard
   (@mattpallissard).
 
-* [ocaml-multicore/eio#91](https://github.com/ocaml-multicore/eio/issues/91)
+* [ocaml-multicore/eio#91](https://github.com/ocaml-multicore/eio/issues/91 - [403 Forbidden])
   [Discussion] Object Capabilities / API
   
   The discussion on using an open object as the first argument of
   every function, and to use full words and expressions instead of
   `network`, `file_systems` etc. is closed now with updates to
-  [eio#90](https://github.com/ocaml-multicore/eio/pull/90).
+  [eio#90](https://github.com/ocaml-multicore/eio/pull/90 - [403 Forbidden]).
 
-* [ocaml-multicore/eio#101](https://github.com/ocaml-multicore/eio/issues/101)
+* [ocaml-multicore/eio#101](https://github.com/ocaml-multicore/eio/issues/101 - [403 Forbidden])
   Make luv backend thread-safe
   
   An update to `lib_eio_luv/eio_luv.ml` that makes the luv backend
   thread-safe, and prevents a deadlock in the execution of benchmarks.
 
-* [ocaml-multicore/eio#102](https://github.com/ocaml-multicore/eio/issues/102)
+* [ocaml-multicore/eio#102](https://github.com/ocaml-multicore/eio/issues/102 - [403 Forbidden])
   Use a lock-free run queue for luv backend
   
   The PR removes the need for a mutex around the queue, and there is a
@@ -694,7 +694,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
      10000,  114.80,        5.9410
   ```
 
-* [ocaml-multicore/eio#103](https://github.com/ocaml-multicore/eio/issues/103)
+* [ocaml-multicore/eio#103](https://github.com/ocaml-multicore/eio/issues/103 - [403 Forbidden])
   Add `Domain_manager.run` to start a domain with an event loop
   
   The `lib_eio/eio.ml` code has added `Domain_manager.run` and
@@ -702,20 +702,20 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   function must only access thread-safe values from the calling
   domain.
 
-* [ocaml-multicore/eio#104](https://github.com/ocaml-multicore/eio/issues/104)
+* [ocaml-multicore/eio#104](https://github.com/ocaml-multicore/eio/issues/104 - [403 Forbidden])
   Split out `Ctf_unix` module
   
   The dependency on `Unix` has been removed from the `Eio` module, and
   the `Ctf_unix.with_tracing` function has been added for convenience.
 
-* [ocaml-multicore/eio#106](https://github.com/ocaml-multicore/eio/issues/106)
+* [ocaml-multicore/eio#106](https://github.com/ocaml-multicore/eio/issues/106 - [403 Forbidden])
   Avoid `Fun.protect` in `Eio_linux.run`
   
   The use of `Fun.protect` is removed from
   `lib_eio_linux/eio_linux.ml` as it throws an exception, which is not
   useful when the scheduler crashes.
 
-* [ocaml-multicore/eio#107](https://github.com/ocaml-multicore/eio/issues/107)
+* [ocaml-multicore/eio#107](https://github.com/ocaml-multicore/eio/issues/107 - [403 Forbidden])
   Make cancellation thread-safe
   
   A cancellation context now has a list of fibres, and when a fibre is
@@ -724,13 +724,13 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   fibre's own domain, and each fibre holds a single, optionally atomic
   cancellation function.
 
-* [ocaml-multicore/eio#108](https://github.com/ocaml-multicore/eio/issues/108)
+* [ocaml-multicore/eio#108](https://github.com/ocaml-multicore/eio/issues/108 - [403 Forbidden])
   Clean up Waiters API
   
   The result type was not required by many users and has thus been
   removed. The relevant documentation has been updated as well.
 
-* [ocaml-multicore/eio#109](https://github.com/ocaml-multicore/eio/issues/109)
+* [ocaml-multicore/eio#109](https://github.com/ocaml-multicore/eio/issues/109 - [403 Forbidden])
   Use lock-free run queue in `eio_linux` tools
   
   The `lib_eio_linux/eio_linux.ml` file has been updated to use a
@@ -743,33 +743,33 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
   ![Eio-PR-109-Before-After|690x429](https://discuss.ocaml.org/uploads/short-url/sm3ND4YQkuYHmc1F2LCDDyeDCLT.png)
 
-* [ocaml-multicore/eio#110](https://github.com/ocaml-multicore/eio/issues/110)
+* [ocaml-multicore/eio#110](https://github.com/ocaml-multicore/eio/issues/110 - [403 Forbidden])
   Make `Waiters.wake_one` safe with cancellation
   
   As `wake_one` was being called after a cancelled waiter, we could
   not wake anything when using multiple domains. This PR fixes the
   same in `lib_eio/waiters.ml` along with a stress test.
 
-* [ocaml-multicore/eio#111](https://github.com/ocaml-multicore/eio/issues/111)
+* [ocaml-multicore/eio#111](https://github.com/ocaml-multicore/eio/issues/111 - [403 Forbidden])
   Restore domains test
   
   The `tests/tests_domains.md` file has now been enabled, since a fix
   to Multicore OCaml was backported to 4.12+domains. The tests also
   now run in the CI.
 
-* [ocaml-multicore/eio#112](https://github.com/ocaml-multicore/eio/issues/112)
+* [ocaml-multicore/eio#112](https://github.com/ocaml-multicore/eio/issues/112 - [403 Forbidden])
   Add `Stream.take_nonblocking`
   
   The `lib_eio/stream.ml` file has been updated to include a
   `Stream.take_nonblocking` function along with a couple of tests.
 
-* [ocaml-multicore/eio#113](https://github.com/ocaml-multicore/eio/issues/113)
+* [ocaml-multicore/eio#113](https://github.com/ocaml-multicore/eio/issues/113 - [403 Forbidden])
   Explain about `Promises` and `Streams` in the README
   
   The README has been updated with a section each on `Promises` and
   `Streams`, and the `Fibre.fork` code and tests have been simplified.
 
-* [ocaml-multicore/eio#114](https://github.com/ocaml-multicore/eio/issues/114)
+* [ocaml-multicore/eio#114](https://github.com/ocaml-multicore/eio/issues/114 - [403 Forbidden])
   Allow `Domain_mgr.run` to be cancelled
   
   The run() function in `lib_eio/eio.ml` has been updated to inject a
@@ -777,19 +777,19 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   another domain, and spawning when already cancelled have been added
   to `tests/test_domains.md`.
 
-* [ocaml-multicore/eio#115](https://github.com/ocaml-multicore/eio/issues/115)
+* [ocaml-multicore/eio#115](https://github.com/ocaml-multicore/eio/issues/115 - [403 Forbidden])
   Create fibre context before forking
   
   A fibre is created without being started immediately, which allows
   more flexibility in scheduling and reduces the number of contexts.
 
-* [ocaml-multicore/eio#117](https://github.com/ocaml-multicore/eio/issues/117)
+* [ocaml-multicore/eio#117](https://github.com/ocaml-multicore/eio/issues/117 - [403 Forbidden])
   Allow to set `SO_REUSEPORT` option
   
   The PR adds support to set the `SO_REUSEPORT` socket setting for the
   `linux_uring` backend.
 
-* [ocaml-multicore/eio#118](https://github.com/ocaml-multicore/eio/issues/118)
+* [ocaml-multicore/eio#118](https://github.com/ocaml-multicore/eio/issues/118 - [403 Forbidden])
   Improve scheduling of forks
   
   The old `Fork` effect has been implemented similar to `Fork_ignore`,
@@ -798,14 +798,14 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   at the head of the run-queue, as this new scheduling order is more
   natural, flexible and better for caching.
 
-* [ocaml-multicore/eio#119](https://github.com/ocaml-multicore/eio/issues/119)
+* [ocaml-multicore/eio#119](https://github.com/ocaml-multicore/eio/issues/119 - [403 Forbidden])
   Improve cancellation
   
   The `Fibre.check` function has been added to check whether the
   current context has been cancelled, and documentation on
   cancellation has been updated.
 
-* [ocaml-multicore/eio#121](https://github.com/ocaml-multicore/eio/issues/121)
+* [ocaml-multicore/eio#121](https://github.com/ocaml-multicore/eio/issues/121 - [403 Forbidden])
   Add rationales for end-of-life and dynamic dispatch
   
   A documentation update on `Indicating End-of-File` and `Dynamic
@@ -813,19 +813,19 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Tezos
 
-* [ocaml-multicore/tezos-opam-repository#7](https://github.com/ocaml-multicore/tezos-opam-repository/pull/7)
+* [ocaml-multicore/tezos-opam-repository#7](https://github.com/ocaml-multicore/tezos-opam-repository/pull/7 - [403 Forbidden])
   Updates
   
   A merge from upstream that includes updates to the dependency
   packages and addition of new packages to the repository.
 
-* [ocaml-multicore/tezos-opam-repository#8](https://github.com/ocaml-multicore/tezos-opam-repository/pull/8)
+* [ocaml-multicore/tezos-opam-repository#8](https://github.com/ocaml-multicore/tezos-opam-repository/pull/8 - [403 Forbidden])
   Add `domainslib.0.4.0` & `lwt_domain.0.1.0`
   
   The addition of `domainslib.0.4.0` and `lwt_domain.0.1.0` to the
   tezos-opam-repository.
 
-* [ocaml-multicore/tezos#21](https://github.com/ocaml-multicore/tezos/pull/21)
+* [ocaml-multicore/tezos#21](https://github.com/ocaml-multicore/tezos/pull/21 - [403 Forbidden])
   Upstream updates
 
   The latest upstream build, code and documentation changes have been
@@ -833,7 +833,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Domainslib
 
-* [ocaml-multicore/domainslib#50](https://github.com/ocaml-multicore/domainslib/pull/50)
+* [ocaml-multicore/domainslib#50](https://github.com/ocaml-multicore/domainslib/pull/50 - [403 Forbidden])
   Multi_channel: allow more than one instance per program with different configurations
   
   A shared global state in `Multi_channel` exists in the form of
@@ -841,7 +841,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   contributed by Edwin Torok (@edwintorok), removes the global key,
   and uses a per-channel key.
 
-* [ocaml-multicore/domainslib#60](https://github.com/ocaml-multicore/domainslib/pull/60)
+* [ocaml-multicore/domainslib#60](https://github.com/ocaml-multicore/domainslib/pull/60 - [403 Forbidden])
   Bug fix in `parallel_scan`
   
   The final entry in the array result was incorrect for
@@ -849,7 +849,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   array size less than the pool size.
   
 * A new
-  [domainslib.0.4.0](https://github.com/ocaml-multicore/domainslib/releases/tag/0.4.0)
+  [domainslib.0.4.0](https://github.com/ocaml-multicore/domainslib/releases/tag/0.4.0 - [403 Forbidden])
   has been released that includes a breaking change. We now need to
   use effect handlers for task creation, and all computations need to
   be enclosed in a `Task.run` function.
@@ -860,13 +860,13 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Ongoing
 
-* [ocaml-bench/sandmark-nightly#23](https://github.com/ocaml-bench/sandmark-nightly/issues/23)
+* [ocaml-bench/sandmark-nightly#23](https://github.com/ocaml-bench/sandmark-nightly/issues/23 - [403 Forbidden])
   Sandmark nightly issues
   
   A list of issues observed for the `sandmark.ocamllabs.io` service on
   results returned from Navajo and Turing machines.
 
-* [ocaml-bench/sandmark-nightly#24](https://github.com/ocaml-bench/sandmark-nightly/pull/24)
+* [ocaml-bench/sandmark-nightly#24](https://github.com/ocaml-bench/sandmark-nightly/pull/24 - [403 Forbidden])
   Use git clone from ocurrent-deployer
   
   An update to the Dockerfile to use git clone from `ocurrent-deployer`,
@@ -934,7 +934,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Ongoing
 
-* [ocaml-multicore-ci#15](https://github.com/ocurrent/ocaml-multicore-ci/pull/15)
+* [ocaml-multicore-ci#15](https://github.com/ocurrent/ocaml-multicore-ci/pull/15 - [403 Forbidden])
   Add dependency installation steps in README
   
   The following commands are required to be executed prior to
@@ -945,27 +945,27 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   $ opam install -t .
   ```
 
-* [ocurrent/ocluster#151](https://github.com/ocurrent/ocluster/pull/151)
+* [ocurrent/ocluster#151](https://github.com/ocurrent/ocluster/pull/151 - [403 Forbidden])
   Public `Ocluster_worker` library
   
   The PR exposes the internal library `Ocluster_worker` for
   current-bench and Sandmark, as we need a specific worker with custom
   settings to ensure that the benchmarks are stable.
 
-* [ocurrent/ocluster#154](https://github.com/ocurrent/ocluster/pull/154)
+* [ocurrent/ocluster#154](https://github.com/ocurrent/ocluster/pull/154 - [403 Forbidden])
   Use `opam update`, remove `--verbose`, and `--connect` options
   
   A README documentation update with the latest instructions and
   options available to use ocluster.
 
-* [ocurrent/current-bench#226](https://github.com/ocurrent/current-bench/issues/226)
+* [ocurrent/current-bench#226](https://github.com/ocurrent/current-bench/issues/226 - [403 Forbidden])
   Only build benchmarks whose dependencies build fine in CI
   
   The CI/CB pipeline can be integrated and extended to allow building
   of those dependencies in the benchmarks that are known to build
   cleanly in the CI for various OCaml variants.
 
-* [ocurrent/ocaml-ci#399](https://github.com/ocurrent/ocaml-ci/pull/399/)
+* [ocurrent/ocaml-ci#399](https://github.com/ocurrent/ocaml-ci/pull/399/ - [403 Forbidden])
   Add dependency installation steps to README
   
   The `ocaml-ci` project can be run for a local project directory, and
@@ -974,14 +974,14 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
 #### Completed
 
-* [ocurrent/current-bench#216](https://github.com/ocurrent/current-bench/pull/216)
+* [ocurrent/current-bench#216](https://github.com/ocurrent/current-bench/pull/216 - [403 Forbidden])
   Add a custom OCluster worker build-and-run-benchmarks
   
   The PR provides a OCluster worker that enables us to build and run
   the benchmarks from the main pipeline, and fixes the Multicore
   repository settings.
   
-* [ocurrent/current-bench#241](https://github.com/ocurrent/current-bench/pull/241)
+* [ocurrent/current-bench#241](https://github.com/ocurrent/current-bench/pull/241 - [403 Forbidden])
   Display min and max values when displaying multi-value datapoints
   
   The minimum and maximum values for multi-value data points are now
@@ -989,7 +989,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
   ![Current-bench-241-Min-Max|690x388](https://discuss.ocaml.org/uploads/short-url/8YoOBKutYLRMDliEnuDrk6daQC9.png)
 
-* [ocurrent/current-bench#242](https://github.com/ocurrent/current-bench/pull/242)
+* [ocurrent/current-bench#242](https://github.com/ocurrent/current-bench/pull/242 - [403 Forbidden])
   Workers: run one benchmark per CPU
   
   You can now run multiple benchmarks in parallel, each using its own
@@ -999,14 +999,14 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
   OCAML_BENCH_DOCKER_CPU=4,5,6
   ```
 
-* [ocurrent/current-bench#252](https://github.com/ocurrent/current-bench/pull/252)
+* [ocurrent/current-bench#252](https://github.com/ocurrent/current-bench/pull/252 - [403 Forbidden])
   Make the Debian version more explicit
   
   The `pipeline/Dockerfile` and `pipeline/Dockerfile.env` files have
   been updated to be explicit on the Debian image
   `ocaml/opam:debian-11-ocaml-4.13` to be used.
 
-* [ocurrent/current-bench#254](https://github.com/ocurrent/current-bench/pull/254)
+* [ocurrent/current-bench#254](https://github.com/ocurrent/current-bench/pull/254 - [403 Forbidden])
   Allow setting a description for the metrics
   
   The current-bench frontend can now display a description for the
@@ -1014,7 +1014,7 @@ As always, the Multicore OCaml updates are listed first, which contain the upstr
 
   ![Current-bench-254-Metrics-Description|690x216](https://discuss.ocaml.org/uploads/short-url/eZ4kBExiMVCqSEwaBtdIKJEbN0c.png)
 
-* [ocurrent/current-bench#257](https://github.com/ocurrent/current-bench/pull/257)
+* [ocurrent/current-bench#257](https://github.com/ocurrent/current-bench/pull/257 - [403 Forbidden])
   Config repositories to run with specific workers and OCaml versions
   
   A static configuration can be provided to current-bench that

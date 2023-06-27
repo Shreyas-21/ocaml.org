@@ -611,7 +611,7 @@ As always, the Multicore OCaml updates are listed first, which are then followed
 
 ##### Enhancement
 
-* [ocaml-multicore/eio#155](https://github.com/ocaml-multicore/eio/issues/155)
+* [ocaml-multicore/eio#155](https://github.com/ocaml-multicore/eio/issues/155 - [403 Forbidden])
   Add `Eio_unix.FD`
   
   The `FD` module has been added to `lib_eio/unix/eio_unix.ml` to be
@@ -1292,13 +1292,13 @@ As always, the Multicore OCaml updates are listed first, which are then followed
   The frontend uses Rescript, and the current plotting library has its
   limitations. An open issue to discuss rewriting the frontend.
 
-* [ocurrent/current-bench#322](https://github.com/ocurrent/current-bench/issues/322)
+* [ocurrent/current-bench#322](https://github.com/ocurrent/current-bench/issues/322 - [403 Forbidden])
   Adjust units on comparison commit values tool
   
   The `adjust` function is now called on both the benchmark and the
   comparison values to show the same units.
 
-* [ocurrent/current-bench#323](https://github.com/ocurrent/current-bench/pull/323)
+* [ocurrent/current-bench#323](https://github.com/ocurrent/current-bench/pull/323 - [403 Forbidden])
   Allow clicking on the legend to show/hide plot lines and use more columns
 
   The legend now uses more columns when clicking on the show/hide plot
@@ -1306,14 +1306,14 @@ As always, the Multicore OCaml updates are listed first, which are then followed
   
   ![Current-bench-PR-323](images/Current-bench-PR-323.png)
 
-* [ocurrent/current-bench#324](https://github.com/ocurrent/current-bench/issues/324)
+* [ocurrent/current-bench#324](https://github.com/ocurrent/current-bench/issues/324 - [403 Forbidden])
   Disabled worker / docker image
 
   The frontend automatically selects the first "environment" (worker +
   Docker image) and the system may contain disabled ones. The
   environment list needs to be filtered for the active entries only.
 
-* [ocurrent/current-bench#326](https://github.com/ocurrent/current-bench/pull/326)
+* [ocurrent/current-bench#326](https://github.com/ocurrent/current-bench/pull/326 - [403 Forbidden])
   frontend: Fix bug with using same x-axis for all metrics
 
   The PR fixes the change to use the correct meta-data for all the
@@ -1321,13 +1321,13 @@ As always, the Multicore OCaml updates are listed first, which are then followed
 
 ##### Testing
 
-* [ocurrent/current-bench#316](https://github.com/ocurrent/current-bench/issues/316)
+* [ocurrent/current-bench#316](https://github.com/ocurrent/current-bench/issues/316 - [403 Forbidden])
   Real-life testing
 
   current-bench requires both functional and integration tests for
   checking on failure conditions and to validate the backend pipeline.
 
-* [ocurrent/current-bench#318](https://github.com/ocurrent/current-bench/issues/318)
+* [ocurrent/current-bench#318](https://github.com/ocurrent/current-bench/issues/318 - [403 Forbidden])
   Cobench user library
 
   A validation test interface, when adding new benchmarks, is needed
@@ -1336,19 +1336,19 @@ As always, the Multicore OCaml updates are listed first, which are then followed
 
 ##### Monitoring
 
-* [ocurrent/current-bench#290](https://github.com/ocurrent/current-bench/issues/290)
+* [ocurrent/current-bench#290](https://github.com/ocurrent/current-bench/issues/290 - [403 Forbidden])
   Add optional field to JSON
 
   A request to add an optional field in the JSON object whose values
   can be printed verbatim in the log.
 
-* [ocurrent/current-bench#298](https://github.com/ocurrent/current-bench/issues/298)
+* [ocurrent/current-bench#298](https://github.com/ocurrent/current-bench/issues/298 - [403 Forbidden])
   Production logs and warnings
 
   The filtering of the logs based on a component in the pipeline will
   be useful for troubleshooting and debugging production issues.
   
-* [ocurrent/current-bench#319](https://github.com/ocurrent/current-bench/issues/319)
+* [ocurrent/current-bench#319](https://github.com/ocurrent/current-bench/issues/319 - [403 Forbidden])
   Github bot messages
 
   Similar to code coverage reports, it will be nice to produce
@@ -1358,19 +1358,19 @@ As always, the Multicore OCaml updates are listed first, which are then followed
 
 ##### Build
 
-* [ocurrent/current-bench#282](https://github.com/ocurrent/current-bench/pull/282)
+* [ocurrent/current-bench#282](https://github.com/ocurrent/current-bench/pull/282 - [403 Forbidden])
   Docker compose for stack deploy
   
   A `docker-compose.yaml` file can now build the backend pipeline and
   frontend stack for deployment.
 
-* [ocurrent/current-bench#301](https://github.com/ocurrent/current-bench/pull/301)
+* [ocurrent/current-bench#301](https://github.com/ocurrent/current-bench/pull/301 - [403 Forbidden])
   Worker support for raspberry ARM: add new argument to specify arch
 
   The architecture argument has been added to the `run_command`
   function to allow the use of Raspberry Pi ARM as a worker.
   
-* [ocurrent/current-bench#305](https://github.com/ocurrent/current-bench/pull/305)
+* [ocurrent/current-bench#305](https://github.com/ocurrent/current-bench/pull/305 - [403 Forbidden])
   Update `ocamlformat` version to `0.20.1`
 
   The `ocamlformat` version has been updated from `0.19.0` to `0.20.1`.
