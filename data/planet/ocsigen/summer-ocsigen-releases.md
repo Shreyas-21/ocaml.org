@@ -13,7 +13,7 @@ source:
 <p>We are happy to announce the releases of</p>
 
 <ul>
-  <li><a href="https://github.com/ocsigen/eliom/releases/tag/4.2">Eliom 4.2</a></li>
+  <li><a href="https://github.com/ocsigen/eliom/releases/tag/4.2 - [403 Forbidden]">Eliom 4.2</a></li>
   <li><a href="https://github.com/ocsigen/ocsigenserver/releases/tag/2.6">Server 2.6</a></li>
   <li><a href="https://github.com/ocsigen/js_of_ocaml/releases/tag/2.6">js_of_ocaml 2.6</a></li>
   <li><a href="https://github.com/ocsigen/tyxml/releases/tag/3.5.0">TyXML 3.5</a></li>
@@ -26,7 +26,7 @@ source:
 <ul>
   <li>
     <p>PPX support for js_of_ocaml with OCaml &gt;= 4.02.2.
-See documentation <a href="http://ocsigen.org/js_of_ocaml/2.6/api/Ppx_js">here</a>.</p>
+See documentation <a href="http://ocsigen.org/js_of_ocaml/2.6/api/Ppx_js - [404 Not Found]">here</a>.</p>
 
     <p>This was also the occasion to introduce a new syntax for object
 literals, and to improve the Camlp4 syntax (w.r.t. to

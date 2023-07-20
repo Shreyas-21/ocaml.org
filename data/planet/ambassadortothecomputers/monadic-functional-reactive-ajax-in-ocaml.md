@@ -13,8 +13,8 @@ source:
 
 Yesterday I released three related projects which I've been working on for a long time:
 <ul>
-  <li><a href="http://code.google.com/p/ocamljs"><b>ocamljs</b></a>, a Javascript backend for ocamlc, along with some libraries for web programming</li>
-  <li><a href="http://code.google.com/p/orpc2"><b>orpc</b></a>, a tool for generating RPC stubs from OCaml signatures, either ONC RPC for use with Ocamlnet's RPC implementation, or RPC over HTTP for use with ocamljs</li>
+  <li><a href="http://code.google.com/p/ocamljs - [500 Internal Server Error]"><b>ocamljs</b></a>, a Javascript backend for ocamlc, along with some libraries for web programming</li>
+  <li><a href="http://code.google.com/p/orpc2 - [500 Internal Server Error]"><b>orpc</b></a>, a tool for generating RPC stubs from OCaml signatures, either ONC RPC for use with Ocamlnet's RPC implementation, or RPC over HTTP for use with ocamljs</li>
   <li><a href="http://code.google.com/p/froc"><b>froc</b></a>, a library for functional reactive programming that works with ocamljs</li>
 </ul>
 The idea of all this is to build a platform for client-side web programming like <a href="http://code.google.com/webtoolkit/">Google Web Toolkit</a> (but better, of course :). There is still a lot of work to get there, but already we use ocamljs and orpc for production work at <a href="http://skydeck.com/">Skydeck</a>. In my next few posts I'll work through some examples using ocamljs, orpc, and froc:

@@ -11,7 +11,7 @@ authors:
 source:
 ---
 
-<b>Update (Oct 2013):</b> Anil &nbsp;Madhavapeddy has <a href="http://anil.recoil.org/2013/09/30/travis-and-ocaml.html">fleshed this out further</a>.<br/><br/>
+<b>Update (Oct 2013):</b> Anil &nbsp;Madhavapeddy has <a href="http://anil.recoil.org/2013/09/30/travis-and-ocaml.html - [1 Client error: Server returned nothing (no headers, no data)]">fleshed this out further</a>.<br/><br/>
 This evening I spent some time getting unit tests for my OCaml projects to run on <a href="https://travis-ci.org/">Travis CI</a>, a free service for continuous integration on public GitHub projects. Although Travis has no built-in OCaml environment, it's straightforward to hijack its C environment to install OCaml and <a href="http://opam.ocamlpro.com/">OPAM</a>, then build an OCaml project and run its tests.<br/>
 <br/>
 <b>1.</b> Perform the <a href="http://about.travis-ci.org/docs/user/getting-started/">initial setup</a> to get Travis CI watching your GitHub repo (up to and including step two of that guide).<br/>

@@ -18,7 +18,7 @@ implementations of the same application. A <a href="http://ocsigen.org/js_of_oca
 version is now available:</p>
 
 <ul>
-  <li><a href="https://github.com/slegrand45/examples_ocsigen/tree/master/jsoo/todomvc-react">Source code</a></li>
+  <li><a href="https://github.com/slegrand45/examples_ocsigen/tree/master/jsoo/todomvc-react - [403 Forbidden]">Source code</a></li>
   <li><a href="http://slegrand45.github.io/examples_ocsigen.site/jsoo/todomvc-react/">Demo</a></li>
 </ul>
 
@@ -49,28 +49,28 @@ instance) based on the model data.</p>
 </ul>
 
 <p>For the Todo application, we have three corresponding OCaml
-modules. <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L38"><code class="language-plaintext highlighter-rouge">Model</code></a> mainly contains the task list and the new
-task field value. It uses <a href="https://ocsigen.org/js_of_ocaml/api/Deriving_Json"><code class="language-plaintext highlighter-rouge">Deriving_Json</code></a> to convert
+modules. <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L38 - [403 Forbidden]"><code class="language-plaintext highlighter-rouge">Model</code></a> mainly contains the task list and the new
+task field value. It uses <a href="https://ocsigen.org/js_of_ocaml/api/Deriving_Json - [404 Not Found]"><code class="language-plaintext highlighter-rouge">Deriving_Json</code></a> to convert
 the data to JSON and vice versa, in order to be able to save and
 restore the application state. This module is otherwise written with
-basic OCaml code. <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L111"><code class="language-plaintext highlighter-rouge">Controller</code></a> produces new models
+basic OCaml code. <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L111 - [403 Forbidden]"><code class="language-plaintext highlighter-rouge">Controller</code></a> produces new models
 according to the actions it receives. Whenever a new model is built,
 the model becomes the new reactive signal value. We will elaborate on
-this point later. <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L175"><code class="language-plaintext highlighter-rouge">View</code></a> builds the HTML to display the
+this point later. <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L175 - [403 Forbidden]"><code class="language-plaintext highlighter-rouge">View</code></a> builds the HTML to display the
 page. It receives as input the dynamic data from the model. The HTML
 also contains the event management code needed to emit the
 corresponding actions.</p>
 
 <p>Besides these three MVC modules, the application uses three
-helpers. <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L14"><code class="language-plaintext highlighter-rouge">Storage</code></a>
+helpers. <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L14 - [403 Forbidden]"><code class="language-plaintext highlighter-rouge">Storage</code></a>
 contains the functions to read and write a string value in the browser
 local storage. This module is used to save and restore the application
 data in JSON
-format. <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L94"><code class="language-plaintext highlighter-rouge">Action</code></a>
+format. <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L94 - [403 Forbidden]"><code class="language-plaintext highlighter-rouge">Action</code></a>
 contains all the actions available from the user
-interface. <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L3"><code class="language-plaintext highlighter-rouge">ReactList</code></a>
+interface. <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L3 - [403 Forbidden]"><code class="language-plaintext highlighter-rouge">ReactList</code></a>
 contains a single function to ease the creation of a reactive list via
-the <a href="https://github.com/hhugo/reactiveData"><code class="language-plaintext highlighter-rouge">ReactiveData</code> library</a>.</p>
+the <a href="https://github.com/hhugo/reactiveData - [403 Forbidden]"><code class="language-plaintext highlighter-rouge">ReactiveData</code> library</a>.</p>
 
 <h2>React</h2>
 
@@ -79,7 +79,7 @@ the <a href="https://github.com/hhugo/reactiveData"><code class="language-plaint
 automatically refresh the view whenever a new model is built by the
 controller. To achieve this goal, the application uses a reactive
 signal which carries the model values (which vary over time). The
-model value may initially be equal to the <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L60-L65">empty model</a>. When
+model value may initially be equal to the <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L60-L65 - [403 Forbidden]">empty model</a>. When
 this value is modified by the controller, <em>i.e.,</em> after a new model
 has been generated, the view automatically refreshes its reactive
 parts.</p>
@@ -115,18 +115,18 @@ emphasis on the reactive features.</p>
 
 <h3>Initialization</h3>
 
-<p>The <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L393">main function</a> creates the reactive signal with an initial
+<p>The <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L393 - [403 Forbidden]">main function</a> creates the reactive signal with an initial
 (possibly empty) model. The <code class="language-plaintext highlighter-rouge">m</code> value is of type <code class="language-plaintext highlighter-rouge">Model.t</code>:</p>
 
 <figure class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="k">let</span> <span class="n">rp</span> <span class="o">=</span> <span class="nn">React</span><span class="p">.</span><span class="nn">S</span><span class="p">.</span><span class="n">create</span> <span class="n">m</span> <span class="k">in</span> <span class="c">(* ... *)</span></code></pre></figure>
 
 <p><code class="language-plaintext highlighter-rouge">React.S.create</code> returns a tuple, the first part of which is a
 primitive signal; the second part is a function used by the controller
-<a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L170">to set a new model as the new signal value</a>.</p>
+<a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L170 - [403 Forbidden]">to set a new model as the new signal value</a>.</p>
 
 <h3>Reactive attribute</h3>
 
-<p>We first explain how the CSS style of a HTML node <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L267-L299">becomes
+<p>We first explain how the CSS style of a HTML node <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L267-L299 - [403 Forbidden]">becomes
 reactive</a>. In the Todo application, the task list is
 displayed in a <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code> HTML tag. The CSS style of this HTML node
 must contain <code class="language-plaintext highlighter-rouge">visibility: hidden;</code> if the tasks list is empty, and
@@ -136,7 +136,7 @@ therefore change according to the model content:</p>
 
 <figure class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="nn">R</span><span class="p">.</span><span class="nn">Html5</span><span class="p">.</span><span class="n">a_style</span> <span class="p">(</span><span class="nn">React</span><span class="p">.</span><span class="nn">S</span><span class="p">.</span><span class="n">map</span> <span class="n">css_visibility</span> <span class="n">r</span><span class="p">)</span></code></pre></figure>
 
-<p>We use the <a href="https://ocsigen.org/js_of_ocaml/api/Tyxml_js"><code class="language-plaintext highlighter-rouge">Tyxml_js</code></a> module to safely build the HTML
+<p>We use the <a href="https://ocsigen.org/js_of_ocaml/api/Tyxml_js - [404 Not Found]"><code class="language-plaintext highlighter-rouge">Tyxml_js</code></a> module to safely build the HTML
 code. The first thing to note is that we use the reactive <code class="language-plaintext highlighter-rouge">R.Html5</code>
 submodule, not the plain <code class="language-plaintext highlighter-rouge">Html5</code> submodule. The <code class="language-plaintext highlighter-rouge">a_style</code> function
 implements a reactive attribute; it expects a reactive signal as its
@@ -168,7 +168,7 @@ automatically modified.</p>
 
 <p>Reactive attributes alone would not suffice to build a user
 interface. We also need a reactive list of child nodes. Such a list is
-for example needed to display the task list. (<a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L267-L299">The source code section
+for example needed to display the task list. (<a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L267-L299 - [403 Forbidden]">The source code section
 is the same as for the first
 example.</a>) It
 is a list of <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code> nodes contained in a <code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code> node. We accordingly
@@ -183,7 +183,7 @@ contains the node&rsquo;s children:</p>
 <figure class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="k">let</span> <span class="n">rl</span> <span class="o">=</span> <span class="nn">ReactList</span><span class="p">.</span><span class="n">list</span> <span class="p">(</span><span class="nn">React</span><span class="p">.</span><span class="nn">S</span><span class="p">.</span><span class="n">map</span> <span class="n">visible_tasks</span> <span class="n">r</span><span class="p">)</span></code></pre></figure>
 
 <p>We create the reactive list via the helper module
-<a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L3">ReactList</a>. As for the previous example, we use
+<a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L3 - [403 Forbidden]">ReactList</a>. As for the previous example, we use
 <code class="language-plaintext highlighter-rouge">React.S.map</code> to build a reactive signal, <code class="language-plaintext highlighter-rouge">r</code> being again the
 primitive signal. The <code class="language-plaintext highlighter-rouge">visible_tasks</code> function generates the <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code>
 elements from the task list, filtered by the current selected
@@ -206,7 +206,7 @@ automatically refreshed.</p>
 
 <h3>Signal typing</h3>
 
-<p>You may have noticed that the code <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L89-L91">includes the following
+<p>You may have noticed that the code <a href="https://github.com/slegrand45/examples_ocsigen/blob/d6766d404a449d0b1d36ad3cd916b0c444390a19/jsoo/todomvc-react/todomvc.ml#L89-L91 - [403 Forbidden]">includes the following
 types</a>:</p>
 
 <figure class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="k">type</span> <span class="n">rs</span> <span class="o">=</span> <span class="nn">Model</span><span class="p">.</span><span class="n">t</span> <span class="nn">React</span><span class="p">.</span><span class="n">signal</span>
@@ -225,9 +225,9 @@ dedicated to frontend web application development. Elm was designed by
 Evan Czaplicki. The language should feel familiar to OCaml
 programmers.</p>
 
-<p>Our TodoMVC example is based on the <a href="https://github.com/evancz/elm-todomvc">Elm
+<p>Our TodoMVC example is based on the <a href="https://github.com/evancz/elm-todomvc - [403 Forbidden]">Elm
 implementation</a>, which follows
-the structure used in <a href="https://github.com/evancz/elm-architecture-tutorial/">all Elm
+the structure used in <a href="https://github.com/evancz/elm-architecture-tutorial/ - [403 Forbidden]">all Elm
 programs</a>: a
 model, an update function, and a view. Like Elm, our example uses the
 functional reactive programming style, enabled in our case by the

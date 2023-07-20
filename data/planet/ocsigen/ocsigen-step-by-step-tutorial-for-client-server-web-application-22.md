@@ -12,7 +12,7 @@ source:
 
 <p>This is the end of the tutorial about writing a collaborative Web drawing
 in OCaml. Have a look at
-<a href="http://ocsigen.org/tuto/manual/application">the full tutorial</a>
+<a href="http://ocsigen.org/tuto/manual/application - [404 Not Found]">the full tutorial</a>
 if you haven&rsquo;t read the first part or if you want a version with full
 colors and links.</p>
 
@@ -288,7 +288,7 @@ describing the color (as RGB values) and coordinates of drawn lines.</p>
 type-safe deserialization of this type. Eliom forces you to use this
 in order to avoid server crashes if a client sends corrupted data.
 This is defined using a JSON plugin for
-<a href="https://github.com/whitequark/ppx_deriving">ppx_deriving</a>, which you
+<a href="https://github.com/whitequark/ppx_deriving - [403 Forbidden]">ppx_deriving</a>, which you
 need to install. You need to do that for each type of data sent by the
 client to the server.  This annotation can only be added on types
 containing exclusively basic types, or other types annotated with
@@ -422,7 +422,7 @@ easily create the <code class="language-plaintext highlighter-rouge">head</code>
 <p>You need to install the corresponding stylesheets and images into your
 project. The stylesheet files should go to the directory
 <code class="language-plaintext highlighter-rouge">static/css</code>.
-File <a href="http://ocsigen.org/tuto/files/tutorial/static/css/graffiti.css">graffiti.css</a> is a custom-made CSS file.</p>
+File <a href="http://ocsigen.org/tuto/files/tutorial/static/css/graffiti.css - [404 Not Found]">graffiti.css</a> is a custom-made CSS file.</p>
 
 <p>You can then test your application (<code class="language-plaintext highlighter-rouge">make test.byte</code>).</p>
 

@@ -30,7 +30,7 @@ Overall, we're now in a very good position to understand which changes should be
 
 In addition to the high-level overhaul of the Learn area we're working on, outlined above, we also made several smaller improvements on the documentation to continuously improve the content of the documentation.
 
-Many of the [outstanding pull requests on ocaml/ocaml.org](https://github.com/ocaml/ocaml.org/issues?q=is%3Apr+is%3Aopen+label%3Adocumentation) contain updates to the existing documentation pages of the Learn area. We aim to merge the majority of these in May.
+Many of the [outstanding pull requests on ocaml/ocaml.org](https://github.com/ocaml/ocaml.org/issues?q=is%3Apr+is%3Aopen+label%3Adocumentation - [403 Forbidden]) contain updates to the existing documentation pages of the Learn area. We aim to merge the majority of these in May.
 
 We are incredibly thankful for your feedback, suggestions, and help along the way. We are striving to make learning OCaml frictionless by providing high-quality content on OCaml.org. It's quite a big task, and everyone's help is essential to allow us to make this happen.
 
@@ -102,19 +102,19 @@ Relevant PRs/Issues:
 
   16. The package autocomplete search input in the top navigation bar now reacts faster since the [throttling delay has been removed (ocaml/ocaml.org#1122)](https://github.com/ocaml/ocaml.org/pull/1122).
 
-  17. We made the [share button of the OCaml Playground more obvious (ocaml/ocaml.org#1117)](https://github.com/ocaml/ocaml.org/pull/1117) by adding a caption.
+  17. We made the [share button of the OCaml Playground more obvious (ocaml/ocaml.org#1117)](https://github.com/ocaml/ocaml.org/pull/1117 - [403 Forbidden]) by adding a caption.
 
   18. We worked on the [experimental changelog page](https://ocaml.org/changelog).
 
   19. Considering that there are some unmet caching needs in our web stack (e.g., in the package documentation section: looking at the many HTTP requests and rendering the module tree menu), we [reached out to the OCaml community](https://discuss.ocaml.org/t/is-there-a-drop-in-solution-for-serving-responses-from-cache-in-dream/11985) to understand what the ecosystem is like at the moment and if there is a meaningful opportunity to contribute to the OCaml ecosystem as part of our work on OCaml.org.
 
-  20. There is an open PR for [adding WIP dev-container](https://github.com/ocaml/ocaml.org/pull/1126) that can make it easier to get started developing on the ocaml/ocaml.org repository.
+  20. There is an open PR for [adding WIP dev-container](https://github.com/ocaml/ocaml.org/pull/1126 - [403 Forbidden]) that can make it easier to get started developing on the ocaml/ocaml.org repository.
 
-  21. The ["Contribute" link on the documentation pages now links to the commit from which the content was rendered (ocaml/ocaml.org#1139](https://github.com/ocaml/ocaml.org/pull/1139)
+  21. The ["Contribute" link on the documentation pages now links to the commit from which the content was rendered (ocaml/ocaml.org#1139](https://github.com/ocaml/ocaml.org/pull/1139 - [403 Forbidden])
 
   22. The OCaml.org project [officially adopted the OCaml Code of Conduct by adding `CODE_OF_CONDUCT.md` to its GitHub repository
-  (ocaml/ocaml.org#1135)](https://github.com/ocaml/ocaml.org/pull/1135) and by [adding ocaml/ocaml.org to the list of adopters (ocaml/code-of-conduct#6)](https://github.com/ocaml/code-of-conduct/pull/6)
+  (ocaml/ocaml.org#1135)](https://github.com/ocaml/ocaml.org/pull/1135 - [403 Forbidden]) and by [adding ocaml/ocaml.org to the list of adopters (ocaml/code-of-conduct#6)](https://github.com/ocaml/code-of-conduct/pull/6 - [403 Forbidden])
 
-  23. The [problems in the exercises section of the Learn area can now be filtered by difficulty (ocaml/ocaml.org#1141)](https://github.com/ocaml/ocaml.org/pull/1141#pullrequestreview-1403923329).
+  23. The [problems in the exercises section of the Learn area can now be filtered by difficulty (ocaml/ocaml.org#1141)](https://github.com/ocaml/ocaml.org/pull/1141#pullrequestreview-1403923329 - [403 Forbidden]).
 
-  24. Bugfix: the problem difficulty symbols in the exercise section would be cut off in the too-small margins. Now the [problem difficulty symbols in the exercises section only show up in the margin on `xl` screen size (ocaml/ocaml.org#1138).](https://github.com/ocaml/ocaml.org/pull/1138)
+  24. Bugfix: the problem difficulty symbols in the exercise section would be cut off in the too-small margins. Now the [problem difficulty symbols in the exercises section only show up in the margin on `xl` screen size (ocaml/ocaml.org#1138).](https://github.com/ocaml/ocaml.org/pull/1138 - [403 Forbidden])
