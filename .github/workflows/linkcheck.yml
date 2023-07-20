@@ -1,9 +1,11 @@
 name: Check links
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: 0 2 * * MON
+  push:
+    branches: [test-pr]
+  # workflow_dispatch:
+  # schedule:
+  #   - cron: 0 2 * * MON
 
 permissions:
   pull-requests: write
@@ -41,7 +43,20 @@ jobs:
 
       - name: Annotate broken links
         run: |
-          opam exec -- olinkcheck --annotate-in-file md data --exclude-list=.github/workflows/exclude.txt
+          opam exec -- olinkcheck --annotate md_with_yaml data/academic_institutions --exclude-list=.github/workflows/exclude.txt
+          opam exec -- olinkcheck --annotate md_with_yaml data/books --exclude-list=.github/workflows/exclude.txt
+          opam exec -- olinkcheck --annotate md_with_yaml data/changelog --exclude-list=.github/workflows/exclude.txt
+          opam exec -- olinkcheck --annotate md_with_yaml data/code_examples --exclude-list=.github/workflows/exclude.txt
+          opam exec -- olinkcheck --annotate md_with_yaml data/industrial_users --exclude-list=.github/workflows/exclude.txt
+          opam exec -- olinkcheck --annotate md_with_yaml data/media --exclude-list=.github/workflows/exclude.txt
+          opam exec -- olinkcheck --annotate md_with_yaml data/news --exclude-list=.github/workflows/exclude.txt
+          opam exec -- olinkcheck --annotate md_with_yaml data/pages --exclude-list=.github/workflows/exclude.txt
+          opam exec -- olinkcheck --annotate html_with_yaml data/planet --exclude-list=.github/workflows/exclude.txt
+          opam exec -- olinkcheck --annotate md_with_yaml data/problems --exclude-list=.github/workflows/exclude.txt
+          opam exec -- olinkcheck --annotate md_with_yaml data/releases --exclude-list=.github/workflows/exclude.txt
+          opam exec -- olinkcheck --annotate md_with_yaml data/success_stories --exclude-list=.github/workflows/exclude.txt
+          opam exec -- olinkcheck --annotate md_with_yaml data/tutorials --exclude-list=.github/workflows/exclude.txt
+          opam exec -- olinkcheck --annotate md_with_yaml data/workshops --exclude-list=.github/workflows/exclude.txt
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
