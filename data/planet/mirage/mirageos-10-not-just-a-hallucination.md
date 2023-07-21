@@ -13,13 +13,13 @@ authors:
         <p><em>First</em>: read the <a href="https://mirage.io/wiki/overview-of-mirage">overview</a> and
 <a href="https://mirage.io/wiki/technical-background">technical background</a> behind the project.</p>
 <p>When we started hacking on MirageOS back in 2009, it started off looking like a
-conventional OS, except written in OCaml.   The <a href="https://github.com/mirage/mirage/tree/old-master">monolithic
+conventional OS, except written in OCaml.   The <a href="https://github.com/mirage/mirage/tree/old-master - [404 Not Found]">monolithic
 repository</a> contained all the
 libraries and boot code, and exposed a big <code>OS</code> module for applications to use.
 We used this to do several fun <a href="http://cufp.org/conference/sessions/2011/t3-building-functional-os">tutorials</a> at conferences
 such as ICFP/CUFP and get early feedback.</p>
 <p>As development continued though, we started to understand what it is we were
-building: a <a href="http://anil.recoil.org/papers/2013-asplos-mirage.pdf">&quot;library operating system&quot;</a>.  As the number of libraries grew,
+building: a <a href="http://anil.recoil.org/papers/2013-asplos-mirage.pdf - [1 Client error: Server returned nothing (no headers, no data)]">&quot;library operating system&quot;</a>.  As the number of libraries grew,
 putting everything into one repository just wasn't scaling, and it made it hard
 to work with third-party code.  We spent some time developing tools to make
 Mirage fit into the broader OCaml ecosystem.</p>
