@@ -39,7 +39,7 @@ source:
   <li>Post the <a href="https://github.com/mirage/mirage-www/wiki/Call-Agenda">agenda</a> online (wiki and mirage.io?) 2-3 days prior to call</li>
   <li>More structured agenda - with additional background information for topics, and prioritisation of burning issues that require discussion/decision</li>
   <li>Follow up other discussion items regularly on the <a href="https://lists.xenproject.org/cgi-bin/mailman/listinfo/mirageos-devel">mailing list</a></li>
-  <li>Call summaries alongside <a href="http://canopy.mirage.io/irclogs">IRC logs</a></li>
+  <li>Call summaries alongside <a href="http://canopy.mirage.io/irclogs - [1 Client error: Timeout was reached]">IRC logs</a></li>
   <li>Publicise calls to the wider community</li>
   <li>Add more details of topics of discussion for participants to read before the call - linked from agenda perhaps?</li>
   <li>Provide documentation and tutorials for newcomers</li>

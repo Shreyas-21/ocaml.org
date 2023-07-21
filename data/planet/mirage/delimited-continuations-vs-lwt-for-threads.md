@@ -30,7 +30,7 @@ The <code>return</code> function is the simplest way to construct such a thread 
 </code></pre>
 <p><code>x</code> has the type <code>unit Lwt.t</code>, and the closure passed to <code>bind</code> will eventually be called with <code>unit</code> when the sleep finishes. Note that we also need a function to actually begin evaluating an Lwt thread, which is the <code>run</code> function.</p>
 <h2>Concerns</h2>
-<p>MirageOS currently uses Lwt extensively, and we have been very happy with using it to build a network stack. However, I was surprised to hear a lot of debate at the <a href="http://anil.recoil.org/2011/04/15/ocaml-users-group.html">2011 OCaml Users Group</a> meeting that Lwt is not to everyone's tastes. There are a few issues:</p>
+<p>MirageOS currently uses Lwt extensively, and we have been very happy with using it to build a network stack. However, I was surprised to hear a lot of debate at the <a href="http://anil.recoil.org/2011/04/15/ocaml-users-group.html - [1 Client error: Server returned nothing (no headers, no data)]">2011 OCaml Users Group</a> meeting that Lwt is not to everyone's tastes. There are a few issues:</p>
 <ul>
 <li>
 <p>The monadic style means that existing code will not just work. Any code that might block must be adapted to use <code>return</code> and <code>bind</code>, which makes integrating third-party code problematic.</p>
@@ -189,6 +189,6 @@ Delimcc can be combined with Lwt very elegantly, and Jake Donham did just this w
 </code></pre>
 <p>Every iteration of the recursive loop requires the allocation of a closure (the <code>Lwt.bind</code> call). In the <code>delimcc</code> case, the function operates as a normal recursive function that uses the stack, until the very end when it needs to save the stack in one pass.</p>
 <p>Overall, I'm convinced now that the performance difference is insignificant for the purposes of choosing one thread system over the other for MirageOS.  Instead, the question of code interoperability is more important. Lwt-enabled protocol code will work unmodified in Javascript, and Delimcc code helps migrate existing code over.</p>
-<p>Interestingly, <a href="https://developer.mozilla.org/en/new_in_javascript_1.7">Javascript 1.7</a> introduces a <em>yield</em> operator, which <a href="http://parametricity.net/dropbox/yield.subc.pdf">has been shown</a> to have comparable expressive power to the <em>shift-reset</em> delimcc operators. Perhaps convergence isn't too far away after all...</p>
+<p>Interestingly, <a href="https://developer.mozilla.org/en/new_in_javascript_1.7 - [404 Not Found]">Javascript 1.7</a> introduces a <em>yield</em> operator, which <a href="http://parametricity.net/dropbox/yield.subc.pdf">has been shown</a> to have comparable expressive power to the <em>shift-reset</em> delimcc operators. Perhaps convergence isn't too far away after all...</p>
 
       

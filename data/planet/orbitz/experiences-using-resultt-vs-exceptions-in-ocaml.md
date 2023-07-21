@@ -20,7 +20,7 @@ Previously I gave an <a href="http://functional-orbitz.blogspot.se/2013/01/intro
 </p>
 
 <p>
-I have used this style in two projects.  The first is a project that was originally written using exceptions and I have converted most of it to using return values.  The second is one that was written from the start using return values.  They can be found <a href="http://code.google.com/p/para-mugsy/">here</a> and <a href="https://github.com/orbitz/opass">here</a>.  <i>I make no guarantees about the quality of the code, in fact I believe some of it to be junk.  These are just my subjective opinions in writing software with a particular attribute</i>.
+I have used this style in two projects.  The first is a project that was originally written using exceptions and I have converted most of it to using return values.  The second is one that was written from the start using return values.  They can be found <a href="http://code.google.com/p/para-mugsy/ - [500 Internal Server Error]">here</a> and <a href="https://github.com/orbitz/opass">here</a>.  <i>I make no guarantees about the quality of the code, in fact I believe some of it to be junk.  These are just my subjective opinions in writing software with a particular attribute</i>.
 </p>
 
 <h1>The Good</h1>
