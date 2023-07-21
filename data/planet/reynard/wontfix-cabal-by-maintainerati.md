@@ -10,7 +10,7 @@ authors:
 source:
 ---
 
-<p>Last month I was very lucky to attend the first <a href="https://github.com/maintainerati/events/tree/master/wontfix_cabal">Wontfix_Cabal</a>, organised by <a href="https://maintainerati.org/">Maintainerati</a> and hosted at GitHub HQ in San Francisco.</p>
+<p>Last month I was very lucky to attend the first <a href="https://github.com/maintainerati/events/tree/master/wontfix_cabal">Wontfix_Cabal</a>, organised by <a href="https://maintainerati.org/ - [1 Client error: SSL connect error]">Maintainerati</a> and hosted at GitHub HQ in San Francisco.</p>
 
 <p>It was totally awesome - and this is why.</p>
 
@@ -21,7 +21,7 @@ source:
 
 <h2>Concept &amp; Style</h2>
 
-<p>This event was in the style of an &ldquo;<a href="https://en.wikipedia.org/wiki/Unconference">unconference</a>&rdquo; and was organised BY open source software maintainers FOR open source software maintainers. The event organiser <a href="https://twitter.com/jessfraz">Jess Frazelle</a> explains the concept behind it as a place &ldquo;where attendees could discuss topics candidly with their peers from other open source communities&rdquo;. You can read Jess&rsquo; <a href="https://opensource.googleblog.com/2017/03/by-maintainers-for-maintainers.html?m=1">blog post</a> for more of her insight into the event, where she also references the response to a previous <a href="https://blog.jessfraz.com/post/the-art-of-closing/">blog post</a> she published that appears to have unlocked the concept in her mind. It seemed to her that many maintainers were all coming up against the same issues, and they needed a space to vent - this is where Maintainerati and the Wonfix_Cabal were born.</p>
+<p>This event was in the style of an &ldquo;<a href="https://en.wikipedia.org/wiki/Unconference">unconference</a>&rdquo; and was organised BY open source software maintainers FOR open source software maintainers. The event organiser <a href="https://twitter.com/jessfraz - [1 Client error: Number of redirects hit maximum amount]">Jess Frazelle</a> explains the concept behind it as a place &ldquo;where attendees could discuss topics candidly with their peers from other open source communities&rdquo;. You can read Jess&rsquo; <a href="https://opensource.googleblog.com/2017/03/by-maintainers-for-maintainers.html?m=1">blog post</a> for more of her insight into the event, where she also references the response to a previous <a href="https://blog.jessfraz.com/post/the-art-of-closing/">blog post</a> she published that appears to have unlocked the concept in her mind. It seemed to her that many maintainers were all coming up against the same issues, and they needed a space to vent - this is where Maintainerati and the Wonfix_Cabal were born.</p>
 
 <p>The verb to <a href="https://en.oxforddictionaries.com/definition/vent">&ldquo;vent&rdquo;</a> refers to &ldquo;giving free expression to (a strong emotion)&rdquo;, and this is definitely applicable here. Everyone in the room had at least one burning issue they wanted to address, and the simple question &ldquo;What would you like to discuss?&rdquo; allowed the process to begin without censorship.</p>
 
