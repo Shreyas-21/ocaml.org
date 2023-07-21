@@ -20,3 +20,5 @@ https://github.com/ocurrent/current-bench/issues
 https://github.com/ocurrent/current-bench/pull
 https://github.com/ocurrent/ocluster/pull
 https://github.com/ocurrent/ocluster/issues
+https://github.com/ocaml/ocaml.org/pull
+https://github.com/ocaml/ocaml.org/issues
